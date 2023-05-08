@@ -99,6 +99,26 @@
 			</div>
 		</div>
 		
+		<div class="main">
+			<!-- for each문 써야함 -->
+			<div class="viewWrap">
+				<a href="#">
+					<div class="viewImg">
+						<img alt="상품이미지" src="" width="194" height="194">
+					</div>
+					<div class="viewCard">
+						<div class="title">
+							
+						</div>
+						<div class="price">
+							
+						</div>
+					</div>
+				</a>
+			</div>
+			<!-- 여기까지 for each문 -->
+		</div>
+		
 	</div>
 	
 	<script type="text/javascript" src="#">
