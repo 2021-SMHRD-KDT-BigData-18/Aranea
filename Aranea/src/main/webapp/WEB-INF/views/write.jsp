@@ -63,7 +63,7 @@
 					<select name="category"
 						id="category">
 						<option value="">--선택--</option>
-						<option value="menswear">남성복</option>
+						<option value="menwear">남성복</option>
 						<option value="ladieswear">여성복</option>
 						<option value="device">디지털기기</option>
 						<option value="appliances">생활가전</option>

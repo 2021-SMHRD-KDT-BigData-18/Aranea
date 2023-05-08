@@ -13,8 +13,19 @@ import javax.servlet.http.HttpServletResponse;
 import kr.aranea.controller.AddressSetCon;
 import kr.aranea.controller.Controller;
 import kr.aranea.controller.CreateAccountCon;
+import kr.aranea.controller.CtAppliancesCon;
+import kr.aranea.controller.CtBeautyCon;
+import kr.aranea.controller.CtBookCon;
+import kr.aranea.controller.CtDeviceCon;
+import kr.aranea.controller.CtInteriorCon;
+import kr.aranea.controller.CtLadieswearCon;
+import kr.aranea.controller.CtMenwearCon;
+import kr.aranea.controller.CtPetCon;
+import kr.aranea.controller.CtSportCon;
+import kr.aranea.controller.CtTicketCon;
 import kr.aranea.controller.GoMainCon;
 import kr.aranea.controller.GoMypageCon;
+import kr.aranea.controller.GoSpiderman;
 import kr.aranea.controller.GoSuccessCon;
 import kr.aranea.controller.GoWriteCon;
 import kr.aranea.controller.JoinCon;
@@ -51,6 +62,17 @@ public class FrontController extends HttpServlet {
 		mappings.put("/writingUpload.com", new WritingUploadCon());
 		mappings.put("/goWrite.com", new GoWriteCon());
 		mappings.put("/addressSet.com", new AddressSetCon());
+		mappings.put("/ctMenwear.com", new CtMenwearCon());
+		mappings.put("/ctLadieswear.com", new CtLadieswearCon());
+		mappings.put("/ctDevice.com", new CtDeviceCon());
+		mappings.put("/ctAppliances.com", new CtAppliancesCon());
+		mappings.put("/ctInterior.com", new CtInteriorCon());
+		mappings.put("/ctBeauty.com", new CtBeautyCon());
+		mappings.put("/ctSport.com", new CtSportCon());
+		mappings.put("/ctBook.com", new CtBookCon());
+		mappings.put("/ctTicket.com", new CtTicketCon());
+		mappings.put("/ctPet.com", new CtPetCon());
+		mappings.put("/goSpiderman.com", new GoSpiderman());
 		
 	}
 	

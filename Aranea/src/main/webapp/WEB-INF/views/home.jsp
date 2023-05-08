@@ -66,8 +66,13 @@
 				<a class="seller" href="goWrite.com"> 
 					<img alt="판매하기 로고" src="images/seller.png" width="23" height="26"> 판매하기
 				</a> 
+				
 				<a class="mystore" href="goMypage.com"> 
 					<img alt="내상점 로고" src="images/mystore.png" width="23" height="24"> 내 상점
+				</a>
+				
+				<a class="spiderman" href="goSpiderman.com"> 
+					<img alt="스파이더맨 신청 로고" src="images/mystore.png" width="23" height="26"> 스파이더맨 신청
 				</a>
 				
 			</div>
@@ -81,22 +86,22 @@
 			</div>
 			<div class="section">
 				
-				<ul><a href="#">남성복</a></ul>
-				<ul><a href="#">여성복</a></ul>
-				<ul><a href="#">디지털기기</a></ul>
-				<ul><a href="#">생활가전</a></ul>
-				<ul><a href="#">가구/인테리어</a></ul>
-				<ul><a href="#">뷰티/미용</a></ul>
-				<ul><a href="#">스포츠/레저</a></ul>
-				<ul><a href="#">도서</a></ul>
-				<ul><a href="#">티켓/상품권</a></ul>
-				<ul><a href="#">반려동물용품</a></ul>
+				<ul><a href="ctMenwear.com">남성복</a></ul>
+				<ul><a href="ctLadieswear.com">여성복</a></ul>
+				<ul><a href="ctDevice.com">디지털기기</a></ul>
+				<ul><a href="ct_appliances">생활가전</a></ul>
+				<ul><a href="ctInterior.com">가구/인테리어</a></ul>
+				<ul><a href="ctBeauty.com">뷰티/미용</a></ul>
+				<ul><a href="ctSport.com">스포츠/레저</a></ul>
+				<ul><a href="ctBook.com">도서</a></ul>
+				<ul><a href="ctTicket.com">티켓/상품권</a></ul>
+				<ul><a href="ctPet.com">반려동물용품</a></ul>
 			</div>
 		</div>
 		
 	</div>
 	
-	<script type="text/javascript" src="css/write.css">
+	<script type="text/javascript" src="#">
 	</script>
 
 </body>
