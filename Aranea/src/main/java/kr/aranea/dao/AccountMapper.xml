@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.aranea.dao.AccountDAO">
+
+	<!-- 회원가입 -->
+	<insert id="create" parameterType="kr.aranea.entity.Account">
+		insert into CREATEUSER
+		values( #{id},
+				#{pw},
+				#{name},
+				#{tel},
+				#{address},
+				#{account},
+				#{money},
+				#{point}
+		)
+	</insert>
+	
+	<!-- 로그인 -->
+	<select id="login" 
+	parameterType="kr.aranea.entity.Account"
+	resultType="kr.aranea.entity.Account">
+		select * from CREATEUSER where id = #{id} and pw = #{pw}
+	</select>
+	
+	<!-- 아이디 찾기 -->
+	<select id="searchid"
+	parameterType="kr.aranea.entity.Account"
+	resultType="kr.aranea.entity.Account">
+		select * from CREATEUSER where name = #{name} and tel = #{tel}
+	</select>
+	
+	<!-- 비밀번호 변경 -->
+	
+	<update id="searchpw" parameterType="kr.aranea.entity.Account">
+		update CREATEUSER set pw = #{pw} where id = #{id} and tel = #{tel}
+	</update>
+	
+	<!-- 판매글 작성 -->
+	<insert id="writing" parameterType="kr.aranea.entity.Writing">
+		insert into WRITING
+		values ( #{id},
+				 #{img1},
+				 #{img2},
+				 #{img3},
+				 #{title},
+				 #{category},
+				 #{address},
+				 #{condition},
+				 #{price},
+				 #{content},
+				 #{num}
+		
+		)
+	</insert>
+	
+	<!--  -->
+
+</mapper>
