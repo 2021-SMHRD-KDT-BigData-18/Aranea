@@ -21,7 +21,6 @@ public class CreateAccountCon implements Controller {
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		String tel = request.getParameter("tel");
-		String address = request.getParameter("address");
 		String account = request.getParameter("account");
 		
 		// 데이터가 2개 이상이면, DTO로 묶기
@@ -30,7 +29,6 @@ public class CreateAccountCon implements Controller {
 		dto.setPw(pw);
 		dto.setName(name);
 		dto.setTel(tel);
-		dto.setAddress(address);
 		dto.setAccount(account);
 		
 		// 기능구현

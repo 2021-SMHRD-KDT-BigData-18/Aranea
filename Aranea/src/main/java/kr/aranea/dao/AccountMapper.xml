@@ -9,7 +9,6 @@
 				#{pw},
 				#{name},
 				#{tel},
-				#{address},
 				#{account},
 				#{money},
 				#{point}

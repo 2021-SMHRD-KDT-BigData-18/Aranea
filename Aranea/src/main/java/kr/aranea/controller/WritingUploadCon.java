@@ -68,7 +68,11 @@ public class WritingUploadCon implements Controller {
 		
 		session.setAttribute("row", row);
 		
-		String nextview = "viewWrite";
+		String nextview = "";
+		
+		if(row>0) {
+			nextview = "viewWrite";
+		}
 		
 		return nextview;
 	}

@@ -6,7 +6,6 @@ public class Account {
 	private String pw;
 	private String name;
 	private String tel;
-	private String address;
 	private String account;
 	private int money;
 	private int point;
@@ -15,14 +14,12 @@ public class Account {
 		
 	}
 
-	public Account(String id, String pw, String name, String tel, String address, String account, int money,
-			int point) {
+	public Account(String id, String pw, String name, String tel, String account, int money, int point) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
 		this.tel = tel;
-		this.address = address;
 		this.account = account;
 		this.money = money;
 		this.point = point;
@@ -60,14 +57,6 @@ public class Account {
 		this.tel = tel;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public String getAccount() {
 		return account;
 	}
@@ -93,7 +82,6 @@ public class Account {
 	}
 
 	
-
 	
 	
 }

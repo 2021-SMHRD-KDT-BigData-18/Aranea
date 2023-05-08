@@ -43,11 +43,6 @@
     </div>
     
     <div class="form-group">
-      <label for="adr">주소</label>
-      <input type="text" class="form-control" name="address">
-    </div>
-    
-    <div class="form-group">
       <label for="act">계좌번호</label>
       <input type="text" class="form-control" name="account">
     </div>
