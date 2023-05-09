@@ -21,7 +21,7 @@
 				)
 	</insert>
 	
-	<!-- 메인페이지에서 판매글 조회 -->
+	<!-- 판매글 작성 후 조회 -->
 	<select id="main"
 	parameterType="kr.aranea.entity.Writing"
 	resultType="kr.aranea.entity.Writing">
@@ -29,7 +29,7 @@
 		  from Writing
 	</select>
 	
-	<!-- 판매글 작성 후 조회 -->
+	<!-- 메인페이지에서 판매글 조회 -->
 	<select id="view"
 	resultType="kr.aranea.entity.Writing">
 		select *
