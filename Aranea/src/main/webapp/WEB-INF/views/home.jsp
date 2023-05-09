@@ -1,6 +1,9 @@
+<%@page import="kr.aranea.entity.Writing"%>
+<%@page import="java.util.List"%>
 <%@page import="kr.aranea.entity.Account"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +31,9 @@
 <body>
 <%
 	Account user = (Account)session.getAttribute("user");
+
+	List<Writing> list = (List<Writing>)request.getAttribute("list");
+	request.setAttribute("list", list);
 %>
 	<div class="container">
 		<div class="header">
@@ -54,7 +60,7 @@
 			<div class="search_input">
 				<div class="search">
 					<input type="text" placeholder="상품명, 지역명, @상점명 입력"
-						class="inputTag" value> 
+						class="inputTag"> 
 					<a class="searchBtn">
 						<img alt="검색버튼 아이콘" src="images/searchbtn.jpg" width="20"
 						height="20">
@@ -99,28 +105,29 @@
 			</div>
 		</div>
 		
+		
 		<div class="main">
+			<c:forEach items="${list}" var="list">
+			
 			<!-- for each문 써야함 -->
 			<div class="viewWrap">
 				<a href="#">
 					<div class="viewImg">
-						<img alt="상품이미지" src="" width="194" height="194">
+						<img alt="상품이미지" src="file/${list.img1}" width="194" height="194">
 					</div>
 					<div class="viewCard">
-						<div class="title">
-							
-						</div>
-						<div class="price">
-							
-						</div>
+						<div class="title">${list.title}</div>
+						<div class="price">${list.price}원</div>
 					</div>
 				</a>
 			</div>
 			<!-- 여기까지 for each문 -->
+			
+			</c:forEach>
 		</div>
 		
+		
 	</div>
-	
 
 </body>
 </html>

@@ -20,4 +20,12 @@
 				#{counts}
 				)
 	</insert>
+	
+	<!-- 메인페이지에서 판매글 조회 -->
+	<select id="main"
+	parameterType="kr.aranea.entity.Writing"
+	resultType="kr.aranea.entity.Writing">
+		select * 
+		  from Writing
+	</select>
 </mapper>
