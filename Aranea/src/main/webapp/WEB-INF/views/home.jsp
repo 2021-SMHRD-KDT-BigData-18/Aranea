@@ -111,7 +111,7 @@
 			
 			<!-- for each문 써야함 -->
 			<div class="viewWrap">
-				<a href="#">
+				<a href="viewWriting.com?num=${list.num }">
 					<div class="viewImg">
 						<img alt="상품이미지" src="file/${list.img1}" width="194" height="194">
 					</div>

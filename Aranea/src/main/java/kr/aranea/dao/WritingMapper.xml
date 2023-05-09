@@ -28,4 +28,13 @@
 		select * 
 		  from Writing
 	</select>
+	
+	<!-- 판매글 작성 후 조회 -->
+	<select id="view"
+	resultType="kr.aranea.entity.Writing">
+		select *
+		  from Writing
+		 where num = #{num}
+	</select>
+	
 </mapper>
