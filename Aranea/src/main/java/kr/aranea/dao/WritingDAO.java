@@ -19,10 +19,18 @@ public class WritingDAO {
 		return row;
 	}
 
-	// 메인페이지에서 판매글 조회
+	// 판매글 작성 후 조회
 	public List<Writing> main() {
 		SqlSession session = factory.openSession(true);
 		List<Writing> list = session.selectList("main");
+		session.close();
+		return list;
+	}
+
+	// 메인페이지에서 판매글 조회
+	public Writing view(int num) {
+		SqlSession session = factory.openSession(true);
+		Writing list = session.selectOne("view", num);
 		session.close();
 		return list;
 	}

@@ -36,6 +36,7 @@ import kr.aranea.controller.SearchIdCon;
 import kr.aranea.controller.SearchIdSuccessCon;
 import kr.aranea.controller.SearchPwCon;
 import kr.aranea.controller.SearchPwSuccessCon;
+import kr.aranea.controller.ViewWritingCon;
 import kr.aranea.controller.WritingUploadCon;
 
 @WebServlet("*.com")
@@ -73,6 +74,7 @@ public class FrontController extends HttpServlet {
 		mappings.put("/ctTicket.com", new CtTicketCon());
 		mappings.put("/ctPet.com", new CtPetCon());
 		mappings.put("/goSpiderman.com", new GoSpiderman());
+		mappings.put("/viewWriting.com", new ViewWritingCon());
 		
 	}
 	
