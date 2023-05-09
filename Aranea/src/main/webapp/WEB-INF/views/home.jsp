@@ -19,6 +19,8 @@
 	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	
+<script src="./js/jquery-3.6.4.min.js"></script>
 <style>
 
 .div {
@@ -85,25 +87,51 @@
 		</div>
 		<hr>
 		
-		<div class="side">
+	 	<div class="side">
 			<div class="category">
 				<img alt="메뉴버튼" src="images/category.png" width="35" height="35">
 				<span name="categoryTag">카테고리</span>
 			</div>
 			<div class="section">
+			<li >
+			    <ul class=>
+				  <li href="ctMenwear.com">남성복</li>
+				  <li href="ctLadieswear.com">여성복</li>
+				  <li href="ctDevice.com">디지털기기</li>
+				  <li href="ct_appliances">생활가전</li>
+				  <li href="ctInterior.com">가구/인테리어</li>
+				  <li href="ctBeauty.com">뷰티/미용</li>
+				  <li href="ctSport.com">스포츠/레저</li>
+				  <li href="ctBook.com">도서</li>
+				  <li href="ctTicket.com">티켓/상품권</li>
+				  <li href="ctPet.com">반려동물용품</li>
+				</ul>
+			</li>
 				
-				<ul><a href="ctMenwear.com">남성복</a></ul>
-				<ul><a href="ctLadieswear.com">여성복</a></ul>
-				<ul><a href="ctDevice.com">디지털기기</a></ul>
-				<ul><a href="ct_appliances">생활가전</a></ul>
-				<ul><a href="ctInterior.com">가구/인테리어</a></ul>
-				<ul><a href="ctBeauty.com">뷰티/미용</a></ul>
-				<ul><a href="ctSport.com">스포츠/레저</a></ul>
-				<ul><a href="ctBook.com">도서</a></ul>
-				<ul><a href="ctTicket.com">티켓/상품권</a></ul>
-				<ul><a href="ctPet.com">반려동물용품</a></ul>
 			</div>
-		</div>
+		</div> 
+		
+
+		
+	
+        <script>
+        // html dom 이 다 로딩된 후 실행된다.
+        $(document).ready(function(){
+            // memu 클래스 바로 하위에 있는 a 태그를 클릭했을때
+            $(".category>a").click(function(){
+                // 현재 클릭한 태그가 a 이기 때문에
+                // a 옆의 태그중 ul 태그에 hide 클래스 태그를 넣던지 빼던지 한다.
+                $(this).next("ul").toggleClass("categorybtn");
+            });
+        });
+    </script>
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		<div class="main">

@@ -93,15 +93,16 @@
     }
     
     /* 카테고리 */
-    .category{
+     .category{
     	display: flex;
     	justify-content: flex-start;
     }
     
     .categoryTag{
     	text-align: center;
-    }
-    
+    } 
+     
+ 
     
 
     
