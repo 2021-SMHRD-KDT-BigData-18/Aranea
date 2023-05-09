@@ -39,3 +39,6 @@ create sequence num_writing
 increment by 1
 start with 1;
 
+delete from num_writing;
+
+delete from writing where num = 32;
