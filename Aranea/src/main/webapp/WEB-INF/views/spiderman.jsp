@@ -1,4 +1,4 @@
-s<%@page import="kr.aranea.entity.Account"%>
+<%@page import="kr.aranea.entity.Account"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,8 +11,7 @@ s<%@page import="kr.aranea.entity.Account"%>
 	<%
 	Account user = (Account) session.getAttribute("user");
 	%>
-	
-	
+
 	<%if(user == null){ %>
 		<a href="login.com">로그인하러 가기</a>
 	<%}else { %>
