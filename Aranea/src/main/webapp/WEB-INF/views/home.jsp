@@ -128,22 +128,7 @@
                          <li><a href="ctPet.com">반려동물용품</a></li>
                 </ul>
             </div>
-     
-            
-        
     </div>
-		
-
-		
-	
-   
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		<div class="main">
