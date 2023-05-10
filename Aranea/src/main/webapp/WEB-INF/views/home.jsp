@@ -88,6 +88,29 @@
       </div>
       <hr>
       
+       <!-- <div class="side">
+         <div class="category">
+            <img alt="메뉴버튼" src="images/category.png" width="35" height="35">
+            <span name="categoryTag">카테고리</span>
+         </div>
+         <div class="section">
+         <li >
+             <ul class=>
+              <li href="ctMenwear.com">남성복</li>
+              <li href="ctLadieswear.com">여성복</li>
+              <li href="ctDevice.com">디지털기기</li>
+              <li href="ct_appliances">생활가전</li>
+              <li href="ctInterior.com">가구/인테리어</li>
+              <li href="ctBeauty.com">뷰티/미용</li>
+              <li href="ctSport.com">스포츠/레저</li>
+              <li href="ctBook.com">도서</li>
+              <li href="ctTicket.com">티켓/상품권</li>
+              <li href="ctPet.com">반려동물용품</li>
+            </ul>
+         </li>
+            
+         </div>
+      </div>  -->
          <div class="side">
         
             <div class="category">

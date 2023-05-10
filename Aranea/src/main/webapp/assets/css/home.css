@@ -92,7 +92,28 @@
     margin-left: 50px;
     }
     
-    
     /* 카테고리 */
-     .category a{cursor:pointer;}
-     .category .categorybtn{display:none;}
+ /*     .category{
+       display: flex;
+       justify-content: flex-start;
+    }
+    
+    .categoryTag{
+       text-align: center;
+    }  */
+     
+    
+      .category a{cursor:pointer;}
+        .category .categorybtn{display:none;}
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
