@@ -8,8 +8,14 @@
 		values
 		(#{user_id},
 		#{user_pw},
+		#{user_name},
 		#{user_phone},
-		#{user_v_account}
+		#{user_v_account},
+		#{user_account_balance},
+		#{user_point},
+		#{user_joindate},
+		#{user_type},
+		#{spider_yn}	
 		)
 	</insert>
 

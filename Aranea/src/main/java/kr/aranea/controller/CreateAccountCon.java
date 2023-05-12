@@ -28,6 +28,7 @@ public class CreateAccountCon implements Controller {
 		dto.setUser_id(user_id);
 		dto.setUser_pw(user_pw);
 		dto.setUser_name(user_name);
+		dto.setUser_phone(user_phone);
 		dto.setUser_v_account(user_v_account);
 		
 		// 기능구현
