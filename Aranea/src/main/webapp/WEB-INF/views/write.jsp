@@ -7,7 +7,40 @@
 <head>
 <title>Bootstrap Example</title>
 <style>
+.map_wrap {
+	position: relative;
+	width: 100%;
+	height: 350px;
+}
 
+.title {
+	font-weight: bold;
+	display: block;
+}
+
+.hAddr {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	border-radius: 2px;
+	background: #fff;
+	background: rgba(255, 255, 255, 0.8);
+	z-index: 1;
+	padding: 5px;
+}
+
+#centerAddr {
+	display: block;
+	margin-top: 2px;
+	font-weight: normal;
+}
+
+.bAddr {
+	padding: 5px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
 </style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,13 +115,14 @@
 					</select>
 					<hr>
 
-					<strong>거래지역설정</strong><br>
-					<span>지도를 클릭하여 동네를 설정해주세요.</span>
-					<div class="map_wrap">
-						<div id="map"
-							style="width: 100%; height: 100%; position: relative; overflow: hidden;"></div>
-						<div class="hAddr"></div>
+					<strong>거래지역설정</strong><br> <span>지도를 클릭하여 동네를 설정해주세요.</span>
+					
+					<div id="map" style="width: 100%; height: 350px;"></div>
+					<div class="hAddr">
+						<span id="centerAddr"></span>
 					</div>
+					
+
 
 					<hr>
 
