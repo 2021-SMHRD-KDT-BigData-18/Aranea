@@ -127,4 +127,6 @@ public class T_User {
 		this.user_type = param.getUserType();
 		this.spider_yn = param.getSpiderYn();
 	}
+	
+	public void CopyData() {}
 }

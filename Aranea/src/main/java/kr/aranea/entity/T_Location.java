@@ -65,4 +65,6 @@ public class T_Location {
 		this.lat = param.getLat();
 		this.lng = param.getLng();
 	}
+	
+	public void CopyData() {}
 }

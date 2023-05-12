@@ -151,4 +151,6 @@ public class T_Commodity {
 		this.cm_regdate = param.getCmRegdate();
 		this.loc_seq = param.getLocSeq();
 	}
+	
+	public void CopyData() {}
 }

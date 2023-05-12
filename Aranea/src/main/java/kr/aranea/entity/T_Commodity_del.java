@@ -127,4 +127,6 @@ public class T_Commodity_del {
 		this.cm_price = param.getCmPrice();
 		this.loc_seq = param.getLocSeq();
 	}
+	
+	public void CopyData() {}
 }

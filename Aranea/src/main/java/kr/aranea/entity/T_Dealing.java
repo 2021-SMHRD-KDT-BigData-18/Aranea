@@ -91,5 +91,7 @@ public class T_Dealing {
 		this.deal_dt = param.getDealDt();
 		this.spider_id = param.getSpiderId();
 	}
+	
+	public void CopyData() {}
 
 }
