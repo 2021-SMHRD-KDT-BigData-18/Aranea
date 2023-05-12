@@ -1,11 +1,14 @@
 <%@page import="kr.aranea.entity.T_User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Bootstrap Example</title>
+<style>
+
+</style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -22,14 +25,18 @@
 	<%
 	T_User user = (T_User) session.getAttribute("user");
 	%>
-	
-	
-	<%if(user == null){ %>
-		<a href="login.com">로그인하러 가기</a>
-	<%}else { %>
+
+
+	<%
+	if (user == null) {
+	%>
+	<a href="login.com">로그인하러 가기</a>
+	<%
+	} else {
+	%>
 	<div class="logo">
-		<a class="logoimg" href="gomain.com"> 
-			<img alt="아라냐 로고" src="images/araneaLogo.png" width="200px" height="65px">
+		<a class="logoimg" href="gomain.com"> <img alt="아라냐 로고"
+			src="images/araneaLogo.png" width="200px" height="65px">
 		</a>
 	</div>
 	<div class="container">
@@ -39,7 +46,8 @@
 			</div>
 			<div class="card-body">
 
-				<form action="writingUpload.com" method="post" enctype="multipart/form-data">
+				<form action="writingUpload.com" method="post"
+					enctype="multipart/form-data">
 					<strong>상품이미지</strong><br>
 					<div>
 						<span>파일 1</span><br> <input type='file' name='cm_img1'
@@ -55,12 +63,10 @@
 					</div>
 					<hr>
 
-					<strong>제목</strong><br> 
-					<input type="text" name="cm_name">
+					<strong>제목</strong><br> <input type="text" name="cm_name">
 					<hr>
 
-					<strong>카테고리</strong><br> 
-					<select name="cm_category"
+					<strong>카테고리</strong><br> <select name="cm_category"
 						id="category">
 						<option value="">--선택--</option>
 						<option value="남성복">남성복</option>
@@ -76,24 +82,22 @@
 					</select>
 					<hr>
 
-					<strong>거래지역설정</strong>
-               			<div id="map" style="width: 100%; height: 350px;"></div>
-               			<p>
-		                <em>지도를 클릭해주세요!</em>
-		                </p>
-		                <div id="clickLatlng"></div>
-			            
-			        <hr>
+					<strong>거래지역설정</strong><br>
+					<span>지도를 클릭하여 동네를 설정해주세요.</span>
+					<div class="map_wrap">
+						<div id="map"
+							style="width: 100%; height: 100%; position: relative; overflow: hidden;"></div>
+						<div class="hAddr"></div>
+					</div>
 
-					<strong>상태(중고상품/새상품)</strong><br> 
-					중고상품<input type="radio"
-						name="cm_status" value="중고상품"> 
-					새상품 <input type="radio"
+					<hr>
+
+					<strong>상태(중고상품/새상품)</strong><br> 중고상품<input type="radio"
+						name="cm_status" value="중고상품"> 새상품 <input type="radio"
 						name="cm_status" value="새상품">
 					<hr>
 
-					<strong>가격</strong><br> 
-					<input type="text" name="cm_price"
+					<strong>가격</strong><br> <input type="text" name="cm_price"
 						onkeyup="inputNumberFormat(this)" />
 					<hr>
 
@@ -109,10 +113,13 @@
 			<div class="card-footer"></div>
 		</div>
 	</div>
-	<%} %>
-	
+	<%
+	}
+	%>
+
 	<script type="text/javascript" src="assets/JS/write.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec459ef047abc9cf75674cad293a5dbb"></script>
-    <script type="text/javascript" src="assets/JS/geolocation.js"></script>
+	<script type="text/javascript"
+		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec459ef047abc9cf75674cad293a5dbb&libraries=services"></script>
+	<script type="text/javascript" src="assets/JS/geolocation.js"></script>
 </body>
 </html>
