@@ -115,14 +115,13 @@
 					</select>
 					<hr>
 
-					<strong>거래지역설정</strong><br> <span>지도를 클릭하여 동네를 설정해주세요.</span>
-					
-					<div id="map" style="width: 100%; height: 350px;"></div>
-					<div class="hAddr">
-						<span id="centerAddr"></span>
+					<strong>거래지역설정</strong><br>
+					<span>지도를 클릭하여 동네를 설정해주세요.</span>
+					<div class="map_wrap">
+						<div id="map"
+							style="width: 100%; height: 100%; position: relative; overflow: hidden;"></div>
+						<div class="hAddr"></div>
 					</div>
-					
-
 
 					<hr>
 
