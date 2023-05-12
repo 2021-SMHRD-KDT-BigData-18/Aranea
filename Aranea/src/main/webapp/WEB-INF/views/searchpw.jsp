@@ -24,15 +24,15 @@
   <form action="searchPwSuccess.com" method="post">
     <div class="form-group">
       <label for="usr">아이디</label>
-      <input type="text" class="form-control" id="usr" name="id">
+      <input type="text" class="form-control" id="usr" name="user_id">
     </div>
     <div class="form-group">
       <label for="tel">전화번호</label>
-      <input type="text" class="form-control" id="tel" name="tel">
+      <input type="text" class="form-control" id="tel" name="user_phone">
     </div>
     <div class="form-group">
       <label for="pwd">새로운 비밀번호 입력</label>
-      <input type="password" class="form-control" id="pw" name="pw">
+      <input type="password" class="form-control" id="pw" name="user_pw">
     </div>
     <button type="submit" class="btn btn-primary">완료</button>
   </form>

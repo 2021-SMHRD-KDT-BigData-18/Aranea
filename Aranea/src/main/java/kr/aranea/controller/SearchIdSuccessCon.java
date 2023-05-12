@@ -9,7 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import kr.aranea.dao.AccountDAO;
-import kr.aranea.entity.Account;
+import kr.aranea.dao.T_UserDAO;
+import kr.aranea.entity.T_User;
 
 public class SearchIdSuccessCon implements Controller {
 
@@ -19,16 +20,16 @@ public class SearchIdSuccessCon implements Controller {
 
 		request.setCharacterEncoding("UTF-8");
 		
-		String name = request.getParameter("name");
-		String tel = request.getParameter("tel");
+		String user_name = request.getParameter("user_name");
+		String user_phone = request.getParameter("user_phone");
 		
-		Account dto = new Account();
-		dto.setName(name);
-		dto.setTel(tel);
+		T_User dto = new T_User();
+		dto.setUser_name(user_name);
+		dto.setUser_phone(user_phone);
 		
 		// 기능 구현
-		AccountDAO dao = new AccountDAO();
-		Account user = dao.searchid(dto);
+		T_UserDAO dao = new T_UserDAO();
+		T_User user = dao.searchId(dto);
 		
 		// view 연결
 		String nextview = "";

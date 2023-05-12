@@ -1,6 +1,5 @@
-<%@page import="kr.aranea.entity.Writing"%>
+<%@page import="kr.aranea.entity.T_User"%>
 <%@page import="java.util.List"%>
-<%@page import="kr.aranea.entity.Account"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -31,7 +30,7 @@
 </head>
 <body>
 	<%
-   Account user = (Account)session.getAttribute("user");
+   T_User user = (T_User)session.getAttribute("user");
 
    List<Writing> list = (List<Writing>)request.getAttribute("list");
    request.setAttribute("list", list);
@@ -42,7 +41,7 @@
 				<%if(user == null){ %>
 				<a class="login" href="login.com">로그인/회원가입</a>
 				<%}else { %>
-				<%=user.getName()%>님, 환영합니다. <a href="addressSet.com">동네설정</a> <a
+				<%=user.getUser_name()%>님, 환영합니다. <a href="addressSet.com">동네설정</a> <a
 					href="logout.com">로그아웃</a>
 				<%} %>
 			</div>

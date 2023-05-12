@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.aranea.dao.AccountDAO;
-import kr.aranea.entity.Account;
+import kr.aranea.dao.T_UserDAO;
+import kr.aranea.entity.T_User;
 
 public class SearchPwSuccessCon implements Controller {
 
@@ -18,17 +19,17 @@ public class SearchPwSuccessCon implements Controller {
 
 		request.setCharacterEncoding("UTF-8");
 		
-		String id = request.getParameter("id");
-		String tel = request.getParameter("tel");
-		String pw = request.getParameter("pw");
+		String user_id = request.getParameter("user_id");
+		String user_phone = request.getParameter("user_phone");
+		String user_pw = request.getParameter("user_pw");
 		
-		Account dto = new Account();
-		dto.setId(id);
-		dto.setTel(tel);
-		dto.setPw(pw);
+		T_User dto = new T_User();
+		dto.setUser_id(user_id);
+		dto.setUser_phone(user_phone);
+		dto.setUser_pw(user_pw);
 		
-		AccountDAO dao = new AccountDAO();
-		int row = dao.searchpw(dto);
+		T_UserDAO dao = new T_UserDAO();
+		int row = dao.searchPw(dto);
 		
 		String nextview = "";
 		

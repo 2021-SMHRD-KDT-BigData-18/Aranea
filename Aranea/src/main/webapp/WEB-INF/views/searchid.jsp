@@ -23,11 +23,11 @@
   <form action="searchIdSuccess.com" method="post">
     <div class="form-group">
       <label for="usr">닉네임</label>
-      <input type="text" class="form-control" id="usr" name="name">
+      <input type="text" class="form-control" id="usr" name="user_name">
     </div>
     <div class="form-group">
       <label for="pwd">전화번호</label>
-      <input type="text" class="form-control" id="tel" name="tel">
+      <input type="text" class="form-control" id="tel" name="user_phone">
     </div>
     <button type="submit" class="btn btn-primary">완료</button>
   </form>

@@ -1,4 +1,4 @@
-<%@page import="kr.aranea.entity.Account"%>
+<%@page import="kr.aranea.entity.T_User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 </head>
 <body>
 	<%
-	Account user = (Account) session.getAttribute("user");
+	T_User user = (T_User) session.getAttribute("user");
 	%>
 
 	<%if(user == null){ %>
