@@ -7,7 +7,8 @@ import kr.aranea.entity.T_User;
 
 public class T_UserDAO {
 
-	private SqlSessionFactory factory = SqlSessionManager.getSqlSessionFactory();
+	private SqlSessionFactory factory = 
+			SqlSessionManager.getSqlSessionFactory();
 
 	// 회원가입
 	public int create(T_User dto) {

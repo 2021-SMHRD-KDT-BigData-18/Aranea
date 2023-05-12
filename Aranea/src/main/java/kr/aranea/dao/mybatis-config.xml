@@ -17,7 +17,7 @@
     </environment>
   </environments>
   <mappers>
-    <mapper resource="kr/aranea/dao/T_Commodity_dealMapper.xml"/>
+    <mapper resource="kr/aranea/dao/T_Commodity_delMapper.xml"/>
     <mapper resource="kr/aranea/dao/T_CommodityMapper.xml"/>
     <mapper resource="kr/aranea/dao/T_DealingMapper.xml"/>
     <mapper resource="kr/aranea/dao/T_LocationMapper.xml"/>

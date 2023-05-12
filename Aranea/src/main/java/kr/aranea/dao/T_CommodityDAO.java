@@ -9,7 +9,8 @@ import kr.aranea.entity.T_Commodity;
 
 public class T_CommodityDAO {
 
-	private SqlSessionFactory factory = SqlSessionManager.getSqlSessionFactory();
+	private SqlSessionFactory factory = 
+			SqlSessionManager.getSqlSessionFactory();
 
 	// 판매글 작성
 	public int write(T_Commodity dto) {
