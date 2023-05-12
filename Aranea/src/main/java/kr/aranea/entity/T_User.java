@@ -20,10 +20,10 @@ public class T_User {
     private String user_v_account;
 
     // 가상계좌 잔고 
-    private Double user_account_balance;
+    private int user_account_balance;
 
     // 회원 포인트 
-    private Double user_point;
+    private int user_point;
 
     // 회원 가입일자 
     private Date user_joindate;
@@ -37,7 +37,7 @@ public class T_User {
     public T_User() {}
 
 	public T_User(String user_id, String user_pw, String user_name, String user_phone, String user_v_account,
-			Double user_account_balance, Double user_point, Date user_joindate, String user_type, String spider_yn) {
+			int user_account_balance, int user_point, Date user_joindate, String user_type, String spider_yn) {
 		super();
 		this.user_id = user_id;
 		this.user_pw = user_pw;
@@ -91,19 +91,19 @@ public class T_User {
 		this.user_v_account = user_v_account;
 	}
 
-	public Double getUser_account_balance() {
+	public int getUser_account_balance() {
 		return user_account_balance;
 	}
 
-	public void setUser_account_balance(Double user_account_balance) {
+	public void setUser_account_balance(int user_account_balance) {
 		this.user_account_balance = user_account_balance;
 	}
 
-	public Double getUser_point() {
+	public int getUser_point() {
 		return user_point;
 	}
 
-	public void setUser_point(Double user_point) {
+	public void setUser_point(int user_point) {
 		this.user_point = user_point;
 	}
 
