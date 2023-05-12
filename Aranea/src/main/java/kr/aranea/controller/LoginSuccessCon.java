@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import kr.aranea.dao.AccountDAO;
-import kr.aranea.entity.Account;
+import kr.aranea.dao.T_UserDAO;
+import kr.aranea.entity.T_User;
 
 public class LoginSuccessCon implements Controller {
 
@@ -18,16 +19,16 @@ public class LoginSuccessCon implements Controller {
 
 		request.setCharacterEncoding("UTF-8");
 
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
+		String user_id = request.getParameter("user_id");
+		String user_pw = request.getParameter("user_pw");
 
-		Account dto = new Account();
-		dto.setId(id);
-		dto.setPw(pw);
+		T_User dto = new T_User();
+		dto.setUser_id(user_id);
+		dto.setUser_pw(user_pw);
 
 		// 기능구현(DB 데이터와 비교)
-		AccountDAO dao = new AccountDAO();
-		Account user = dao.login(dto);
+		T_UserDAO dao = new T_UserDAO();
+		T_User user = dao.login(dto);
 
 		// View 화면 연결
 		String nextview = "";

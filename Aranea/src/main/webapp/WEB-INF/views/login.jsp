@@ -25,11 +25,11 @@
   <form action="loginSuccess.com" method="post">
     <div class="form-group">
       <label for="usr">아이디:</label>
-      <input type="text" class="form-control" id="usr" name="id" placeholder="아이디 입력">
+      <input type="text" class="form-control" id="usr" name="user_id" placeholder="아이디 입력">
     </div>
     <div class="form-group">
       <label for="pwd">비밀번호:</label>
-      <input type="password" class="form-control" id="pwd" name="pw" placeholder="비밀번호 입력">
+      <input type="password" class="form-control" id="pwd" name="user_pw" placeholder="비밀번호 입력">
     </div>
     <button type="submit" class="btn btn-primary">로그인</button><br>
     <a class="searchid" href="searchId.com">아이디 찾기</a>
