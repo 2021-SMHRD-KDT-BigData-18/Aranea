@@ -1,4 +1,4 @@
-<%@page import="kr.aranea.entity.Account"%>
+<%@page import="kr.aranea.entity.T_User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
@@ -20,7 +20,7 @@
 </head>
 <body>
 	<%
-	Account user = (Account) session.getAttribute("user");
+	T_User user = (T_User) session.getAttribute("user");
 	%>
 	
 	
@@ -42,25 +42,25 @@
 				<form action="writingUpload.com" method="post" enctype="multipart/form-data">
 					<strong>상품이미지</strong><br>
 					<div>
-						<span>파일 1</span><br> <input type='file' name='img1'
+						<span>파일 1</span><br> <input type='file' name='cm_img1'
 							accept="image/png, image/gif, image/jpeg"><br>
 					</div>
 					<div>
-						<span>파일 2</span><br> <input type='file' name='img2'
+						<span>파일 2</span><br> <input type='file' name='cm_img2'
 							accept="image/png, image/gif, image/jpeg"><br>
 					</div>
 					<div>
-						<span>파일 3</span><br> <input type='file' name='img3'
+						<span>파일 3</span><br> <input type='file' name='cm_img3'
 							accept="image/png, image/gif, image/jpeg">
 					</div>
 					<hr>
 
 					<strong>제목</strong><br> 
-					<input type="text" name="title">
+					<input type="text" name="cm_name">
 					<hr>
 
 					<strong>카테고리</strong><br> 
-					<select name="category"
+					<select name="cm_category"
 						id="category">
 						<option value="">--선택--</option>
 						<option value="남성복">남성복</option>
@@ -82,29 +82,25 @@
 		                <em>지도를 클릭해주세요!</em>
 		                </p>
 		                <div id="clickLatlng"></div>
-			            <input type="text" name="address">
 			            
 			        <hr>
 
 					<strong>상태(중고상품/새상품)</strong><br> 
 					중고상품<input type="radio"
-						name="condition" value="중고상품"> 
+						name="cm_status" value="중고상품"> 
 					새상품 <input type="radio"
-						name="condition" value="새상품">
+						name="cm_status" value="새상품">
 					<hr>
 
 					<strong>가격</strong><br> 
-					<input type="text" name="price"
+					<input type="text" name="cm_price"
 						onkeyup="inputNumberFormat(this)" />
 					<hr>
 
 					<strong>설명</strong><br>
-					<textarea rows="10" cols="50" name="content"></textarea>
+					<textarea rows="10" cols="50" name="cm_desc"></textarea>
 					<hr>
 
-					<strong>수량</strong><br> 
-					<input type="number" name="counts">
-					<hr>
 
 					<button class="btn btn-primary btn-sm">작성완료</button>
 				</form>

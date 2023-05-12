@@ -10,9 +10,10 @@ import javax.servlet.http.HttpSession;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
+import kr.aranea.dao.T_CommodityDAO;
 import kr.aranea.dao.WritingDAO;
-import kr.aranea.entity.Account;
-import kr.aranea.entity.Writing;
+import kr.aranea.entity.T_Commodity;
+import kr.aranea.entity.T_User;
 
 public class WritingUploadCon implements Controller {
 
@@ -35,35 +36,30 @@ public class WritingUploadCon implements Controller {
 		MultipartRequest multi = new MultipartRequest(request, path, maxSize, encoding, rename);
 		
 		HttpSession session = request.getSession();
-		Account user = (Account)session.getAttribute("user");
+		T_User user = (T_User)session.getAttribute("user");
 		
-		String id = user.getId();
-		String img1 = multi.getFilesystemName("img1");
-		String img2 = multi.getFilesystemName("img2");
-		String img3 = multi.getFilesystemName("img3");
-		String title = multi.getParameter("title");
-		String category = multi.getParameter("category");
-		String address = multi.getParameter("address");
-		String condition = multi.getParameter("condition");
-		String price = multi.getParameter("price");
-		String content = multi.getParameter("content");
-		int counts = Integer.parseInt(multi.getParameter("counts"));
+		String cm_name = multi.getParameter("cm_name");
+		String user_id = user.getUser_id();
+		String cm_desc = multi.getParameter("cm_desc");
+		String cm_img1 = multi.getFilesystemName("cm_img1");
+		String cm_img2 = multi.getFilesystemName("cm_img2");
+		String cm_img3 = multi.getFilesystemName("cm_img3");
+		String cm_category = multi.getParameter("cm_category");
+		String cm_status = multi.getParameter("cm_status");
+		String cm_price = multi.getParameter("cm_price");
 		
 		
-		Writing dto = new Writing();
-		dto.setId(id);
-		dto.setImg1(img1);
-		dto.setImg2(img2);
-		dto.setImg3(img3);
-		dto.setTitle(title);
-		dto.setCategory(category);
-		dto.setAddress(address);
-		dto.setCondition(condition);
-		dto.setPrice(price);
-		dto.setContent(content);
-		dto.setCounts(counts);
+		T_Commodity dto = new T_Commodity();
+		dto.setUser_id(cm_name);
+		dto.setCm_img1(user_id);
+		dto.setCm_desc(cm_desc);
+		dto.setCm_img2(cm_img2);
+		dto.setCm_img3(cm_img3);
+		dto.setCm_category(cm_category);
+		dto.setCm_status(cm_status);
+		dto.setCm_price(cm_price);
 		
-		WritingDAO dao = new WritingDAO();
+		T_CommodityDAO dao = new T_CommodityDAO();
 		int row = dao.write(dto);
 		
 		session.setAttribute("row", row);

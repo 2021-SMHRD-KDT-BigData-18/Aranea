@@ -2,4 +2,23 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.aranea.dao.T_CommodityDAO">
 
+<!-- 중고거래 글 작성 -->
+	<insert id="write"
+	parameterType="kr.aranea.entity.T_Commodity">
+		insert into T_COMMODITY
+		values( T_COMMODITY_SEQ.nextval,
+				#{cm_name},
+				#{user_id},
+				#{cm_desc},
+				#{cm_img1},
+				#{cm_img2},
+				#{cm_img3},
+				#{cm_category},
+				#{cm_status},
+				#{cm_price},
+				#{loc_seq}
+				)
+	</insert>
+
+
 </mapper>
