@@ -13,9 +13,9 @@
 		#{user_v_account},
 		#{user_account_balance},
 		#{user_point},
-		#{user_joindate},
-		#{user_type},
-		#{spider_yn}	
+		sysdate,
+		'u',
+		'n'	
 		)
 	</insert>
 
