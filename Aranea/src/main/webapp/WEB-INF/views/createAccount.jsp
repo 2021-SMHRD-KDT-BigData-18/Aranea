@@ -24,27 +24,27 @@
   <form action="createAccount.com">
     <div class="form-group">
       <label for="usr">아이디</label>
-      <input type="text" class="form-control" name="id">
+      <input type="text" class="form-control" name="user_id">
     </div>
     
     <div class="form-group">
       <label for="pwd">비밀번호</label>
-      <input type="password" class="form-control" name="pw">
+      <input type="password" class="form-control" name="user_pw">
     </div>
     
     <div class="form-group">
       <label for="nm">닉네임</label>
-      <input type="text" class="form-control" name="name">
+      <input type="text" class="form-control" name="user_name">
     </div>
     
     <div class="form-group">
       <label for="tel">전화번호</label>
-      <input type="text" class="form-control" name="tel">
+      <input type="text" class="form-control" name="user_phone">
     </div>
     
     <div class="form-group">
       <label for="act">계좌번호</label>
-      <input type="text" class="form-control" name="account">
+      <input type="text" class="form-control" name="user_v_account">
     </div>
     <button type="submit" class="btn btn-primary">회원가입 완료</button>
   </form>

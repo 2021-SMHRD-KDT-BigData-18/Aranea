@@ -7,7 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.aranea.dao.AccountDAO;
-import kr.aranea.entity.Account;
+import kr.aranea.dao.T_UserDAO;
+import kr.aranea.entity.T_User;
 
 public class CreateAccountCon implements Controller {
 
@@ -17,22 +18,21 @@ public class CreateAccountCon implements Controller {
 
 		request.setCharacterEncoding("UTF-8");
 		
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String name = request.getParameter("name");
-		String tel = request.getParameter("tel");
-		String account = request.getParameter("account");
+		String user_id = request.getParameter("user_id");
+		String user_pw = request.getParameter("user_pw");
+		String user_name = request.getParameter("user_name");
+		String user_phone = request.getParameter("user_phone");
+		String user_v_account = request.getParameter("user_v_account");
 		
 		// 데이터가 2개 이상이면, DTO로 묶기
-		Account dto = new Account();
-		dto.setId(id);
-		dto.setPw(pw);
-		dto.setName(name);
-		dto.setTel(tel);
-		dto.setAccount(account);
+		T_User dto = new T_User();
+		dto.setUser_id(user_id);
+		dto.setUser_pw(user_pw);
+		dto.setUser_name(user_name);
+		dto.setUser_v_account(user_v_account);
 		
 		// 기능구현
-		AccountDAO dao = new AccountDAO();
+		T_UserDAO dao = new T_UserDAO();
 		int row = dao.create(dto);
 		
 		// View 화면 구현

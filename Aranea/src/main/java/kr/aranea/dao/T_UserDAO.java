@@ -10,6 +10,14 @@ public class T_UserDAO {
 	private SqlSessionFactory factory =
 			SqlSessionManager.getSqlSessionFactory();
 	
+	// 회원가입
+	public int create(T_User dto) {
+		SqlSession session = factory.openSession(true);
+		int row = session.insert("create", dto);
+		session.close();
+		return row;
+	}
+	
 	
 	// 로그인
 		public T_User login(T_User dto) {
