@@ -23,7 +23,7 @@
 	<!-- 로그인 -->
 	<select id="login" parameterType="kr.aranea.entity.T_User"
 		resultType="kr.aranea.entity.T_User">
-		select * from CREATEUSER where user_id = #{user_id} and
+		select * from T_USER where user_id = #{user_id} and
 		user_pw = #{user_pw}
 	</select>
 
