@@ -118,8 +118,6 @@
 					<strong>거래지역설정</strong>
 					<div id="map" style="width: 100%; height: 350px;"></div>
 					<div class="hAddr">
-						<span id="centerAddr"></span>
-						<div id="clickLatlng"></div>
 					</div>
 
 					<hr>
