@@ -4,129 +4,132 @@ import java.util.Date;
 
 public class T_User {
 
-	// 회원 아이디
-	private String user_id;
+	// 회원 아이디 
+    private String user_id;
 
-	// 회원 비밀번호
-	private String user_pw;
+    // 회원 비밀번호 
+    private String user_pw;
 
-	// 회원 이름
-	private String user_name;
+    // 회원 이름 
+    private String user_name;
 
-	// 회원 전화번호
-	private String user_phone;
+    // 회원 전화번호 
+    private String user_phone;
 
-	// 회원 가상계좌
-	private String user_v_account;
+    // 회원 가상계좌 
+    private String user_v_account;
 
-	// 가상계좌 잔고
-	private Double user_account_balance;
+    // 가상계좌 잔고 
+    private Double user_account_balance;
 
-	// 회원 포인트
-	private Double user_point;
+    // 회원 포인트 
+    private Double user_point;
 
-	// 회원 가입일자
-	private Date user_joindate;
+    // 회원 가입일자 
+    private Date user_joindate;
 
-	// 회원 유형
-	private String user_type;
+    // 회원 유형 
+    private String user_type;
 
-	// 스파이더맨 자격
-	private String spider_yn;
+    // 스파이더맨 자격 
+    private String spider_yn;
+    
+    public T_User() {}
 
-	public String getUserId() {
-		return user_id;
-	}
-
-	public void setUserId(String userId) {
+	public T_User(String user_id, String user_pw, String user_name, String user_phone, String user_v_account,
+			Double user_account_balance, Double user_point, Date user_joindate, String user_type, String spider_yn) {
+		super();
 		this.user_id = user_id;
-	}
-
-	public String getUserPw() {
-		return user_pw;
-	}
-
-	public void setUserPw(String userPw) {
 		this.user_pw = user_pw;
-	}
-
-	public String getUserName() {
-		return user_name;
-	}
-
-	public void setUserName(String userName) {
 		this.user_name = user_name;
-	}
-
-	public String getUserPhone() {
-		return user_phone;
-	}
-
-	public void setUserPhone(String userPhone) {
 		this.user_phone = user_phone;
-	}
-
-	public String getUserVAccount() {
-		return user_v_account;
-	}
-
-	public void setUserVAccount(String userVAccount) {
 		this.user_v_account = user_v_account;
-	}
-
-	public Double getUserAccountBalance() {
-		return user_account_balance;
-	}
-
-	public void setUserAccountBalance(Double userAccountBalance) {
 		this.user_account_balance = user_account_balance;
-	}
-
-	public Double getUserPoint() {
-		return user_point;
-	}
-
-	public void setUserPoint(Double userPoint) {
 		this.user_point = user_point;
-	}
-
-	public Date getUserJoindate() {
-		return user_joindate;
-	}
-
-	public void setUserJoindate(Date userJoindate) {
 		this.user_joindate = user_joindate;
-	}
-
-	public String getUserType() {
-		return user_type;
-	}
-
-	public void setUserType(String userType) {
 		this.user_type = user_type;
-	}
-
-	public String getSpiderYn() {
-		return spider_yn;
-	}
-
-	public void setSpiderYn(String spiderYn) {
 		this.spider_yn = spider_yn;
 	}
 
-	// t_user 모델 복사
-	public void CopyData(T_User param) {
-		this.user_id = param.getUserId();
-		this.user_pw = param.getUserPw();
-		this.user_name = param.getUserName();
-		this.user_phone = param.getUserPhone();
-		this.user_v_account = param.getUserVAccount();
-		this.user_account_balance = param.getUserAccountBalance();
-		this.user_point = param.getUserPoint();
-		this.user_joindate = param.getUserJoindate();
-		this.user_type = param.getUserType();
-		this.spider_yn = param.getSpiderYn();
+	public String getUser_id() {
+		return user_id;
 	}
-	
-	public void CopyData() {}
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+
+	public String getUser_pw() {
+		return user_pw;
+	}
+
+	public void setUser_pw(String user_pw) {
+		this.user_pw = user_pw;
+	}
+
+	public String getUser_name() {
+		return user_name;
+	}
+
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
+
+	public String getUser_phone() {
+		return user_phone;
+	}
+
+	public void setUser_phone(String user_phone) {
+		this.user_phone = user_phone;
+	}
+
+	public String getUser_v_account() {
+		return user_v_account;
+	}
+
+	public void setUser_v_account(String user_v_account) {
+		this.user_v_account = user_v_account;
+	}
+
+	public Double getUser_account_balance() {
+		return user_account_balance;
+	}
+
+	public void setUser_account_balance(Double user_account_balance) {
+		this.user_account_balance = user_account_balance;
+	}
+
+	public Double getUser_point() {
+		return user_point;
+	}
+
+	public void setUser_point(Double user_point) {
+		this.user_point = user_point;
+	}
+
+	public Date getUser_joindate() {
+		return user_joindate;
+	}
+
+	public void setUser_joindate(Date user_joindate) {
+		this.user_joindate = user_joindate;
+	}
+
+	public String getUser_type() {
+		return user_type;
+	}
+
+	public void setUser_type(String user_type) {
+		this.user_type = user_type;
+	}
+
+	public String getSpider_yn() {
+		return spider_yn;
+	}
+
+	public void setSpider_yn(String spider_yn) {
+		this.spider_yn = spider_yn;
+	}
+    
+    
 }

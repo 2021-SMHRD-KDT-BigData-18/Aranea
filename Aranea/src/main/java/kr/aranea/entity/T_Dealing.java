@@ -25,73 +25,75 @@ public class T_Dealing {
 	// 스파이더 아이디
 	private String spider_id;
 
-	public Double getDealSeq() {
-		return deal_seq;
-	}
+	public T_Dealing() {}
 
-	public void setDealSeq(Double dealSeq) {
+	public T_Dealing(Double deal_seq, String seller_id, String buyer_id, Double cm_seq, String deal_status,
+			Date deal_dt, String spider_id) {
+		super();
 		this.deal_seq = deal_seq;
-	}
-
-	public String getSellerId() {
-		return seller_id;
-	}
-
-	public void setSellerId(String sellerId) {
 		this.seller_id = seller_id;
-	}
-
-	public String getBuyerId() {
-		return buyer_id;
-	}
-
-	public void setBuyerId(String buyerId) {
 		this.buyer_id = buyer_id;
-	}
-
-	public Double getCmSeq() {
-		return cm_seq;
-	}
-
-	public void setCmSeq(Double cmSeq) {
 		this.cm_seq = cm_seq;
-	}
-
-	public String getDealStatus() {
-		return deal_status;
-	}
-
-	public void setDealStatus(String dealStatus) {
 		this.deal_status = deal_status;
-	}
-
-	public Date getDealDt() {
-		return deal_dt;
-	}
-
-	public void setDealDt(Date dealDt) {
 		this.deal_dt = deal_dt;
-	}
-
-	public String getSpiderId() {
-		return spider_id;
-	}
-
-	public void setSpiderId(String spiderId) {
 		this.spider_id = spider_id;
 	}
 
-	// t_dealing 모델 복사
-	public void CopyData(T_Dealing param) {
-		this.deal_seq = param.getDealSeq();
-		this.seller_id = param.getSellerId();
-		this.buyer_id = param.getBuyerId();
-		this.cm_seq = param.getCmSeq();
-		this.deal_status = param.getDealStatus();
-		this.deal_dt = param.getDealDt();
-		this.spider_id = param.getSpiderId();
+	public Double getDeal_seq() {
+		return deal_seq;
+	}
+
+	public void setDeal_seq(Double deal_seq) {
+		this.deal_seq = deal_seq;
+	}
+
+	public String getSeller_id() {
+		return seller_id;
+	}
+
+	public void setSeller_id(String seller_id) {
+		this.seller_id = seller_id;
+	}
+
+	public String getBuyer_id() {
+		return buyer_id;
+	}
+
+	public void setBuyer_id(String buyer_id) {
+		this.buyer_id = buyer_id;
+	}
+
+	public Double getCm_seq() {
+		return cm_seq;
+	}
+
+	public void setCm_seq(Double cm_seq) {
+		this.cm_seq = cm_seq;
+	}
+
+	public String getDeal_status() {
+		return deal_status;
+	}
+
+	public void setDeal_status(String deal_status) {
+		this.deal_status = deal_status;
+	}
+
+	public Date getDeal_dt() {
+		return deal_dt;
+	}
+
+	public void setDeal_dt(Date deal_dt) {
+		this.deal_dt = deal_dt;
+	}
+
+	public String getSpider_id() {
+		return spider_id;
+	}
+
+	public void setSpider_id(String spider_id) {
+		this.spider_id = spider_id;
 	}
 	
-	public void CopyData() {}
 
 }

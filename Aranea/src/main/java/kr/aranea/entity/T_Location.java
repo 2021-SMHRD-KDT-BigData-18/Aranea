@@ -1,5 +1,6 @@
 package kr.aranea.entity;
 
+//거래 장소 
 public class T_Location {
 
 	// 장소 순번
@@ -17,27 +18,38 @@ public class T_Location {
 	// 경도
 	private Double lng;
 
-	public Double getLocSeq() {
+	public T_Location() {}
+
+	public T_Location(Double loc_seq, String loc_name, String user_id, Double lat, Double lng) {
+		super();
+		this.loc_seq = loc_seq;
+		this.loc_name = loc_name;
+		this.user_id = user_id;
+		this.lat = lat;
+		this.lng = lng;
+	}
+
+	public Double getLoc_seq() {
 		return loc_seq;
 	}
 
-	public void setLocSeq(Double locSeq) {
+	public void setLoc_seq(Double loc_seq) {
 		this.loc_seq = loc_seq;
 	}
 
-	public String getLocName() {
+	public String getLoc_name() {
 		return loc_name;
 	}
 
-	public void setLocName(String locName) {
+	public void setLoc_name(String loc_name) {
 		this.loc_name = loc_name;
 	}
 
-	public String getUserId() {
+	public String getUser_id() {
 		return user_id;
 	}
 
-	public void setUserId(String userId) {
+	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
 
@@ -56,15 +68,8 @@ public class T_Location {
 	public void setLng(Double lng) {
 		this.lng = lng;
 	}
-
-	// t_location 모델 복사
-	public void CopyData(T_Location param) {
-		this.loc_seq = param.getLocSeq();
-		this.loc_name = param.getLocName();
-		this.user_id = param.getUserId();
-		this.lat = param.getLat();
-		this.lng = param.getLng();
-	}
 	
-	public void CopyData() {}
+	
+	
+	
 }
