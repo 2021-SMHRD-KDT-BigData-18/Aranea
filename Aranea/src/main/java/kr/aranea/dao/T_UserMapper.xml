@@ -15,7 +15,8 @@
 		#{user_point},
 		#{user_joindate},
 		#{user_type},
-		#{spider_yn}	
+		#{spider_yn}
+			
 		)
 	</insert>
 
