@@ -11,7 +11,8 @@
 				#{tel},
 				#{account},
 				#{money},
-				#{point}
+				#{point},
+				#{spider}
 		)
 	</insert>
 	

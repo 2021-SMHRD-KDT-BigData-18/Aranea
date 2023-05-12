@@ -2,7 +2,7 @@ package kr.aranea.entity;
 
 import java.util.Date;
 
-public class T_commodity {
+public class T_Commodity {
 
 	// 상품 정보 
 	public class t_commodity {
@@ -35,7 +35,7 @@ public class T_commodity {
 	    private String cm_status;
 
 	    // 상품 가격 
-	    private Double cm_price;
+	    private String cm_price;
 
 	    // 상품 등록일자 
 	    private Date cm_regdate;
@@ -115,11 +115,11 @@ public class T_commodity {
 	        this.cm_status = cm_status;
 	    }
 
-	    public Double getCmPrice() {
+	    public String getCmPrice() {
 	        return cm_price;
 	    }
 
-	    public void setCmPrice(Double cmPrice) {
+	    public void setCmPrice(String cmPrice) {
 	        this.cm_price = cm_price;
 	    }
 

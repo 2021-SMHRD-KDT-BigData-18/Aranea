@@ -2,7 +2,7 @@ package kr.aranea.entity;
 
 import java.util.Date;
 
-public class T_dealing {
+public class T_Dealing {
 
 	// 거래 정보 
 	public class t_dealing {

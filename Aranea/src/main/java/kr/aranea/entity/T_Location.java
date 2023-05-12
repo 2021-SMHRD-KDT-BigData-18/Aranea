@@ -1,7 +1,7 @@
 package kr.aranea.entity;
 
-public class T_location {
-	
+public class T_Location {
+
 	// 거래 장소 
 	public class t_location {
 
@@ -70,5 +70,4 @@ public class T_location {
 	        this.lng = param.getLng();
 	    }
 	}
-
 }

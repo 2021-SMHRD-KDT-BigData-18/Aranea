@@ -2,8 +2,8 @@ package kr.aranea.entity;
 
 import java.util.Date;
 
-public class T_user {
-	
+public class T_User {
+
 	// 회원 정보 
 	public class t_user {
 
@@ -132,5 +132,4 @@ public class T_user {
 	        this.spider_yn = param.getSpiderYn();
 	    }
 	}
-
 }

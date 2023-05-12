@@ -6,7 +6,8 @@ CREATE TABLE CREATEUSER(
         ACCOUNT VARCHAR2(13) NOT NULL,
         MONEY NUMBER DEFAULT 0,
         POINT NUMBER DEFAULT 0,
-
+        SPIDER VARCHAR2(1) DEFAULT 'N',
+        
         CONSTRAINT USER_ID_PK PRIMARY KEY(ID)
 );
 
@@ -40,7 +41,5 @@ SELECT * FROM WRITING;
 create sequence num_writing
 increment by 1
 start with 1;
-
-
 
 drop sequence num_writing;
