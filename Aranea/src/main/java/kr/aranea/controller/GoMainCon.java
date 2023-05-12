@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import kr.aranea.dao.WritingDAO;
-import kr.aranea.entity.Writing;
+import kr.aranea.dao.T_CommodityDAO;
+import kr.aranea.dao.T_Commodity_delDAO;
+import kr.aranea.entity.T_Commodity;
+
 
 public class GoMainCon implements Controller {
 
@@ -17,10 +19,10 @@ public class GoMainCon implements Controller {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		WritingDAO dao = new WritingDAO();
-		List<Writing> list = dao.main();
-		
-		request.setAttribute("list", list);
+//		T_CommodityDAO dao = new T_CommodityDAO();
+//		List<T_Commodity> list = dao.main();
+//		
+//		request.setAttribute("list", list);
 		
 		
 		String nextView = "home";

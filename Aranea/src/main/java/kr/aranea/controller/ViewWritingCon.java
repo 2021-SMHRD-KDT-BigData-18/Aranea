@@ -6,8 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.aranea.dao.WritingDAO;
-import kr.aranea.entity.Writing;
+import kr.aranea.dao.T_CommodityDAO;
+import kr.aranea.entity.T_Commodity;
+
 
 public class ViewWritingCon implements Controller {
 
@@ -15,10 +16,10 @@ public class ViewWritingCon implements Controller {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		int num = Integer.parseInt(request.getParameter("num"));
+		int cm_seq = Integer.parseInt(request.getParameter("cm_seq"));
 		
-		WritingDAO dao = new WritingDAO();
-		Writing view = dao.view(num);
+		T_CommodityDAO dao = new T_CommodityDAO();
+		T_Commodity view = dao.view(cm_seq);
 		
 		request.setAttribute("list", view);
 		

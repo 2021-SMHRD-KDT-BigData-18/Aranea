@@ -11,7 +11,6 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import kr.aranea.dao.T_CommodityDAO;
-import kr.aranea.dao.WritingDAO;
 import kr.aranea.entity.T_Commodity;
 import kr.aranea.entity.T_User;
 

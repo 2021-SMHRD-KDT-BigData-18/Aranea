@@ -1,4 +1,3 @@
-<%@page import="kr.aranea.entity.Writing"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>

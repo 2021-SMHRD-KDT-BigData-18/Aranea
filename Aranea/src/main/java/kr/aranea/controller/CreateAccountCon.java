@@ -6,7 +6,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.aranea.dao.AccountDAO;
 import kr.aranea.dao.T_UserDAO;
 import kr.aranea.entity.T_User;
 

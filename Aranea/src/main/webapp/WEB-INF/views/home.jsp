@@ -1,3 +1,4 @@
+<%@page import="kr.aranea.entity.T_Commodity"%>
 <%@page import="kr.aranea.entity.T_User"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -32,7 +33,7 @@
 	<%
    T_User user = (T_User)session.getAttribute("user");
 
-   List<Writing> list = (List<Writing>)request.getAttribute("list");
+   List<T_Commodity> list = (List<T_Commodity>)request.getAttribute("list");
    request.setAttribute("list", list);
 %>
 	<div class="container">
@@ -99,13 +100,12 @@
 			</div>
 		</div>
 
-
+		<!--  
 		<div class="main">
 			<c:forEach items="${list}" var="list">
 
-				<!-- for each문 써야함 -->
 				<div class="viewWrap">
-					<a href="viewWriting.com?num=${list.num }">
+					<a href="viewWriting.com?cm_seq=${list.cm_seq}">
 						<div class="viewImg">
 							<img alt="상품이미지" src="file/${list.img1}" width="194" height="194">
 						</div>
@@ -115,11 +115,10 @@
 						</div>
 					</a>
 				</div>
-				<!-- 여기까지 for each문 -->
 
 			</c:forEach>
 		</div>
-
+		-->
 
 	</div>
 	<script type="text/javascript" src="assets/JS/home.js"></script>
