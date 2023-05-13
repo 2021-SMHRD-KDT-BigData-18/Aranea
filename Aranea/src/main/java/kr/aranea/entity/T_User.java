@@ -34,7 +34,9 @@ public class T_User {
     // 스파이더맨 자격 
     private String spider_yn;
     
-    public T_User() {}
+    public T_User() {
+    	
+    }
 
 	public T_User(String user_id, String user_pw, String user_name, String user_phone, String user_v_account,
 			int user_account_balance, int user_point, Date user_joindate, String user_type, String spider_yn) {
