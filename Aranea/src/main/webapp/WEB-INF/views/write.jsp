@@ -80,7 +80,7 @@
 
 					<strong>거래지역설정</strong><br>
 						<input type="text" name="loc_seq">
-						<a href="wrieMap.com" target="_blank">거래지역 검색</a>
+						<a href="writeMap.com" target="_blank">거래지역 검색</a>
 					
 
 					<hr>

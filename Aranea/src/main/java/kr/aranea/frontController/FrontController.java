@@ -76,7 +76,7 @@ public class FrontController extends HttpServlet {
 		mappings.put("/ctPet.com", new CtPetCon());
 		mappings.put("/goSpiderman.com", new GoSpiderman());
 		mappings.put("/viewWriting.com", new ViewWritingCon());
-		mappings.put("/wrieMap.com", new WriteMapCon());
+		mappings.put("/writeMap.com", new WriteMapCon());
 		
 	}
 	
