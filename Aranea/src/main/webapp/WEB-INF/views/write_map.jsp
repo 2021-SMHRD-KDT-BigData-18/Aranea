@@ -9,11 +9,13 @@
 
 </head>
 <body>
+	<form action="writeMapUpload.com" method="post">
 	<div class="map_wrap">
 		<div id="map" style="width: 80%; height: 500px;"></div>
 		<div class="hAddr"></div>
 		<input type="submit" value="선택완료">
 	</div>
+	</form>
 
 	<script type="text/javascript"
 			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec459ef047abc9cf75674cad293a5dbb&libraries=services"></script>
