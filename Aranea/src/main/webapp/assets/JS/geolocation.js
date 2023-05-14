@@ -43,8 +43,7 @@ var marker = new kakao.maps.Marker(), // 클릭한 위치를 표시할 마커입
 kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
 	searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
 		if (status === kakao.maps.services.Status.OK) {
-			var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
-			detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
+			var detailAddr = '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
 
 			var content = '<div class="bAddr">' +
 				'<span class="title">법정동 주소정보</span>' +
@@ -64,7 +63,7 @@ kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
 
 // 중심 좌표나 확대 수준이 변경됐을 때 지도 중심 좌표에 대한 주소 정보를 표시하도록 이벤트를 등록합니다
 kakao.maps.event.addListener(map, 'idle', function() {
-	searchAddrFromCoords(map.getCenter(), displayCenterInfo);
+	searchAddrFromCoords(map.getCenter());
 });
 
 function searchAddrFromCoords(coords, callback) {
@@ -75,19 +74,4 @@ function searchAddrFromCoords(coords, callback) {
 function searchDetailAddrFromCoords(coords, callback) {
 	// 좌표로 법정동 상세 주소 정보를 요청합니다
 	geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
-}
-
-// 지도 좌측상단에 지도 중심좌표에 대한 주소정보를 표출하는 함수입니다
-function displayCenterInfo(result, status) {
-	if (status === kakao.maps.services.Status.OK) {
-		var infoDiv = document.getElementById('centerAddr');
-
-		for (var i = 0; i < result.length; i++) {
-			// 행정동의 region_type 값은 'H' 이므로
-			if (result[i].region_type === 'H') {
-				infoDiv.innerHTML = result[i].address_name;
-				break;
-			}
-		}
-	}
 }
