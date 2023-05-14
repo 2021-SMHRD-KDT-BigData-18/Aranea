@@ -5,7 +5,7 @@ import java.util.Date;
 public class T_Commodity {
 
 	// 상품 순번
-	private Double cm_seq;
+	private int cm_seq;
 
 	// 상품 명
 	private String cm_name;
@@ -38,14 +38,14 @@ public class T_Commodity {
 	private Date cm_regdate;
 
 	// 장소 순번
-	private Double loc_seq;
+	private int loc_seq;
 
 	
 	public T_Commodity() {}
 
 
-	public T_Commodity(Double cm_seq, String cm_name, String user_id, String cm_desc, String cm_img1, String cm_img2,
-			String cm_img3, String cm_category, String cm_status, String cm_price, Date cm_regdate, Double loc_seq) {
+	public T_Commodity(int cm_seq, String cm_name, String user_id, String cm_desc, String cm_img1, String cm_img2,
+			String cm_img3, String cm_category, String cm_status, String cm_price, Date cm_regdate, int loc_seq) {
 		super();
 		this.cm_seq = cm_seq;
 		this.cm_name = cm_name;
@@ -62,12 +62,12 @@ public class T_Commodity {
 	}
 
 
-	public Double getCm_seq() {
+	public int getCm_seq() {
 		return cm_seq;
 	}
 
 
-	public void setCm_seq(Double cm_seq) {
+	public void setCm_seq(int cm_seq) {
 		this.cm_seq = cm_seq;
 	}
 
@@ -172,14 +172,17 @@ public class T_Commodity {
 	}
 
 
-	public Double getLoc_seq() {
+	public int getLoc_seq() {
 		return loc_seq;
 	}
 
 
-	public void setLoc_seq(Double loc_seq) {
+	public void setLoc_seq(int loc_seq) {
 		this.loc_seq = loc_seq;
 	}
+
+
+	
 	
 	
 }

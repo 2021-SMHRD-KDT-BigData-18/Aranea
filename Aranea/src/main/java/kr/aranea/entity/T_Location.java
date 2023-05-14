@@ -4,7 +4,7 @@ package kr.aranea.entity;
 public class T_Location {
 
 	// 장소 순번
-	private Double loc_seq;
+	private int loc_seq;
 
 	// 장소 명
 	private String loc_name;
@@ -20,7 +20,7 @@ public class T_Location {
 
 	public T_Location() {}
 
-	public T_Location(Double loc_seq, String loc_name, String user_id, Double lat, Double lng) {
+	public T_Location(int loc_seq, String loc_name, String user_id, Double lat, Double lng) {
 		super();
 		this.loc_seq = loc_seq;
 		this.loc_name = loc_name;
@@ -29,11 +29,11 @@ public class T_Location {
 		this.lng = lng;
 	}
 
-	public Double getLoc_seq() {
+	public int getLoc_seq() {
 		return loc_seq;
 	}
 
-	public void setLoc_seq(Double loc_seq) {
+	public void setLoc_seq(int loc_seq) {
 		this.loc_seq = loc_seq;
 	}
 
@@ -68,7 +68,7 @@ public class T_Location {
 	public void setLng(Double lng) {
 		this.lng = lng;
 	}
-	
+
 	
 	
 	

@@ -5,7 +5,7 @@ import java.util.Date;
 public class T_Dealing {
 
 	// 거래 순번
-	private Double deal_seq;
+	private int deal_seq;
 
 	// 판매자 아이디
 	private String seller_id;
@@ -14,7 +14,7 @@ public class T_Dealing {
 	private String buyer_id;
 
 	// 상품 순번
-	private Double cm_seq;
+	private int cm_seq;
 
 	// 거래 상태(여부)
 	private String deal_status;
@@ -27,8 +27,8 @@ public class T_Dealing {
 
 	public T_Dealing() {}
 
-	public T_Dealing(Double deal_seq, String seller_id, String buyer_id, Double cm_seq, String deal_status,
-			Date deal_dt, String spider_id) {
+	public T_Dealing(int deal_seq, String seller_id, String buyer_id, int cm_seq, String deal_status, Date deal_dt,
+			String spider_id) {
 		super();
 		this.deal_seq = deal_seq;
 		this.seller_id = seller_id;
@@ -39,11 +39,11 @@ public class T_Dealing {
 		this.spider_id = spider_id;
 	}
 
-	public Double getDeal_seq() {
+	public int getDeal_seq() {
 		return deal_seq;
 	}
 
-	public void setDeal_seq(Double deal_seq) {
+	public void setDeal_seq(int deal_seq) {
 		this.deal_seq = deal_seq;
 	}
 
@@ -63,11 +63,11 @@ public class T_Dealing {
 		this.buyer_id = buyer_id;
 	}
 
-	public Double getCm_seq() {
+	public int getCm_seq() {
 		return cm_seq;
 	}
 
-	public void setCm_seq(Double cm_seq) {
+	public void setCm_seq(int cm_seq) {
 		this.cm_seq = cm_seq;
 	}
 
@@ -94,6 +94,8 @@ public class T_Dealing {
 	public void setSpider_id(String spider_id) {
 		this.spider_id = spider_id;
 	}
+
+	
 	
 
 }

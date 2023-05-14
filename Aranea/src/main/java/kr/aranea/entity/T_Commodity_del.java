@@ -5,7 +5,7 @@ import java.util.Date;
 public class T_Commodity_del {
 
 	// 삭제 순번
-	private Double review_del_seq;
+	private int review_del_seq;
 
 	// 후기 작성일자
 	private Date review_dt;
@@ -17,7 +17,7 @@ public class T_Commodity_del {
 	private Date review_del_time;
 
 	// 상품 순번
-	private Double cm_seq;
+	private int cm_seq;
 
 	// 상품명
 	private String cm_name;
@@ -32,12 +32,12 @@ public class T_Commodity_del {
 	private String cm_price;
 
 	// 장소 순번
-	private Double loc_seq;
+	private int loc_seq;
 	
 	public T_Commodity_del() {}
 
-	public T_Commodity_del(Double review_del_seq, Date review_dt, String seller_id, Date review_del_time, Double cm_seq,
-			String cm_name, String cm_desc, String cm_category, String cm_price, Double loc_seq) {
+	public T_Commodity_del(int review_del_seq, Date review_dt, String seller_id, Date review_del_time, int cm_seq,
+			String cm_name, String cm_desc, String cm_category, String cm_price, int loc_seq) {
 		super();
 		this.review_del_seq = review_del_seq;
 		this.review_dt = review_dt;
@@ -51,11 +51,11 @@ public class T_Commodity_del {
 		this.loc_seq = loc_seq;
 	}
 
-	public Double getReview_del_seq() {
+	public int getReview_del_seq() {
 		return review_del_seq;
 	}
 
-	public void setReview_del_seq(Double review_del_seq) {
+	public void setReview_del_seq(int review_del_seq) {
 		this.review_del_seq = review_del_seq;
 	}
 
@@ -83,11 +83,11 @@ public class T_Commodity_del {
 		this.review_del_time = review_del_time;
 	}
 
-	public Double getCm_seq() {
+	public int getCm_seq() {
 		return cm_seq;
 	}
 
-	public void setCm_seq(Double cm_seq) {
+	public void setCm_seq(int cm_seq) {
 		this.cm_seq = cm_seq;
 	}
 
@@ -123,13 +123,15 @@ public class T_Commodity_del {
 		this.cm_price = cm_price;
 	}
 
-	public Double getLoc_seq() {
+	public int getLoc_seq() {
 		return loc_seq;
 	}
 
-	public void setLoc_seq(Double loc_seq) {
+	public void setLoc_seq(int loc_seq) {
 		this.loc_seq = loc_seq;
 	}
+
+	
 	
 	
 }

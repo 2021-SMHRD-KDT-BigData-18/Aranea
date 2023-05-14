@@ -2,4 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.aranea.dao.T_LoctionDAO">
 
+	<!-- 지도 정보 db에 저장 -->
+	<insert id="insert" parameterType="kr.aranea.entity.T_Location">
+		insert into T_LOCATION
+		values(loc_seq.nextval,
+			   #{loc_name},
+			   #{user_id},
+			   #{lat},
+			   #{lng}
+				)
+	</insert>
+	
 </mapper>
