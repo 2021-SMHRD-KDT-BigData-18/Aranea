@@ -83,15 +83,3 @@ function searchDetailAddrFromCoords(coords, callback) {
 	// 좌표로 법정동 상세 주소 정보를 요청합니다
 	geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
 }
-<<<<<<< HEAD
-=======
-
-
-// '선택완료' 누르면 창 닫힘
-
-function javascript() {
-	setTimeout(javascript(), 2000);
-	self.close();
-}
-
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-18/Aranea.git
