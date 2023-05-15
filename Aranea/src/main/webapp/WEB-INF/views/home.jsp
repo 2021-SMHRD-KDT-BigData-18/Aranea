@@ -8,6 +8,7 @@
 <html lang="en">
 <head>
 <title>Bootstrap 4 Website Example</title>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"

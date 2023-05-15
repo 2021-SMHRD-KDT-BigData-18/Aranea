@@ -10,16 +10,30 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ <link rel="stylesheet" href="./assets/css/searchid.css">
+
 </head>
 <body>
+    
 
-<div class="container">
-	<div class="logo">
-		<a class="logoimg" href="gomain.com"> 
-		<img alt="아라냐 로고" src="images/logoimg.png" width="300" height="60">
-		</a>
-	</div>
-  <h2>아이디 찾기</h2>
+    <div class="header">
+        <div class="container">
+               <div class="logo">
+                  <a class="logoimg" href="gomain.com"> 
+                        <img alt="아라냐 로고" src="../araneaLogo.png" width="300px" height="150px">
+                    </a>
+               </div>
+        </div>
+    </div>
+
+    <body>
+
+    </body>
+
+    <div class="body">
+
+   
+<h2>아이디 찾기</h2>
   <form action="searchIdSuccess.com" method="post">
     <div class="form-group">
       <label for="usr">닉네임</label>
