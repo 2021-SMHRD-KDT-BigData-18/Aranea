@@ -7,6 +7,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 
 // 지도를 생성합니다    
 var map = new kakao.maps.Map(mapContainer, mapOption);
+var lat;
+var lon;
 
 // geolocation api
 if (navigator.geolocation) {
@@ -14,8 +16,8 @@ if (navigator.geolocation) {
 	// GeoLocation을 이용해서 접속 위치를 얻어옵니다
 	navigator.geolocation.getCurrentPosition(function(position) {
 
-		var lat = position.coords.latitude, // 위도
-			lon = position.coords.longitude; // 경도
+		lat = position.coords.latitude, // 위도
+		lon = position.coords.longitude; // 경도
 
 		var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
 			message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
@@ -35,6 +37,7 @@ if (navigator.geolocation) {
 
 // 주소-좌표 변환 객체를 생성합니다
 var geocoder = new kakao.maps.services.Geocoder();
+var detailAddr;
 
 var marker = new kakao.maps.Marker(), // 클릭한 위치를 표시할 마커입니다
 	infowindow = new kakao.maps.InfoWindow({ zindex: 1 }); // 클릭한 위치에 대한 주소를 표시할 인포윈도우입니다
@@ -43,7 +46,7 @@ var marker = new kakao.maps.Marker(), // 클릭한 위치를 표시할 마커입
 kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
 	searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
 		if (status === kakao.maps.services.Status.OK) {
-			var detailAddr = '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
+			detailAddr = '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
 
 			var content = '<div class="bAddr">' +
 				'<span class="title">법정동 주소정보</span>' +
@@ -75,3 +78,34 @@ function searchDetailAddrFromCoords(coords, callback) {
 	// 좌표로 법정동 상세 주소 정보를 요청합니다
 	geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
 }
+
+
+// ajax 비동기방식 => t_location에 저장
+
+var save_bt = $('#save_bt'); // 저장할 버튼을 변수에 선언
+save_bt.on('click', request);
+
+function request(){
+	console.log("클릭")
+}
+
+$(function() {
+	save_bt.click(function() {
+		var loc_name = detailAddr.innerTEXT; // 전송할 장소명
+		$.ajax({
+			url: 'writeMapUpload.com', // 서버에 전달할 파일명
+			type: 'post',
+			data: {
+				'loc_name': loc_name, // 전송할 파라미터 1
+				'lat': lat, // 전송할 파라미터 2
+				'lng': lon
+			},
+			success: function() {
+			      alert('Success'); // 성공시 코드
+			},
+			error : function(){
+				  alert("장소 저장 실패"); // 에러시 코드
+			}
+		});
+	})
+})

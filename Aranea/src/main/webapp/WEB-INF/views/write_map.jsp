@@ -13,7 +13,7 @@
 	<div class="map_wrap">
 		<div id="map" style="width: 80%; height: 500px;"></div>
 		<div class="hAddr"></div>
-		<input type="submit" value="선택완료">
+		<input type="submit" value="선택완료" id="save_bt">
 	</div>
 	</form>
 
