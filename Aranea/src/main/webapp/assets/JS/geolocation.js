@@ -17,14 +17,14 @@ if (navigator.geolocation) {
 	navigator.geolocation.getCurrentPosition(function(position) {
 
 		lat = position.coords.latitude, // 위도
-		lon = position.coords.longitude; // 경도
+			lon = position.coords.longitude; // 경도
 
 		var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
 			message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
 
 
 		map.setCenter(locPosition);
-		
+
 	});
 
 } else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
@@ -83,29 +83,27 @@ function searchDetailAddrFromCoords(coords, callback) {
 // ajax 비동기방식 => t_location에 저장
 
 var save_bt = $('#save_bt'); // 저장할 버튼을 변수에 선언
+var loc_name = detailAddr.innerTEXT; // 전송할 장소명
 save_bt.on('click', request);
 
-function request(){
-	console.log("클릭")
-}
 
-$(function() {
-	save_bt.click(function() {
-		var loc_name = detailAddr.innerTEXT; // 전송할 장소명
-		$.ajax({
-			url: 'writeMapUpload.com', // 서버에 전달할 파일명
-			type: 'post',
-			data: {
-				'loc_name': loc_name // 전송할 파라미터 1
-				// 'lat': lat, // 전송할 파라미터 2
-				// 'lng': lon
-			},
-			success: function() {
-			      alert('Success'); // 성공시 코드
-			},
-			error : function(){
-				  alert("장소 저장 실패"); // 에러시 코드
-			}
-		});
-	})
-})
+function request() {
+	console.log("클릭")
+
+	$.ajax({
+		url: 'writeMapUpload.com', // 서버에 전달할 파일명
+		type: 'post',
+		data: {
+			'loc_name': loc_name // 전송할 파라미터 1
+			// 'lat': lat, // 전송할 파라미터 2
+			// 'lng': lon
+		},
+		dataType : 'json',
+		success: function() {
+			alert('Success'); // 성공시 코드
+		},
+		error: function() {
+			alert("장소 저장 실패"); // 에러시 코드
+		}
+	});
+}

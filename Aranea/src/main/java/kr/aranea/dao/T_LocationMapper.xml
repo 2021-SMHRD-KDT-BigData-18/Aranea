@@ -5,7 +5,7 @@
 	<!-- 지도 정보 db에 저장 -->
 	<insert id="insert" parameterType="kr.aranea.entity.T_Location">
 		insert into T_LOCATION
-		values(loc_seq.nextval,
+		values(T_LOCATION_SEQ.nextval,
 			   #{loc_name},
 			   #{user_id},
 			   #{lat},
