@@ -24,8 +24,8 @@ public class WriteMapUploadCon implements Controller {
       request.setCharacterEncoding("UTF-8");
 
       String loc_name = request.getParameter("LOC_NAME");
-//       double lat = Double.parseDouble(request.getParameter("lat"));
-//       double lng = Double.parseDouble(request.getParameter("lng"));
+       double lat = Double.parseDouble(request.getParameter("lat"));
+       double lng = Double.parseDouble(request.getParameter("lng"));
       
       HttpSession session = request.getSession();
       T_User user = (T_User)session.getAttribute("user");
@@ -33,14 +33,14 @@ public class WriteMapUploadCon implements Controller {
       
       System.out.println(loc_name);
       System.out.println(user_id);
-//      System.out.println(lat);
-//      System.out.println(lng);
+      System.out.println(lat);
+      System.out.println(lng);
       
       T_Location dto = new T_Location();
       dto.setLoc_name(loc_name);
       dto.setUser_id(user_id);
-      dto.setLat(0.0);
-      dto.setLng(0.0);
+      dto.setLat(lat);
+      dto.setLng(lng);
       
 
       // 기능 구현
@@ -51,7 +51,7 @@ public class WriteMapUploadCon implements Controller {
       T_LoctionDAO dao = new T_LoctionDAO();
       int row = dao.insert(dto);
            
-
+      
       return null;
    }
 

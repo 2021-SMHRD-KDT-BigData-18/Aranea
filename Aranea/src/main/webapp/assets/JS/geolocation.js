@@ -45,13 +45,13 @@ kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
 		if (status === kakao.maps.services.Status.OK) {
 			var add = result[0].address.address_name;
 			var latlng = mouseEvent.latLng;
-			
+
 			var detailAddr = '<div>지번 주소 : ' + add + '</div>';
-	
+
 			$('#LOC_NAME').val(add);
 			$('#LAT').val(latlng.getLat());
 			$('#LNG').val(latlng.getLng());
-			
+
 
 			var content = '<div class="bAddr">' +
 				'<span class="title">거래장소 정보</span>' +
@@ -86,6 +86,9 @@ function searchDetailAddrFromCoords(coords, callback) {
 
 
 // '선택완료' 누르면 창 닫힘
-function javascript(){
-	self.close(); 
+
+function javascript() {
+	setTimeout(javascript(), 2000);
+	self.close();
 }
+
