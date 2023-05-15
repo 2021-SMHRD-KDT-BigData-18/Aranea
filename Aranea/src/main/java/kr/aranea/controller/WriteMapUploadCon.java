@@ -22,22 +22,22 @@ public class WriteMapUploadCon implements Controller {
 		request.setCharacterEncoding("UTF-8");
 
 		String loc_name = request.getParameter("loc_name");
-		double lat = Double.parseDouble(request.getParameter("lat"));
-		double lng = Double.parseDouble(request.getParameter("lng"));
+		// double lat = Double.parseDouble(request.getParameter("lat"));
+		// double lng = Double.parseDouble(request.getParameter("lng"));
 		
 		HttpSession session = request.getSession();
-		T_User user = (T_User)request.getAttribute("user");
+		T_User user = (T_User)session.getAttribute("user");
 		String user_id = user.getUser_id();
 		
 		System.out.println(loc_name);
-		System.out.println(lat);
-		System.out.println(lng);
+//		System.out.println(lat);
+//		System.out.println(lng);
 		
 		T_Location dto = new T_Location();
 		dto.setLoc_name(loc_name);
 		dto.setUser_id(user_id);
-		dto.setLat(lat);
-		dto.setLng(lng);
+		dto.setLat(0.0);
+		dto.setLng(0.0);
 		
 
 		// 기능 구현

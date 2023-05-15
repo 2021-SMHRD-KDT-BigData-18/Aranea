@@ -96,9 +96,9 @@ $(function() {
 			url: 'writeMapUpload.com', // 서버에 전달할 파일명
 			type: 'post',
 			data: {
-				'loc_name': loc_name, // 전송할 파라미터 1
-				'lat': lat, // 전송할 파라미터 2
-				'lng': lon
+				'loc_name': loc_name // 전송할 파라미터 1
+				// 'lat': lat, // 전송할 파라미터 2
+				// 'lng': lon
 			},
 			success: function() {
 			      alert('Success'); // 성공시 코드
