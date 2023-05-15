@@ -42,6 +42,7 @@ public class WriteMapUploadCon implements Controller {
       dto.setLat(lat);
       dto.setLng(lng);
       
+      
 
       // 기능 구현
       response.setCharacterEncoding("UTF-8");
