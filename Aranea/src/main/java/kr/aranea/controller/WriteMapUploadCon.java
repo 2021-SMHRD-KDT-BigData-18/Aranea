@@ -50,8 +50,7 @@ public class WriteMapUploadCon implements Controller {
       
       T_LoctionDAO dao = new T_LoctionDAO();
       int row = dao.insert(dto);
-           
-
+      
       return null;
    }
 
