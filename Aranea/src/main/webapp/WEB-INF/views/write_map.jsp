@@ -13,6 +13,9 @@
 		<div class="map_wrap">
 			<div id="map" style="width: 80%; height: 500px;"></div>
 			<div class="hAddr"></div>
+			<input name="LOC_NAME" id="LOC_NAME"> 
+			<input name="LAT" id="LAT"> 
+			<input name="LNG" id="LNG"> 
 			<input type="submit" value="선택완료" id="save_bt">
 		</div>
 	</form>
