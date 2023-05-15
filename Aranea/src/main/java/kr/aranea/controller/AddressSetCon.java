@@ -12,6 +12,8 @@ public class AddressSetCon implements Controller {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		
+		
 		String nextview = "addressset";
 		
 		return nextview;
