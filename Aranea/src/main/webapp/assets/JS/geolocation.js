@@ -88,22 +88,22 @@ save_bt.on('click', request);
 
 
 function request() {
-	console.log("클릭")
+   console.log("클릭")
 
-	$.ajax({
-		url: 'writeMapUpload.com', // 서버에 전달할 파일명
-		type: 'post',
-		data: {
-			'loc_name': loc_name // 전송할 파라미터 1
-			// 'lat': lat, // 전송할 파라미터 2
-			// 'lng': lon
-		},
-		dataType : 'json',
-		success: function() {
-			alert('Success'); // 성공시 코드
-		},
-		error: function() {
-			alert("장소 저장 실패"); // 에러시 코드
-		}
-	});
+   $.ajax({
+      url: 'writeMapUpload.com', // 서버에 전달할 파일명
+      type: 'post',
+      data: {
+         'loc_name': loc_name // 전송할 파라미터 1
+         // 'lat': lat, // 전송할 파라미터 2
+         // 'lng': lon
+      },
+      dataType : 'json',
+      success: function() {
+         alert('Success'); // 성공시 코드
+      },
+      error: function() {
+         alert("장소 저장 실패"); // 에러시 코드
+      }
+   });
 }
