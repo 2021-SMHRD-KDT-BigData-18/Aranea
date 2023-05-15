@@ -25,7 +25,7 @@ public class WriteMapUploadCon implements Controller {
 
 		String loc_name = request.getParameter("LOC_NAME");
 		double lat = Double.parseDouble(request.getParameter("LAT"));
-		double lng = Double.parseDouble(request.getParameter("LAT"));
+		double lng = Double.parseDouble(request.getParameter("LNG"));
 
 		HttpSession session = request.getSession();
 		T_User user = (T_User) session.getAttribute("user");
