@@ -13,8 +13,9 @@
 		<div class="map_wrap">
 			<div id="map" style="width: 80%; height: 500px;"></div>
 			<div class="hAddr"></div>
-			<input name="LOC_NAME" id="LOC_NAME"> <input name="LAT"
-				id="LAT"> <input name="LNG" id="LNG">
+			<input type="hidden" name="LOC_NAME" id="LOC_NAME"> 
+			<input type="hidden" name="LAT" id="LAT"> 
+			<input type="hidden" name="LNG" id="LNG">
 
 			<button onclick='javascript()'>선택완료</button>
 

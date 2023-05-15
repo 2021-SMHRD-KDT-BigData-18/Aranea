@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.google.gson.Gson;
+
 import kr.aranea.dao.T_LoctionDAO;
 import kr.aranea.entity.T_Location;
 import kr.aranea.entity.T_User;
@@ -22,8 +24,8 @@ public class WriteMapUploadCon implements Controller {
 		request.setCharacterEncoding("UTF-8");
 
 		String loc_name = request.getParameter("LOC_NAME");
-//       double lat = Double.parseDouble(request.getParameter("lat"));
-//       double lng = Double.parseDouble(request.getParameter("lng"));
+		double lat = Double.parseDouble(request.getParameter("LAT"));
+		double lng = Double.parseDouble(request.getParameter("LAT"));
 
 		HttpSession session = request.getSession();
 		T_User user = (T_User) session.getAttribute("user");
@@ -31,14 +33,14 @@ public class WriteMapUploadCon implements Controller {
 
 		System.out.println(loc_name);
 		System.out.println(user_id);
-//      System.out.println(lat);
-//      System.out.println(lng);
+		System.out.println(request.getParameter("LAT"));
+		System.out.println(request.getParameter("LNG"));
 
 		T_Location dto = new T_Location();
 		dto.setLoc_name(loc_name);
 		dto.setUser_id(user_id);
-		dto.setLat(0.0);
-		dto.setLng(0.0);
+		dto.setLat(lat);
+		dto.setLng(lng);
 
 		// 기능 구현
 		response.setCharacterEncoding("UTF-8");
