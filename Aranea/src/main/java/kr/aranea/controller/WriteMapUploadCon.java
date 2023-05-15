@@ -16,51 +16,51 @@ import kr.aranea.entity.T_User;
 
 public class WriteMapUploadCon implements Controller {
 
-   @Override
-   public String execute(HttpServletRequest request, HttpServletResponse response)
-         throws ServletException, IOException {
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-      // 데이터 수집
-      request.setCharacterEncoding("UTF-8");
+		// 데이터 수집
+		System.out.println("ddddddd");
+		request.setCharacterEncoding("UTF-8");
 
-      String loc_name = request.getParameter("loc_name");
-      // double lat = Double.parseDouble(request.getParameter("lat"));
-      // double lng = Double.parseDouble(request.getParameter("lng"));
-      
-      HttpSession session = request.getSession();
-      T_User user = (T_User)session.getAttribute("user");
-      String user_id = user.getUser_id();
-      
-      System.out.println(loc_name);
-      System.out.println(user_id);
-//      System.out.println(lat);
-//      System.out.println(lng);
-      
-      Gson gson = new Gson();
-      String json = gson.toJson(loc_name);
-      System.out.println(json);
-      
-      T_Location dto = new T_Location();
-      dto.setLoc_name(json);
-      dto.setUser_id(user_id);
-      dto.setLat(0.0);
-      dto.setLng(0.0);
-      
+		System.out.println("ddddddd");
+		String loc_name = request.getParameter("loc_name");
+		System.out.println("fgfdgfd");
+		System.out.println(request.getParameter("lat"));
+		double lat = Double.parseDouble(request.getParameter("lat"));
+		double lng = Double.parseDouble(request.getParameter("lng"));
 
-      // 기능 구현
-      response.setCharacterEncoding("UTF-8");
+		HttpSession session = request.getSession();
+		T_User user = (T_User) session.getAttribute("user");
+		String user_id = user.getUser_id();
 
-      PrintWriter out = response.getWriter();
-      
-      T_LoctionDAO dao = new T_LoctionDAO();
-      int row = dao.insert(dto);
-      
-      
-      
-      out.print(json);
-      
+		System.out.println(loc_name);
+		System.out.println(user_id);
+		System.out.println(lat);
+		System.out.println(lng);
 
-      return null;
-   }
+		Gson gson = new Gson();
+		String json = gson.toJson(loc_name);
+		System.out.println(json);
+
+		T_Location dto = new T_Location();
+		dto.setLoc_name(json);
+		dto.setUser_id(user_id);
+		dto.setLat(lat);
+		dto.setLng(lng);
+
+		// 기능 구현
+		response.setCharacterEncoding("UTF-8");
+
+		PrintWriter out = response.getWriter();
+
+		T_LoctionDAO dao = new T_LoctionDAO();
+		int row = dao.insert(dto);
+
+		out.print(json);
+
+		return null;
+	}
 
 }
