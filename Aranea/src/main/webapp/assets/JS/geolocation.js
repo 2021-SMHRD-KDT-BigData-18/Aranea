@@ -84,6 +84,7 @@ function searchDetailAddrFromCoords(coords, callback) {
 	geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
 }
 
+
 function javascript(){
 	setTimeout(self.close,100);
 }
