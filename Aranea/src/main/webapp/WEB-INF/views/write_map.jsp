@@ -16,7 +16,7 @@
 			<input  name="LOC_NAME" id="LOC_NAME"> 
 			<input  name="LAT" id="LAT"> 
 			<input  name="LNG" id="LNG"> 
-			<button onclick='javascript()'>선택완료</button>
+			<button onclick='javascript()'> 선택완료 </button>
 		</div>
 	</form>
 
