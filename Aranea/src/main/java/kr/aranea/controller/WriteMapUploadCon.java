@@ -23,9 +23,9 @@ public class WriteMapUploadCon implements Controller {
       // 데이터 수집
       request.setCharacterEncoding("UTF-8");
 
-      String loc_name = request.getParameter("loc_name");
-      // double lat = Double.parseDouble(request.getParameter("lat"));
-      // double lng = Double.parseDouble(request.getParameter("lng"));
+      String loc_name = request.getParameter("LOC_NAME");
+//       double lat = Double.parseDouble(request.getParameter("lat"));
+//       double lng = Double.parseDouble(request.getParameter("lng"));
       
       HttpSession session = request.getSession();
       T_User user = (T_User)session.getAttribute("user");
@@ -36,12 +36,8 @@ public class WriteMapUploadCon implements Controller {
 //      System.out.println(lat);
 //      System.out.println(lng);
       
-      Gson gson = new Gson();
-      String json = gson.toJson(loc_name);
-      System.out.println(json);
-      
       T_Location dto = new T_Location();
-      dto.setLoc_name(json);
+      dto.setLoc_name(loc_name);
       dto.setUser_id(user_id);
       dto.setLat(0.0);
       dto.setLng(0.0);
@@ -54,11 +50,7 @@ public class WriteMapUploadCon implements Controller {
       
       T_LoctionDAO dao = new T_LoctionDAO();
       int row = dao.insert(dto);
-      
-      
-      
-      out.print(json);
-      
+           
 
       return null;
    }
