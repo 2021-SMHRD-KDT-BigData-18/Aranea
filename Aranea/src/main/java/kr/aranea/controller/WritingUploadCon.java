@@ -20,25 +20,25 @@ public class WritingUploadCon implements Controller {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		request.setCharacterEncoding("UTF-8");
-		
+
 		String path = request.getServletContext().getRealPath("file");
-				
+
 		System.out.println(path);
-		
-		int maxSize = 10*1024*1024;
-		
+
+		int maxSize = 10 * 1024 * 1024;
+
 		String encoding = "UTF-8";
-		
+
 		DefaultFileRenamePolicy rename = new DefaultFileRenamePolicy();
-		
+
 		MultipartRequest multi = new MultipartRequest(request, path, maxSize, encoding, rename);
-		
+
 		HttpSession session = request.getSession();
-		T_User user = (T_User)session.getAttribute("user");
-		T_Location loc = (T_Location)session.getAttribute("row2");
+		T_User user = (T_User) session.getAttribute("user");
 		
+
 		String cm_name = multi.getParameter("cm_name");
 		String user_id = user.getUser_id();
 		String cm_desc = multi.getParameter("cm_desc");
@@ -48,8 +48,8 @@ public class WritingUploadCon implements Controller {
 		String cm_category = multi.getParameter("cm_category");
 		String cm_status = multi.getParameter("cm_status");
 		String cm_price = multi.getParameter("cm_price");
-		int loc_seq = loc.getLoc_seq();
 		
+
 		T_Commodity dto = new T_Commodity();
 		dto.setUser_id(user_id);
 		dto.setCm_name(cm_name);
@@ -60,20 +60,20 @@ public class WritingUploadCon implements Controller {
 		dto.setCm_category(cm_category);
 		dto.setCm_status(cm_status);
 		dto.setCm_price(cm_price);
-		dto.setLoc_seq(loc_seq);
 		
+
+		String nextview = "";
+
 		T_CommodityDAO dao = new T_CommodityDAO();
 		int row = dao.write(dto);
-		
+
 		session.setAttribute("row", row);
-		
-		String nextview = "";
-		
-		if(row>0) {
+
+		if (row > 0) {
 			nextview = "viewWrite";
+
 		}
-		
+
 		return nextview;
 	}
-
 }
