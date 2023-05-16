@@ -10,7 +10,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
 <link rel="stylesheet" href="assets/css/write.css">
+
+<link rel="stylesheet" href="assets/css/write_map.css">
 <script
 	src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
 <script
@@ -84,9 +87,9 @@
 					<!-- 
 						<input type="text" name="loc_seq" id="check">
 					 -->
-					 	<p id="result"></p>
-						<a href="writeMap.com" target="_blank">거래지역 검색</a>
-					
+					<p id="result"></p>
+					<a href="writeMap.com" target="_blank">거래지역 검색</a>
+
 
 					<hr>
 
@@ -111,12 +114,14 @@
 			<div class="card-footer"></div>
 		</div>
 	</div>
+	
 	<%
 	}
 	%>
-	
+
 
 	<script type="text/javascript" src="assets/JS/write.js"></script>
-	
+	<script type="text/javascript" src="assets/JS/geolocation.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
 </body>
 </html>
