@@ -86,10 +86,7 @@ function searchDetailAddrFromCoords(coords, callback) {
 
 
 // '선택완료' 누른 후 자동 창 닫기
-<<<<<<< HEAD
-function javascript() {
-	setTimeout(self.close, 100);
-=======
+
 function javascript(){
 	var data = $('#LOC_NAME').val();
 	
@@ -99,10 +96,7 @@ function javascript(){
 	// console.log(window.test);
 	
 	window.close();
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-18/Aranea.git
-}
 
-<<<<<<< HEAD
 
 // 장소명 db에서 가져오기
 
