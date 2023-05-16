@@ -16,6 +16,7 @@
 				#{cm_category},
 				#{cm_status},
 				#{cm_price},
+				sysdate,
 				#{loc_seq}
 				)
 	</insert>
