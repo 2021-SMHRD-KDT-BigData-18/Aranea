@@ -97,40 +97,4 @@ function javascript() {
 
 	window.close();
 
-
-	// 장소명 db에서 가져오기
-
-	var loc_btn = $('#loc_btn');
-
-	// 2. button 태그에 이벤트 부여
-	btn.on('click', request);
-
-	// 호이스팅 
-	function request() {
-
-		var loc_p = $('#result');
-
-		// 3. ajax를 사용해서 비동기 방식으로 요청 보내기
-		$.ajax({
-			url: 'write.jsp', // 어디로?
-			type: 'post', // Get? post?
-			data: {
-				// data : "data1=value1&data2=value2..."
-				// key : value
-				"LOC_NAME": add
-
-			}, // 보낼 데이터
-			dataType: "json", // 응답받는 데이터 형식이 무엇인지
-			success: function() {// 응답입니다~~
-
-				loc_p.html("사용가능한 이메일 입니다.");
-
-			},
-			error: function() {
-				// 요청이 실패하면 실행될 콜백함수
-				p.html("사용가능한 이메일 입니다.");
-			}
-		});
-
-	}
 }
