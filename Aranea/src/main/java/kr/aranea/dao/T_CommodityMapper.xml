@@ -36,4 +36,5 @@
 		 where CM_SEQ = #{CM_SEQ}
 	</select>
 
+
 </mapper>

@@ -114,25 +114,24 @@
 				</div>
 			</div>
 		</section>
-		<!--  
+
 		<div class="main">
 			<c:forEach items="${list}" var="list">
 
 				<div class="viewWrap">
 					<a href="viewWriting.com?cm_seq=${list.cm_seq}">
 						<div class="viewImg">
-							<img alt="상품이미지" src="file/${list.img1}" width="194" height="194">
+							<img alt="상품이미지" src="file/${list.cm_img1}" width="194" height="194">
 						</div>
 						<div class="viewCard">
-							<div class="title">${list.title}</div>
-							<div class="price">${list.price}원</div>
+							<div class="title">${list.cm_name}</div>
+							<div class="price">${list.cm_price}원</div>
 						</div>
 					</a>
 				</div>
 
 			</c:forEach>
 		</div>
-		-->
 		
 	</div>
 

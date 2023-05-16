@@ -19,10 +19,10 @@ public class GoMainCon implements Controller {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-//		T_CommodityDAO dao = new T_CommodityDAO();
-//		List<T_Commodity> list = dao.main();
-//		
-//		request.setAttribute("list", list);
+		T_CommodityDAO dao = new T_CommodityDAO();
+		List<T_Commodity> list = dao.main();
+		
+		request.setAttribute("list", list);
 		
 		
 		String nextView = "home";

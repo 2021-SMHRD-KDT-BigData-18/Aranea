@@ -49,14 +49,16 @@ public class WritingUploadCon implements Controller {
 		
 		
 		T_Commodity dto = new T_Commodity();
-		dto.setUser_id(cm_name);
-		dto.setCm_img1(user_id);
+		dto.setUser_id(user_id);
+		dto.setCm_name(cm_name);
 		dto.setCm_desc(cm_desc);
+		dto.setCm_img1(cm_img1);
 		dto.setCm_img2(cm_img2);
 		dto.setCm_img3(cm_img3);
 		dto.setCm_category(cm_category);
 		dto.setCm_status(cm_status);
 		dto.setCm_price(cm_price);
+		dto.setLoc_seq(2);
 		
 		T_CommodityDAO dao = new T_CommodityDAO();
 		int row = dao.write(dto);

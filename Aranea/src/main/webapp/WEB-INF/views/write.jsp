@@ -112,7 +112,7 @@
 
 			</div>
 			<div class="card-footer"></div>
-		</div>null
+		</div>
 	</div>
 	
 	<%
