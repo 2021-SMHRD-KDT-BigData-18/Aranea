@@ -95,6 +95,6 @@ function javascript() {
 	// 부모 -> 자식 정보 제공
 	// console.log(window.test);
 
-	window.close();
+	setTimeout(window.close, 50);
 
 }
