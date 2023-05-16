@@ -16,7 +16,7 @@
          <input type="hidden" name="LOC_NAME" id="LOC_NAME"> 
          <input type="hidden" name="LAT" id="LAT"> 
          <input type="hidden" name="LNG" id="LNG"> 
-         <button onclick='javascript()'>선택완료</button>
+         <button type="button" id="mapBtn" onclick='javascript()'>선택완료</button>
       </div>
    </form>
 

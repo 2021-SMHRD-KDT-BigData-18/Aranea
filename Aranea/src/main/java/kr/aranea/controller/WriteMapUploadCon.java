@@ -51,13 +51,6 @@ public class WriteMapUploadCon implements Controller {
 		int row = dao.insert(dto);
 
 		
-		// 장소명 ajax로 db에서 꺼내오기
-		String data = request.getParameter("data");
-		T_Location name = dao.select(loc_name);
-		
-		Gson gson = new Gson();
-		String json = gson.toJson(loc_name);
-		System.out.println(json);
 
 		return null;
 	}

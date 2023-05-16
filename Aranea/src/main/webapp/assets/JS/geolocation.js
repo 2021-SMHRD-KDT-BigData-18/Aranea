@@ -87,31 +87,13 @@ function searchDetailAddrFromCoords(coords, callback) {
 
 // '선택완료' 누른 후 자동 창 닫기
 function javascript(){
-	setTimeout(self.close,100);
+	var data = $('#LOC_NAME').val();
+	
+	$(opener.document).find('#result').html(data);
+	
+	// 부모 -> 자식 정보 제공
+	// console.log(window.test);
+	
+	window.close();
 }
 
-
-// 장소명 db에서 가져오기
-
-
-
-$(document).ready(function(){
-	var p = $('#result');
-	var input = $('#LOC_NAME');
-	
-	$("button").click(function(){
-		
-		$.ajax({
-			url: 'writeMapUpload.com',
-			type: 'post',
-			data: {
-				"data": input.val()
-			},
-			dataType: "json",
-			success: function(res) {
-				p.append(input.val());
-
-			}
-		})
-	})
-})
