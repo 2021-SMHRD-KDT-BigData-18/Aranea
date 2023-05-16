@@ -1,37 +1,263 @@
 @charset "UTF-8";
 
-.map_wrap {
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+}
+
+ul, li, ol, dl, dd, dt {
+	list-style: none;
+}
+
+img, video {
+	vertical-align: top;
+	border: 0;
+}
+
+input, select, textarea, button {
+	font: inherit;
+	color: inherit;
+	vertical-align: middle;
+	border-radius: 0;
+}
+
+a, a:hover, a:focus {
+	text-decoration: none;
+	color: inherit;
+}
+
+address {
+	font-style: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+/*수정할 코드  */
+img {
+	border-style: none;
+}
+
+.container {
+	
+}
+
+/* header : 로그인/회원가입 화면 */
+.header {
+	display: flex;
+	justify-content: center;
+	-webkit-box-pack: center;
+	border-bottom: 1px solid rgb(238, 238, 238);
+	height: 40px;
+	background: rgb(255, 255, 255);
+	height: 40px;
+	background: rgb(255, 255, 255);
+}
+
+.rose {
+	width: 1024px;
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: right;
+}
+
+.create {
+	display: flex;
+	flex-shrink: 0;
+}
+
+.login {
+	color: black;
+}
+
+.a {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	font-size: 13px;
+	color: rgb(102, 102, 102);
+	padding: 0px 15px;
 	position: relative;
+	line-height: 1.4;
+}
+
+.login:hover {
+	color: rgb(187, 7, 11);
+	text-decoration: underline;
+}
+
+/* nav */
+.nav {
+	position: sticky;
+	display: flex;
 	width: 100%;
-	height: 350px;
+	-webkit-box-pack: center;
+	justify-content: center;
+	padding-top: 35px;
+	background: rgb(255, 255, 255);
+	z-index: 10;
+	border-bottom: 1px solid rgb(238, 238, 238);
+	top: 0px;
+	left: 0px;
+}
+
+.dav {
+	display: flex;
+	flex-direction: column;
+	width: 1024px;
+}
+
+.rav {
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	width: 1024px;
+	height: 40px;
+}
+
+.logo {
+	margin-right: 50px;
+	width: 130px;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+/* nav : 서치*/
+.search_input {
+	border: 2px solid rgb(187, 7, 11);
+	width: 460px;
+	height: 40px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.search {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 0px 15px;
+}
+
+.searchBtn {
+	color: rgb(33, 33, 33);
+	text-decoration: none;
+	cursor: pointer;
+	background-color: transparent;
 	text-align: center;
+	align-items: center;
+}
+
+.inputTag {
+	width: 400px;
+	border: none;
+	color: rgb(102, 102, 102);
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+}
+
+input[type="text"] {
+	appearance: none;
+}
+
+/* twopack */
+.twopack {
+	display: flex;
+	flex-direction: row-reverse;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+}
+
+.menu button {
+	margin-left: 30px;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	position: relative;
+}
+
+.category a {
+	cursor: pointer;
+}
+
+.category .categorybtn {
+	display: none;
+}
+
+.category {
+	-webkit-box-align: center;
+	align-items: center;
+	height: 70px;
+}
+
+.card-menu {
+	width: 1024px;
+	margin: auto;
+	padding: 3.5rem 0px 1.5rem;
+}
+
+.h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.card-list {
+	position: relative;
+	overflow: hidden
+}
+
+.card-list2 {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.card-list3 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.div {
+	width: auto;
+	height: auto;
+}
+
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.viewCard {
+	width: 22%;
+	margin-bottom: 20px;
 }
 
 .title {
-	font-weight: bold;
-	display: block;
+	width: 300px;
+	height: 15%;
+	background-size: cover;
+	background-position: center;
 }
 
-.hAddr {
-	position: absolute;
-	left: 10px;
-	top: 10px;
-	border-radius: 2px;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.8);
-	z-index: 1;
-	padding: 5px;
+.viewWrap {
+	margin-bottom: 100px;
+	margin-right: 9px;
 }
 
-#centerAddr {
-	display: block;
-	margin-top: 2px;
-	font-weight: normal;
-}
-
-.bAddr {
-	padding: 5px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
+.card-menu {
+	width: 1024px;
+	margin: auto;
+	padding: 3.5rem 0px 1.5re
 }
