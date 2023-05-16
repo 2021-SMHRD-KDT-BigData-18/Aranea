@@ -15,57 +15,50 @@ import kr.aranea.entity.T_Location;
 import kr.aranea.entity.T_User;
 
 public class WriteMapUploadCon implements Controller {
-	
+
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		// 데이터 수집
 		request.setCharacterEncoding("UTF-8");
-		
+
 		String loc_name = request.getParameter("LOC_NAME");
 		double lat = Double.parseDouble(request.getParameter("LAT"));
 		double lng = Double.parseDouble(request.getParameter("LNG"));
-		
+
 		HttpSession session = request.getSession();
 		T_User user = (T_User) session.getAttribute("user");
 		String user_id = user.getUser_id();
-		
+
 		System.out.println(loc_name);
 		System.out.println(user_id);
 		System.out.println(request.getParameter("LAT"));
 		System.out.println(request.getParameter("LNG"));
-		
+
 		T_Location dto = new T_Location();
 		dto.setLoc_name(loc_name);
 		dto.setUser_id(user_id);
 		dto.setLat(lat);
 		dto.setLng(lng);
-		
+
 		// 기능 구현
 		response.setCharacterEncoding("UTF-8");
-		
+
 		PrintWriter out = response.getWriter();
-		
+
 		T_LoctionDAO dao = new T_LoctionDAO();
 		int row = dao.insert(dto);
+
+		
+		// 장소명 ajax로 db에서 꺼내오기
+		String data = request.getParameter("data");
+		T_Location name = dao.select(loc_name);
 		
 		Gson gson = new Gson();
-		
 		String json = gson.toJson(loc_name);
-		
 		System.out.println(json);
-		
-		String res = "";
-		
-		if (loc_name != null) {
-			res = "true";
-		} else {
-			res = "flase";
-		}
-		
-		out.print(res);
-		
+
 		return null;
 	}
 

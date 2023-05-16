@@ -5,13 +5,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href=".assets/css/write_map.css">
 <title>Bootstrap Example</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="assets/css/write_map.css">
 <script
 	src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
 <script
@@ -22,8 +21,6 @@
 <body>
 	<%
 	T_User user = (T_User) session.getAttribute("user");
-	
-	
 	%>
 
 
@@ -86,9 +83,9 @@
 					<!-- 
 						<input type="text" name="loc_seq" id="check">
 					 -->
-					 	<p id="result"></p>
-						<a href="writeMap.com" target="_blank">거래지역 검색</a>
-					
+					<p id="result"></p>
+					<a href="writeMap.com" target="_blank">거래지역 검색</a>
+
 
 					<hr>
 
@@ -113,26 +110,14 @@
 			<div class="card-footer"></div>
 		</div>
 	</div>
+	
 	<%
 	}
 	%>
-	<form action="writeMapUpload.com" method="post">
-      <div class="map_wrap">
-         <div id="map" style="width: 80%; height: 500px;"></div>
-         <div class="hAddr"></div>
-         <input  name="LOC_NAME" id="LOC_NAME"> 
-         <input  name="LAT" id="LAT"> 
-         <input  name="LNG" id="LNG"> 
-         <button id="loc_btn">선택완료</button>
-      </div>
-   </form>
+
 
 	<script type="text/javascript" src="assets/JS/write.js"></script>
-	<script type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ec459ef047abc9cf75674cad293a5dbb&libraries=services"></script>
-   <script type="text/javascript" src="assets/JS/geolocation.js"></script>
-   <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
-	
-	
+	<script type="text/javascript" src="assets/JS/geolocation.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
 </body>
 </html>

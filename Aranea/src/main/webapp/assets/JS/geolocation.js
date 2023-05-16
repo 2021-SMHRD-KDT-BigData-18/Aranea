@@ -85,52 +85,33 @@ function searchDetailAddrFromCoords(coords, callback) {
 }
 
 
-function javascript() {
-	setTimeout(self.close, 100);
+// '선택완료' 누른 후 자동 창 닫기
+function javascript(){
+	setTimeout(self.close,100);
 }
 
-var loc_btn = $('#loc_btn');
 
-// 2. button 태그에 이벤트 부여
-loc_btn.on('click', request);
+// 장소명 db에서 가져오기
 
-var result = "";
 
-// 호이스팅 
-function request() {
-	console.log("클릭!")
 
-	// 3. ajax를 사용해서 비동기 방식으로 요청 보내기
-	$.ajax({
-		url: 'writeMapUpload.com', // 어디로?
-		type: 'post', // Get? post?
-		data: {
-			// data : "data1=value1&data2=value2..."
-			// key : value
-			'LOC_NAME': add
+$(document).ready(function(){
+	var p = $('#result');
+	var input = $('#LOC_NAME');
+	
+	$("button").click(function(){
+		
+		$.ajax({
+			url: 'writeMapUpload.com',
+			type: 'post',
+			data: {
+				"data": input.val()
+			},
+			dataType: "json",
+			success: function(res) {
+				p.append(input.val());
 
-		}, // 보낼 데이터
-		dataType: "json", // 응답받는 데이터 형식이 무엇인지
-		success: function(res) {
-
-			var loc_p = $('#result');
-
-			if (res == "true") {
-				// 사용가능한 이메일 입니다.
-				loc_p.html("사용가능한 이메일 입니다.");
-				loc_p.css("color", "green");
-			} else {
-				loc_p.html("중복된 이메일 입니다.");
-				loc_p.css("color", "red");
 			}
-		},
-		error: function(e) {
-			// 요청이 실패하면 실행될 콜백함수
-			alert("요청 실패!");
-		}
-	});
-
-
-
-
-}
+		})
+	})
+})
