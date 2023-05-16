@@ -83,8 +83,8 @@
 				<div class="side">
 
 					<div class="category">
-						<a><img alt="메뉴버튼" src="images/category.png" width="35"
-							height="35">카테고리</a>
+						<a><img alt="메뉴버튼" src="images/categoryLogo.png" width="20"
+							height="20">카테고리</a>
 						<ul class="categorybtn">
 							<li><a href="ctMenwear.com">남성복</a></li>
 							<li><a href="ctLadieswear.com">여성복</a></li>
