@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+}
+
+ul, li, ol, dl, dd, dt {
+	list-style: none;
+}
+
+img, video {
+	border: 0;
+}
+
+input, select, textarea, button {
+	font: inherit;
+	color: inherit;
+	vertical-align: middle;
+	border-radius: 0;
+}
+
+a, a:hover, a:focus {
+	text-decoration: none;
+	color: inherit;
+}
+
+address {
+	font-style: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.container {
+	
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.body {
+	margin-top: 10%;
+	padding: 40px 40px;
+	margin-left: 15%;
+	margin-right: 15%;
+	border: 1px solid black;
+	justify-content: center;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+}
+
+.btn-primary {
+	background-color: rgba(247, 42, 28, 0.836);
+	border: rgba(247, 42, 38, 0.836);
+	width: 100%;
+}
+
+.btn-primary:hover {
+	background-color: rgba(247, 42, 28, 0.836);
+}
+
+.btn-primary:active {
+	background-color: rgba(247, 42, 28, 0.836);
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.checkBox>ul>li {
+	float: left;
+}
+
+.checkBox textarea {
+	width: 96%;
+	height: 90px;
+	margin: 0 2%;
+	background-color: #f7f7f7;
+	color: #888;
+	border: none;
+}
+
+.clearfix {
+	
+	-webkit-box-align: center;
+	
+	
+}
