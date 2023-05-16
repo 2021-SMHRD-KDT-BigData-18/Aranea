@@ -17,12 +17,5 @@ public class T_LoctionDAO {
 		return row;
 	}
 
-	// 장소명 db에서 불러오기
-	public T_Location select(String loc_name) {
-		SqlSession session = factory.openSession(true);
-		T_Location name = session.selectOne("select", loc_name);
-		session.close();
-		return name;
-	}
-
+	
 }

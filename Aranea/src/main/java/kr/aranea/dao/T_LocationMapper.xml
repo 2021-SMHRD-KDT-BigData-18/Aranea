@@ -13,12 +13,6 @@
 				)
 	</insert>
 	
-	<!-- 장소명 db에서 불러오기 -->
-	<select id="select"
-	parameterType="kr.aranea.entity.T_Location">
-		select loc_name
-		  from t_location
-		 where loc_seq = #{loc_seq}
-	</select>
+	
 	
 </mapper>

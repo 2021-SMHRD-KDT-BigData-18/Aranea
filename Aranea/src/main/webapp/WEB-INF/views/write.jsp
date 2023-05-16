@@ -87,8 +87,8 @@
 					<!-- 
 						<input type="text" name="loc_seq" id="check">
 					 -->
-					<p id="result">${param.add}</p>
-					<a href="writeMap.com" target="_blank">거래지역 검색</a>
+					<p id="result"></p>
+					<a href="javascript:openWindow();">거래지역 검색</a>
 
 
 					<hr>
