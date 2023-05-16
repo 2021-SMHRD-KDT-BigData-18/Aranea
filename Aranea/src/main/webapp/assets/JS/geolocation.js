@@ -139,5 +139,3 @@ function request() {
 	});
 
 }
-=======
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-18/Aranea.git
