@@ -83,7 +83,7 @@
 					<!-- 
 						<input type="text" name="loc_seq" id="check">
 					 -->
-					<p id="result"></p>
+					<p id="result">${param.add}</p>
 					<a href="writeMap.com" target="_blank">거래지역 검색</a>
 
 
@@ -108,7 +108,7 @@
 
 			</div>
 			<div class="card-footer"></div>
-		</div>
+		</div>null
 	</div>
 	
 	<%
