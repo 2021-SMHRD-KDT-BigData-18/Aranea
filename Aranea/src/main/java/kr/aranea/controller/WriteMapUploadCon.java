@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 
-import kr.aranea.dao.T_LoctionDAO;
+import kr.aranea.dao.T_LocationDAO;
 import kr.aranea.entity.T_Location;
 import kr.aranea.entity.T_User;
 
@@ -47,7 +47,7 @@ public class WriteMapUploadCon implements Controller {
 
 		PrintWriter out = response.getWriter();
 
-		T_LoctionDAO dao = new T_LoctionDAO();
+		T_LocationDAO dao = new T_LocationDAO();
 		int row = dao.insert(dto);
 
 		session.setAttribute("row2", row);
