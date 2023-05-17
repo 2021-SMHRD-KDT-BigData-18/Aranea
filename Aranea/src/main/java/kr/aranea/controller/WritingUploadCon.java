@@ -36,7 +36,12 @@ public class WritingUploadCon implements Controller {
 		MultipartRequest multi = new MultipartRequest(request, path, maxSize, encoding, rename);
 
 		HttpSession session = request.getSession();
+<<<<<<< HEAD
 		T_User user = (T_User) session.getAttribute("user");
+=======
+		T_User user = (T_User)session.getAttribute("user");
+		
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-18/Aranea.git
 		
 
 		String cm_name = multi.getParameter("cm_name");
@@ -48,6 +53,10 @@ public class WritingUploadCon implements Controller {
 		String cm_category = multi.getParameter("cm_category");
 		String cm_status = multi.getParameter("cm_status");
 		String cm_price = multi.getParameter("cm_price");
+<<<<<<< HEAD
+=======
+		String deal_status = "판매중";
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-18/Aranea.git
 		
 
 		T_Commodity dto = new T_Commodity();
@@ -60,6 +69,10 @@ public class WritingUploadCon implements Controller {
 		dto.setCm_category(cm_category);
 		dto.setCm_status(cm_status);
 		dto.setCm_price(cm_price);
+<<<<<<< HEAD
+=======
+		dto.setDeal_status(deal_status);
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-BigData-18/Aranea.git
 		
 
 		String nextview = "";

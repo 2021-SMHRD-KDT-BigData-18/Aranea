@@ -4,9 +4,59 @@
 	
 	
 	/* 설명 */
-	.content{
-	overflow: scroll;
-	}
-	.card-hearder{
-	color:red;
-	}
+	* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: 0;
+    vertical-align: baseline;
+    }
+	
+	.cont{ 
+    text-align: center;
+    
+    }
+    
+    .logo{
+        margin-top: 5%;
+        margin-right: 45%;
+        height:50px;
+    }
+    .logoimg{
+    	height:200%;
+    }
+    .twopack{
+    	word-spacing:7px;
+    	font-size:18px;
+    }
+    .search{
+    	font-size:20px;
+    }
+    hr{
+        border-top: 1px solid black;
+        width: 75%;
+        margin-left:10%;
+    }
+    #board{
+        margin-right: 30%;
+        font-size:20px;
+        float:right;
+    }
+    button{
+        background-color: rgba(247, 42, 28, 0.836);
+        border-radius: 15%;
+        font-size: 15px;
+        width: 30%;
+        cursor: pointer;
+    }
+    
+    #mybtn{
+        background-color: rgba(238, 186, 182, 0.5);
+    }
+    #chatbtn{
+        background-color: rgba(245, 121, 112, 0.6);
+    }
+    #buybtn{
+        background-color: rgba(247, 42, 28, 0.7);
+    }
+    

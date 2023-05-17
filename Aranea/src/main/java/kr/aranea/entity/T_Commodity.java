@@ -39,13 +39,20 @@ public class T_Commodity {
 
 	// 장소 순번
 	private int loc_seq;
+	
+	// 찜버튼
+	private int cm_like;
+	
+	// 거래 상태
+	private String deal_status;
 
 	
 	public T_Commodity() {}
 
 
 	public T_Commodity(int cm_seq, String cm_name, String user_id, String cm_desc, String cm_img1, String cm_img2,
-			String cm_img3, String cm_category, String cm_status, String cm_price, Date cm_regdate, int loc_seq) {
+			String cm_img3, String cm_category, String cm_status, String cm_price, Date cm_regdate, int loc_seq,
+			int cm_like, String deal_status) {
 		super();
 		this.cm_seq = cm_seq;
 		this.cm_name = cm_name;
@@ -59,6 +66,8 @@ public class T_Commodity {
 		this.cm_price = cm_price;
 		this.cm_regdate = cm_regdate;
 		this.loc_seq = loc_seq;
+		this.cm_like = cm_like;
+		this.deal_status = deal_status;
 	}
 
 
@@ -182,7 +191,26 @@ public class T_Commodity {
 	}
 
 
-	
+	public int getCm_like() {
+		return cm_like;
+	}
+
+
+	public void setCm_like(int cm_like) {
+		this.cm_like = cm_like;
+	}
+
+
+	public String getDeal_status() {
+		return deal_status;
+	}
+
+
+	public void setDeal_status(String deal_status) {
+		this.deal_status = deal_status;
+	}
+
+
 	
 	
 }

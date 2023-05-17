@@ -21,7 +21,9 @@
 		#{cm_status},
 		#{cm_price},
 		sysdate,
-		#{loc_seq}
+		#{loc_seq},
+		#{cm_like},
+		#{deal_status}
 		)
 	</insert>
 
@@ -29,13 +31,15 @@
 	<select id="main" resultType="kr.aranea.entity.T_Commodity">
 		select *
 		from T_COMMODITY
+		order by cm_seq desc;
 	</select>
 
 	<!-- 메인페이지에서 판매글 클릭 후 내용 보이는 쿼리 -->
 	<select id="view" resultType="kr.aranea.entity.T_Commodity">
 		select *
 		from T_COMMODITY
-		where CM_SEQ = #{CM_SEQ}
+		where
+		CM_SEQ = #{CM_SEQ}
 	</select>
 
 
