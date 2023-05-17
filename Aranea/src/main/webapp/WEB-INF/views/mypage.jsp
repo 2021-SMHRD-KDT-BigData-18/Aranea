@@ -113,11 +113,14 @@
 					<div class="text">
 						거래내역<span class="circle"></span>
 					</div>
-				</a> <a href="bookmark.com" class="item">
+				</a> 
+				<a href="bookmark.com" class="item">
 					<div class="text">찜한상품</div>
-				</a> <a href="updateinfo.com" class="item">
+				</a> 
+				<a href="updateinfo.com" class="item">
 					<div class="text">정보수정</div>
-				</a> <a href="point.com" class="item">
+				</a> 
+				<a href="point.com" class="item">
 					<div class="text">포인트확인</div>
 				</a>
 			</div>
