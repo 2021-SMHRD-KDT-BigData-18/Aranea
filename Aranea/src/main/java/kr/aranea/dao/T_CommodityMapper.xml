@@ -41,6 +41,12 @@
 		where
 		CM_SEQ = #{CM_SEQ}
 	</select>
+	<select id="category" resultType="kr.aranea.entity.T_Commodity">
+		select *
+		from T_COMMODITY
+		where cm_category = #{cm_category}
+		order by cm_seq desc
+	</select>
 
 
 </mapper>

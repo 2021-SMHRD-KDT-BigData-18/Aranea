@@ -9,8 +9,7 @@ import kr.aranea.entity.T_Commodity;
 
 public class T_CommodityDAO {
 
-	private SqlSessionFactory factory = 
-			SqlSessionManager.getSqlSessionFactory();
+	private SqlSessionFactory factory = SqlSessionManager.getSqlSessionFactory();
 
 	// 판매글 작성
 	public int write(T_Commodity dto) {
@@ -19,7 +18,7 @@ public class T_CommodityDAO {
 		session.close();
 		return row;
 	}
-	
+
 	// GoMainCON에서 판매글 조회
 	public List<T_Commodity> main() {
 		SqlSession session = factory.openSession(true);
@@ -27,11 +26,18 @@ public class T_CommodityDAO {
 		session.close();
 		return list;
 	}
-	
-	// 메인페이지에서 판매글 클릭 후 내용 보이는 메소드
+
 	public T_Commodity view(int cm_seq) {
 		SqlSession session = factory.openSession(true);
 		T_Commodity list = session.selectOne("view", cm_seq);
+		session.close();
+		return list;
+	}
+
+	// GoMainCON에서 판매글 조회
+	public List<T_Commodity> category(String cm_category) {
+		SqlSession session = factory.openSession(true);
+		List<T_Commodity> list = session.selectList("category", cm_category);
 		session.close();
 		return list;
 	}
