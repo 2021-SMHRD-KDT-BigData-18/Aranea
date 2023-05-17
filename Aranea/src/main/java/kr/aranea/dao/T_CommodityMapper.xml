@@ -31,6 +31,7 @@
 	<select id="main" resultType="kr.aranea.entity.T_Commodity">
 		select *
 		from T_COMMODITY
+		order by cm_seq desc
 	</select>
 
 	<!-- 메인페이지에서 판매글 클릭 후 내용 보이는 쿼리 -->
