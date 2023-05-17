@@ -5,7 +5,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import kr.aranea.entity.T_Location;
 
-public class T_LoctionDAO {
+public class T_LocationDAO {
 
 	private SqlSessionFactory factory = SqlSessionManager.getSqlSessionFactory();
 
@@ -17,5 +17,11 @@ public class T_LoctionDAO {
 		return row;
 	}
 
+	public T_Location select(int loc_seq) {
+		SqlSession session = factory.openSession(true);
+		T_Location list = session.selectOne("select", loc_seq);
+		session.close();
+		return list;
+	}
 	
 }
