@@ -16,9 +16,6 @@ public class T_Dealing {
 	// 상품 순번
 	private int cm_seq;
 
-	// 거래 상태(여부)
-	private String deal_status;
-
 	// 등록 일자
 	private Date deal_dt;
 
@@ -27,14 +24,12 @@ public class T_Dealing {
 
 	public T_Dealing() {}
 
-	public T_Dealing(int deal_seq, String seller_id, String buyer_id, int cm_seq, String deal_status, Date deal_dt,
-			String spider_id) {
+	public T_Dealing(int deal_seq, String seller_id, String buyer_id, int cm_seq, Date deal_dt, String spider_id) {
 		super();
 		this.deal_seq = deal_seq;
 		this.seller_id = seller_id;
 		this.buyer_id = buyer_id;
 		this.cm_seq = cm_seq;
-		this.deal_status = deal_status;
 		this.deal_dt = deal_dt;
 		this.spider_id = spider_id;
 	}
@@ -71,14 +66,6 @@ public class T_Dealing {
 		this.cm_seq = cm_seq;
 	}
 
-	public String getDeal_status() {
-		return deal_status;
-	}
-
-	public void setDeal_status(String deal_status) {
-		this.deal_status = deal_status;
-	}
-
 	public Date getDeal_dt() {
 		return deal_dt;
 	}
@@ -95,7 +82,6 @@ public class T_Dealing {
 		this.spider_id = spider_id;
 	}
 
-	
 	
 
 }
