@@ -38,6 +38,14 @@ table {
 	border-collapse: collapse;
 }
 
+body{
+  padding: 0;
+  margin: 0;
+}
+div{
+  box-sizing: border-box;
+}
+
 /*수정할 코드  */
 img {
 	border-style: none;
@@ -189,6 +197,11 @@ input[type="text"] {
 	cursor: pointer;
 }
 
+.category li {
+	background-color: white;
+	z-index: 0;
+}
+
 .category .categorybtn {
 	display: none;
 }
@@ -199,65 +212,61 @@ input[type="text"] {
 	height: 70px;
 }
 
-.card-menu {
-	width: 1024px;
-	margin: auto;
-	padding: 3.5rem 0px 1.5rem;
+.container{
+	
 }
 
-.h2 {
-	font-size: 1.5rem;
-	margin-bottom: 1.5rem;
+
+/* 주문/배송조회 타이틀 */
+.title{
+  padding: 21px 16px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: rgb(187, 7, 11);
+  width: 95px;
+  height: 45px;
+  border-radius: 13%;
+  align-items: center;
+        
 }
 
-.card-list {
-	position: relative;
-	overflow: hidden
+
+/*=================== 주문목록 ~ 찜한상품 리스트 ==================*/
+.listContainer{  
+  padding: 0;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+.listContainer .item{  
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  color: black;
+  text-decoration: none;  
+  height: 56px;
+  box-sizing: border-box;
+}
+.listContainer .text{
+  font-size: 16px;
+  position: relative;
 }
 
-.card-list2 {
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
-	font: inherit;
-	vertical-align: baseline;
-}
+.item:hover{
+            text-underline-position: under;
+            text-decoration: underline;
+            color: rgb(187, 7, 11);
+        }
 
-.card-list3 {
-	display: flex;
-	flex-wrap: wrap;
-}
 
-.div {
-	width: auto;
-	height: auto;
-}
 
-.main {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-}
 
-.viewCard {
-	width: 22%;
-	margin-bottom: 20px;
-}
 
-.title {
-	width: 300px;
-	height: 15%;
-	background-size: cover;
-	background-position: center;
-}
 
-.viewWrap {
-	margin-bottom: 100px;
-	margin-right: 9px;
-}
 
-.card-menu {
-	width: 1024px;
-	margin: auto;
-	padding: 3.5rem 0px 1.5re
-}
+
+
+
+
+
