@@ -3,37 +3,42 @@
 <mapper namespace="kr.aranea.dao.T_CommodityDAO">
 
 	<!-- 중고거래 글 작성 -->
-	<insert id="write"
-	parameterType="kr.aranea.entity.T_Commodity">
+	<insert id="write" parameterType="kr.aranea.entity.T_Commodity">
+		<selectKey resultType="integer" keyProperty="loc_seq"
+			order="BEFORE">
+			SELECT t_location_seq.CURRVAL
+			FROM dual
+		</selectKey>
 		insert into T_COMMODITY
 		values( T_COMMODITY_SEQ.nextval,
-				#{cm_name},
-				#{user_id},
-				#{cm_desc},
-				#{cm_img1},
-				#{cm_img2},
-				#{cm_img3},
-				#{cm_category},
-				#{cm_status},
-				#{cm_price},
-				sysdate,
-				#{loc_seq}
-				)
+		#{cm_name},
+		#{user_id},
+		#{cm_desc},
+		#{cm_img1},
+		#{cm_img2},
+		#{cm_img3},
+		#{cm_category},
+		#{cm_status},
+		#{cm_price},
+		sysdate,
+		#{loc_seq},
+		#{cm_like},
+		#{deal_status}
+		)
 	</insert>
-	
+
 	<!-- GoMainCON에서 판매글 조회 -->
-	<select id="main"
-	resultType="kr.aranea.entity.T_Commodity">
+	<select id="main" resultType="kr.aranea.entity.T_Commodity">
 		select *
 		  from T_COMMODITY
+		 order by cm_seq desc;
 	</select>
-	
+
 	<!-- 메인페이지에서 판매글 클릭 후 내용 보이는 쿼리 -->
-	<select id="view"
-	resultType="kr.aranea.entity.T_Commodity">
+	<select id="view" resultType="kr.aranea.entity.T_Commodity">
 		select *
-		  from T_COMMODITY
-		 where CM_SEQ = #{CM_SEQ}
+		from T_COMMODITY
+		where CM_SEQ = #{CM_SEQ}
 	</select>
 
 

@@ -37,7 +37,7 @@ public class WritingUploadCon implements Controller {
 		
 		HttpSession session = request.getSession();
 		T_User user = (T_User)session.getAttribute("user");
-		T_Location loc = (T_Location)session.getAttribute("row2");
+		
 		
 		String cm_name = multi.getParameter("cm_name");
 		String user_id = user.getUser_id();
@@ -48,7 +48,7 @@ public class WritingUploadCon implements Controller {
 		String cm_category = multi.getParameter("cm_category");
 		String cm_status = multi.getParameter("cm_status");
 		String cm_price = multi.getParameter("cm_price");
-		int loc_seq = loc.getLoc_seq();
+		String deal_status = "판매중";
 		
 		T_Commodity dto = new T_Commodity();
 		dto.setUser_id(user_id);
@@ -60,7 +60,7 @@ public class WritingUploadCon implements Controller {
 		dto.setCm_category(cm_category);
 		dto.setCm_status(cm_status);
 		dto.setCm_price(cm_price);
-		dto.setLoc_seq(loc_seq);
+		dto.setDeal_status(deal_status);
 		
 		T_CommodityDAO dao = new T_CommodityDAO();
 		int row = dao.write(dto);
