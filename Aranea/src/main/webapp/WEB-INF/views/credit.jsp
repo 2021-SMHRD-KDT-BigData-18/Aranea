@@ -1,53 +1,30 @@
-<%@page import="kr.aranea.entity.T_Commodity"%>
 <%@page import="kr.aranea.entity.T_User"%>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-<title>Bootstrap 4 Website Example</title>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="./assets/css/mypage.css">
-
 </head>
 <body>
 	<%
 	T_User user = (T_User) session.getAttribute("user");
 	%>
 
-	<%
-	if (user == null) {
-	%>
-	<a href="login.com">로그인하러 가기!</a>
-	<%
-	} else {
-	%>
 	<div class="container">
 		<div class="header">
 			<div class="rose">
 				<div class="create">
-					<%
-					if (user == null) {
-					%>
-					<a class="login" href="login.com">로그인/회원가입</a>
-					<%
-					} else {
-					%>
 					<%=user.getUser_name()%>님, 환영합니다! ｜<a href="logout.com">로그아웃</a>
-					<%
-					}
-					%>
 				</div>
 			</div>
 		</div>
-
 		<div class="nav">
 			<div class="dav">
 				<div class="rav">
@@ -106,40 +83,12 @@
 			</div>
 		</div>
 
-		<div class="listContainer">
-			<div class="list">
-				<div class="title">내 상점</div>
-				<a href="credit.com" class="item">
-					<div class="text">
-						거래내역<span class="circle"></span>
-					</div>
-				</a> <a href="bookmark.com" class="item">
-					<div class="text">찜한상품</div>
-				</a> <a href="updateinfo.com" class="item">
-					<div class="text">정보수정</div>
-				</a> <a href="point.com" class="item">
-					<div class="text">포인트확인</div>
-				</a>
-			</div>
-			<div class="hello">
-				<h2>소개글 작성 공간</h2>
 
 
 
 
 
-			</div>
-
-
-
-
-
-
-		</div>
 	</div>
-	<%
-	}
-	%>
 	<script type="text/javascript" src="assets/JS/home.js"></script>
 </body>
 </html>

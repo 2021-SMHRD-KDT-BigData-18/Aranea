@@ -11,8 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.aranea.controller.AddressSetCon;
+import kr.aranea.controller.BookmarkCon;
 import kr.aranea.controller.Controller;
 import kr.aranea.controller.CreateAccountCon;
+import kr.aranea.controller.CreditCon;
 import kr.aranea.controller.CtAppliancesCon;
 import kr.aranea.controller.CtBeautyCon;
 import kr.aranea.controller.CtBookCon;
@@ -32,10 +34,12 @@ import kr.aranea.controller.JoinCon;
 import kr.aranea.controller.LoginCon;
 import kr.aranea.controller.LoginSuccessCon;
 import kr.aranea.controller.LogoutCon;
+import kr.aranea.controller.PointCon;
 import kr.aranea.controller.SearchIdCon;
 import kr.aranea.controller.SearchIdSuccessCon;
 import kr.aranea.controller.SearchPwCon;
 import kr.aranea.controller.SearchPwSuccessCon;
+import kr.aranea.controller.UpdateInfoCon;
 import kr.aranea.controller.ViewWritingCon;
 import kr.aranea.controller.WriteMapCon;
 import kr.aranea.controller.WriteMapUploadCon;
@@ -79,7 +83,10 @@ public class FrontController extends HttpServlet {
 		mappings.put("/viewWriting.com", new ViewWritingCon());
 		mappings.put("/writeMap.com", new WriteMapCon());
 		mappings.put("/writeMapUpload.com", new WriteMapUploadCon());
-		
+		mappings.put("/credit.com", new CreditCon());
+		mappings.put("/UpdateInfo.com", new UpdateInfoCon());
+		mappings.put("/point.com", new PointCon());
+		mappings.put("/bookmark.com", new BookmarkCon());
 	}
 	
 	
