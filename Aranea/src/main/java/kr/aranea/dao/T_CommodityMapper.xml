@@ -30,8 +30,7 @@
 	<!-- GoMainCON에서 판매글 조회 -->
 	<select id="main" resultType="kr.aranea.entity.T_Commodity">
 		select *
-		from T_COMMODITY
-		order by cm_seq desc;
+		from T_COMMODITY;
 	</select>
 
 	<!-- 메인페이지에서 판매글 클릭 후 내용 보이는 쿼리 -->
