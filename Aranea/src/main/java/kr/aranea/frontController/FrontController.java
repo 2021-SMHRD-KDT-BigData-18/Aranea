@@ -11,20 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.aranea.controller.AddressSetCon;
-import kr.aranea.controller.BookmarkCon;
+import kr.aranea.controller.CategoryCon;
 import kr.aranea.controller.Controller;
 import kr.aranea.controller.CreateAccountCon;
-import kr.aranea.controller.CreditCon;
-import kr.aranea.controller.CtAppliancesCon;
-import kr.aranea.controller.CtBeautyCon;
-import kr.aranea.controller.CtBookCon;
-import kr.aranea.controller.CtDeviceCon;
-import kr.aranea.controller.CtInteriorCon;
-import kr.aranea.controller.CtLadieswearCon;
-import kr.aranea.controller.CtMenwearCon;
-import kr.aranea.controller.CtPetCon;
-import kr.aranea.controller.CtSportCon;
-import kr.aranea.controller.CtTicketCon;
 import kr.aranea.controller.GoMainCon;
 import kr.aranea.controller.GoMypageCon;
 import kr.aranea.controller.GoSpiderman;
@@ -34,12 +23,10 @@ import kr.aranea.controller.JoinCon;
 import kr.aranea.controller.LoginCon;
 import kr.aranea.controller.LoginSuccessCon;
 import kr.aranea.controller.LogoutCon;
-import kr.aranea.controller.PointCon;
 import kr.aranea.controller.SearchIdCon;
 import kr.aranea.controller.SearchIdSuccessCon;
 import kr.aranea.controller.SearchPwCon;
 import kr.aranea.controller.SearchPwSuccessCon;
-import kr.aranea.controller.UpdateInfoCon;
 import kr.aranea.controller.ViewWritingCon;
 import kr.aranea.controller.WriteMapCon;
 import kr.aranea.controller.WriteMapUploadCon;
@@ -69,24 +56,12 @@ public class FrontController extends HttpServlet {
 		mappings.put("/writingUpload.com", new WritingUploadCon());
 		mappings.put("/goWrite.com", new GoWriteCon());
 		mappings.put("/addressSet.com", new AddressSetCon());
-		mappings.put("/ctMenwear.com", new CtMenwearCon());
-		mappings.put("/ctLadieswear.com", new CtLadieswearCon());
-		mappings.put("/ctDevice.com", new CtDeviceCon());
-		mappings.put("/ctAppliances.com", new CtAppliancesCon());
-		mappings.put("/ctInterior.com", new CtInteriorCon());
-		mappings.put("/ctBeauty.com", new CtBeautyCon());
-		mappings.put("/ctSport.com", new CtSportCon());
-		mappings.put("/ctBook.com", new CtBookCon());
-		mappings.put("/ctTicket.com", new CtTicketCon());
-		mappings.put("/ctPet.com", new CtPetCon());
 		mappings.put("/goSpiderman.com", new GoSpiderman());
 		mappings.put("/viewWriting.com", new ViewWritingCon());
 		mappings.put("/writeMap.com", new WriteMapCon());
 		mappings.put("/writeMapUpload.com", new WriteMapUploadCon());
-		mappings.put("/credit.com", new CreditCon());
-		mappings.put("/UpdateInfo.com", new UpdateInfoCon());
-		mappings.put("/point.com", new PointCon());
-		mappings.put("/bookmark.com", new BookmarkCon());
+		mappings.put("/category.com", new CategoryCon());
+		
 	}
 	
 	
