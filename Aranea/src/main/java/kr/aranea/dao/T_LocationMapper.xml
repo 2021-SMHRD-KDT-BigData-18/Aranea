@@ -13,6 +13,11 @@
 				)
 	</insert>
 	
+	<select id="select" resultType="kr.aranea.entity.T_Location">
+		select * 
+		from T_LOCATION
+		where loc_seq = #{loc_seq}
+	</select>
 	
 	
 </mapper>

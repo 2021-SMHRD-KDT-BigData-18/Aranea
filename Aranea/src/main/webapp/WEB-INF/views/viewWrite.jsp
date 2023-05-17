@@ -38,10 +38,7 @@
 			</tr>
 			<tr>
 				<td>거래지역</td>
-				<td>
-				${select.loc_name}
-				
-				</td>
+				<td>${select.loc_name}</td>
 			</tr>
 			<tr>
 				<td>상태(중고상품/새상품)</td>

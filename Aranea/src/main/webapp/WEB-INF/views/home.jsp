@@ -1,3 +1,4 @@
+<%@page import="kr.aranea.entity.T_Location"%>
 <%@page import="kr.aranea.entity.T_Commodity"%>
 <%@page import="kr.aranea.entity.T_User"%>
 <%@page import="java.util.List"%>
