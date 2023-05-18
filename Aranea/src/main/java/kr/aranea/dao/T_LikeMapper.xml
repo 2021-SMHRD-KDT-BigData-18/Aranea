@@ -5,9 +5,10 @@
 	<insert id="inst" parameterType="kr.aranea.entity.T_Like">
 		insert into T_Like
 		values(#{cm_seq},
-		#{CM_NAME},
-		#{CM_CATEGORY},
-		#{CM_PRICE}
+		#{cm_name},
+		#{cm_category},
+		#{cm_price},
+		#{user_id}
 		)
 	</insert>
 
