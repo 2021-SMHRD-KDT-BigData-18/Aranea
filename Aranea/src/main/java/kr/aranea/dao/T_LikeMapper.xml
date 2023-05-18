@@ -8,9 +8,16 @@
 		#{cm_name},
 		#{cm_category},
 		#{cm_price},
-		#{user_id}
+		#{user_id},
+		#{cm_img1}
 		)
 	</insert>
+	
+	<select id="bookmark" resultType="kr.aranea.entity.T_Like">
+		select *
+		from T_Like
+		where user_id = #{user_id}
+	</select>
 
 
 

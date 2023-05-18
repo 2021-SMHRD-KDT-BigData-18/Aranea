@@ -1,6 +1,9 @@
+<%@page import="kr.aranea.entity.T_Like"%>
+<%@page import="java.util.List"%>
 <%@page import="kr.aranea.entity.T_User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +18,9 @@
 <body>
 	<%
 	T_User user = (T_User) session.getAttribute("user");
+
+	List<T_Like> list = (List<T_Like>) request.getAttribute("list");
+	request.setAttribute("list", list);	
 	%>
 
 	<div class="container">
@@ -83,7 +89,22 @@
 			</div>
 		</div>
 
-
+		<div id="board">
+		<table id="list">
+			<tr>
+				<td>이미지</td>
+				<td>상품명</td>
+				<td>가격</td>
+			</tr>
+			<c:forEach items="${list}" var="item">
+			<tr>
+				<td><img alt="상품이미지" src="http://211.228.63.186:8081/Aranea/file/${item.cm_img1}" width="194" height="194"></td>
+				<td><a href="viewWriting.com?cm_seq=${item.cm_seq}">${item.cm_name}</a></td>
+				<td>${item.cm_price}</td>
+			</tr>
+			</c:forEach>
+		</table>
+	</div>
 
 
 

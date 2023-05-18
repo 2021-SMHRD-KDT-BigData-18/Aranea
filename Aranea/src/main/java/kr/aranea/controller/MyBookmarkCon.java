@@ -34,20 +34,15 @@ public class MyBookmarkCon implements Controller {
 		String cm_name = view.getCm_name();
 		String cm_price = view.getCm_price();
 		String user_id = user.getUser_id();
-		
-		System.out.println(cm_seq);
-		System.out.println(cm_category);
-		System.out.println(cm_name);
-		System.out.println(cm_price);
-		System.out.println(user_id);
-		
-		
+		String cm_img1 = view.getCm_img1();
+				
 		T_Like dto = new T_Like();
 		dto.setCm_seq(cm_seq);
 		dto.setCm_name(cm_name);
 		dto.setCm_category(cm_category);
 		dto.setCm_price(cm_price);
 		dto.setUser_id(user_id);
+		dto.setCm_img1(cm_img1);
 		
 		T_LikeDAO daoo = new T_LikeDAO();
 		int row = daoo.insert(dto);

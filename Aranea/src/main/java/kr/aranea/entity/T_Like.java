@@ -12,15 +12,18 @@ public class T_Like {
 	
 	private String user_id; 
 
+	private String cm_img1;
+	
 	public T_Like() {}
 
-	public T_Like(int cm_seq, String cm_name, String cm_category, String cm_price, String user_id) {
+	public T_Like(int cm_seq, String cm_name, String cm_category, String cm_price, String user_id, String cm_img1) {
 		super();
 		this.cm_seq = cm_seq;
 		this.cm_name = cm_name;
 		this.cm_category = cm_category;
 		this.cm_price = cm_price;
 		this.user_id = user_id;
+		this.cm_img1 = cm_img1;
 	}
 
 	public int getCm_seq() {
@@ -62,10 +65,14 @@ public class T_Like {
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
-	
-	
-	
-	
-	
-		
+
+	public String getCm_img1() {
+		return cm_img1;
+	}
+
+	public void setCm_img1(String cm_img1) {
+		this.cm_img1 = cm_img1;
+	}
+
+			
 }
