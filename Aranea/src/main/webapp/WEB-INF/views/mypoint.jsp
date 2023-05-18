@@ -83,7 +83,22 @@
 			</div>
 		</div>
 
+		<div class="pure-menu custom-restricted-width">
+			<h2 class="pure-menu-heading">내 상점</h2>
+			<ul class="pure-menu-list">
+				<li class="pure-menu-item"><a href="bookmark.com"
+					class="pure-menu-link">찜한상품</a></li>
+				<li class="pure-menu-item"><a href="sellingList.com"
+					class="pure-menu-link">판매내역</a></li>
+				<li class="pure-menu-item"><a href="buyingList.com"
+					class="pure-menu-link">구매내역</a></li>
+				<li class="pure-menu-item"><a href="updateinfo.com"
+					class="pure-menu-link">정보수정</a></li>
+				<li class="pure-menu-item"><a href="point.com"
+					class="pure-menu-link">포인트확인</a></li>
 
+			</ul>
+		</div>
 
 
 

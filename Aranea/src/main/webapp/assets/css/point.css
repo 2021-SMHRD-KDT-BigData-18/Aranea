@@ -38,12 +38,13 @@ table {
 	border-collapse: collapse;
 }
 
-body{
-  padding: 0;
-  margin: 0;
+body {
+	padding: 0;
+	margin: 0;
 }
-div{
-  box-sizing: border-box;
+
+div {
+	box-sizing: border-box;
 }
 
 /*수정할 코드  */
@@ -81,17 +82,6 @@ img {
 
 .login {
 	color: black;
-}
-
-.a {
-	display: flex;
-	-webkit-box-align: center;
-	align-items: center;
-	font-size: 13px;
-	color: rgb(102, 102, 102);
-	padding: 0px 15px;
-	position: relative;
-	line-height: 1.4;
 }
 
 .login:hover {
@@ -212,6 +202,61 @@ input[type="text"] {
 	height: 70px;
 }
 
-.container{
+.container {
 	
 }
+
+/* 주문/배송조회 타이틀 */
+.title {
+	padding: 20px 20px;
+	background-color: white;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: rgb(187, 7, 11);
+	border-radius: 10%;
+}
+
+/*=================== 주문목록 ~ 찜한상품 리스트 ==================*/
+.menu_list {
+	float: left;
+	margin-right: 15px;
+	border: 3px solid black;
+}
+
+.custom-restricted-width .pure-menu-link {
+	display: flex;
+	align-items: center;
+	padding: 16px;
+	color: black;
+	text-decoration: none;
+	height: 56px;
+	box-sizing: border-box;
+}
+
+.pure-menu-link:hover {
+	text-underline-position: under;
+	text-decoration: underline;
+	color: rgb(187, 7, 11);
+}
+
+.pure-menu-heading {
+	font-size: 45px;
+}
+
+.body1{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
