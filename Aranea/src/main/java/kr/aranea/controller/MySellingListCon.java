@@ -30,6 +30,7 @@ public class MySellingListCon implements Controller {
 
 		String nextview = "mySellingList";
 		
+		
 		return nextview;
 	}
 
