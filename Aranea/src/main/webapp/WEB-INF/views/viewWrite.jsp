@@ -177,9 +177,9 @@
 				
 									<div class="realimglist">
 											<div class="imglist">
-											<img id=imglist1 src="file/${list.cm_img1}">
-											<img id=imglist2 src="file/${list.cm_img2}">
-											<img id=imglist3 src="file/${list.cm_img3}">
+											<img id=imglist1 src="http://211.228.63.186:8081/Aranea/file/${list.cm_img1}">
+											<img id=imglist2 src="http://211.228.63.186:8081/Aranea/file/${list.cm_img2}">
+											<img id=imglist3 src="http://211.228.63.186:8081/Aranea/file/${list.cm_img3}">
 											</div>
 					
 									</div>
