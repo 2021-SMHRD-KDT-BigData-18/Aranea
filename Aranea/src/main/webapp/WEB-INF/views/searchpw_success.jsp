@@ -45,11 +45,11 @@ float: left;
 	  <div id="wrapper">
 		  <li id="banner" ><h1>비밀번호 변경완료 !</h1></li><br><br><br><br>
 
-		  <form action="gomain.com" method="post">
+		  <form action="login.com" method="post">
 			  <nav id="Update">
 			<br><br>
 			<ul class="loginok">
-				<button type="submit" class="btn btn-primary">로그인하러가기가기</button><br>
+				<button type="submit" class="btn btn-primary">로그인 하러가기</button><br>
 			</ul>
 		</nav>
 			</form>
