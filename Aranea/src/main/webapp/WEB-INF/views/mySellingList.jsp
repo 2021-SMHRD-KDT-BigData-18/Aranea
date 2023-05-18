@@ -31,7 +31,8 @@
 				</div>
 			</div>
 		</div>
-
+	</div>
+	
 		<div class="nav">
 			<div class="dav">
 				<div class="rav">
@@ -101,6 +102,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 
 	<div id="board">
 		<table id="list">

@@ -55,9 +55,8 @@
 	<select id="sellingList" resultType="kr.aranea.entity.T_Commodity">
 		select *
 		  from t_commodity
-		 where deal_status = '판매중'
-		    or deal_status = '판매완료'
-		   and user_id = #{user_id}
+		 where user_id = #{user_id}
+		 	and	deal_status in ('판매중', '판매완료')
 		 order by cm_seq desc
 	</select>
 
