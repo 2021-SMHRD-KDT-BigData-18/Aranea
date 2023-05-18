@@ -206,7 +206,7 @@
 										</tr>
 										<tr>
 											<td>거래지역</td><br>
-											<td>${list.loc_seq}</td><br>
+											<td>${select.loc_name}</td><br>
 										</tr>
 										<tr>
 											<td>상태(중고상품/새상품)</td><br>
