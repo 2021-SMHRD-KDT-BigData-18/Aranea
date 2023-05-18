@@ -35,7 +35,7 @@ public class T_Commodity {
 	private String cm_price;
 
 	// 상품 등록일자
-	private Date cm_regdate;
+	private String cm_regdate;
 
 	// 장소 순번
 	private int loc_seq;
@@ -51,7 +51,7 @@ public class T_Commodity {
 
 
 	public T_Commodity(int cm_seq, String cm_name, String user_id, String cm_desc, String cm_img1, String cm_img2,
-			String cm_img3, String cm_category, String cm_status, String cm_price, Date cm_regdate, int loc_seq,
+			String cm_img3, String cm_category, String cm_status, String cm_price, String cm_regdate, int loc_seq,
 			int cm_like, String deal_status) {
 		super();
 		this.cm_seq = cm_seq;
@@ -171,12 +171,12 @@ public class T_Commodity {
 	}
 
 
-	public Date getCm_regdate() {
+	public String getCm_regdate() {
 		return cm_regdate;
 	}
 
 
-	public void setCm_regdate(Date cm_regdate) {
+	public void setCm_regdate(String cm_regdate) {
 		this.cm_regdate = cm_regdate;
 	}
 
@@ -211,6 +211,7 @@ public class T_Commodity {
 	}
 
 
+	
 	
 	
 }
