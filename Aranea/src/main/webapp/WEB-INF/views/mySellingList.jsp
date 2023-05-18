@@ -21,10 +21,16 @@
 		<div class="header">
 			<div class="rose">
 				<div class="create">
-					<%=user.getUser_name()%>님, 환영합니다! ｜<a href="logout.com">로그아웃</a>
+					<%if (user == null) {%>
+					<a class="login" href="login.com">로그인/회원가입</a>
+					<%} else {%>
+					<%=user.getUser_name()%>님, 환영합니다! ｜<a href="addressSet.com">동네설정
+						｜</a> <a href="logout.com">로그아웃</a>
+					<%}%>
 				</div>
 			</div>
 		</div>
+
 		<div class="nav">
 			<div class="dav">
 				<div class="rav">
@@ -44,14 +50,27 @@
 					</div>
 
 					<div class="twopack">
+					<%if(user == null){%>
+					<a class="menu button" href="login.com"> <img alt="판매하기 로고"
+					src="images/seller.png" width="23" height="26"> 판매하기</a>
+					<a class="menu button" href="login.com"> <img alt="내상점 로고"
+							src="images/mystore.png" width="23" height="24"> 내 상점 ｜
+						</a>
+						<a class="menu button" href="login.com"> <img
+							alt="스파이더맨 신청 로고" src="images/mystore.png" width="23" height="24">
+							스파이더맨 신청 ｜</a>
+					
+					<%} else{ %>
 						<a class="menu button" href="goWrite.com"> <img alt="판매하기 로고"
 							src="images/seller.png" width="23" height="26"> 판매하기
-						</a> <a class="menu button" href="goMypage.com"> <img alt="내상점 로고"
-							src="images/mystore.png" width="23" height="24"> 내 상점 ｜
-						</a> <a class="menu button" href="goSpiderman.com"> <img
-							alt="스파이더맨 신청 로고" src="images/mystore.png" width="23" height="24">
-							스파이더맨 신청 ｜
 						</a>
+						<a class="menu button" href="goMypage.com"> <img alt="내상점 로고"
+							src="images/mystore.png" width="23" height="24"> 내 상점 ｜
+						</a>
+						<a class="menu button" href="goSpiderman.com"> <img
+							alt="스파이더맨 신청 로고" src="images/mystore.png" width="23" height="24">
+							스파이더맨 신청 ｜</a>
+					<%} %>	
 
 					</div>
 				</div>
@@ -64,16 +83,16 @@
 							<table>
 								<tr bgcolor="white">
 									<td>
-										<li><a href="ctMenwear.com">남성복</a></li>
-										<li><a href="ctLadieswear.com">여성복</a></li>
-										<li><a href="ctDevice.com">디지털기기</a></li>
-										<li><a href="ct_appliances.com">생활가전</a></li>
-										<li><a href="ctInterior.com">가구/인테리어</a></li>
-										<li><a href="ctBeauty.com">뷰티/미용</a></li>
-										<li><a href="ctSport.com">스포츠/레저</a></li>
-										<li><a href="ctBook.com">도서</a></li>
-										<li><a href="ctTicket.com">티켓/상품권</a></li>
-										<li><a href="ctPet.com">반려동물용품</a></li>
+										<li><a href="category.com?cm_category=남성복">남성복</a></li>
+										<li><a href="category.com?cm_category=여성복">여성복</a></li>
+										<li><a href="category.com?cm_category=디지털기기">디지털기기</a></li>
+										<li><a href="category.com?cm_category=생활가전">생활가전</a></li>
+										<li><a href="category.com?cm_category=가구/인테리어">가구/인테리어</a></li>
+										<li><a href="category.com?cm_category=뷰티/미용">뷰티/미용</a></li>
+										<li><a href="category.com?cm_category=스포츠/레저">스포츠/레저</a></li>
+										<li><a href="category.com?cm_category=도서">도서</a></li>
+										<li><a href="category.com?cm_category=티켓/상품권">티켓/상품권</a></li>
+										<li><a href="category.com?cm_category=반려동물용품">반려동물용품</a></li>
 									</td>
 								</tr>
 							</table>
@@ -81,10 +100,28 @@
 					</div>
 				</div>
 			</div>
-		</div>
 
-
-
+	<div id="board">
+		<table id="list">
+			<tr>
+				<td>이미지</td>
+				<td>상품명</td>
+				<td>가격</td>
+				<td>날짜</td>
+				<td>판매자 아이디</td>
+			</tr>
+			<c:forEach items="${list}" var="item">
+			<tr>
+				<td><img alt="상품이미지" src="http://211.228.63.186:8081/Aranea/file/${item.cm_img1}" width="194" height="194"></td>
+				<td><a href="#">${item.cm_name}</a></td>
+				<td>${item.cm_price}</td>
+				<td>${item.cm_regdate}</td>
+				<td>${item.user_id}</td>
+			</tr>
+			</c:forEach>
+		</table>
+	</div>
+	
 
 
 

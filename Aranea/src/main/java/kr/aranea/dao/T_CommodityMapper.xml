@@ -49,6 +49,15 @@
 		where cm_category = #{cm_category}
 		order by cm_seq desc
 	</select>
+	
+	<!-- 판매내역 리스트 조회 -->
+	<select id="sellingList" resultType="kr.aranea.entity.T_Commodity">
+		select *
+		  from t_commodity
+		 where deal_status = '판매중'
+		    or deal_status = '판매완료'
+		 order by cm_seq desc
+	</select>
 
 
 </mapper>

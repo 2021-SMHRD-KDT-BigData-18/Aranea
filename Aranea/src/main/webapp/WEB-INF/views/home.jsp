@@ -35,18 +35,12 @@
 		<div class="header">
 			<div class="rose">
 				<div class="create">
-					<%
-					if (user == null) {
-					%>
+					<%if (user == null) {%>
 					<a class="login" href="login.com">로그인/회원가입</a>
-					<%
-					} else {
-					%>
+					<%} else {%>
 					<%=user.getUser_name()%>님, 환영합니다! ｜<a href="addressSet.com">동네설정
 						｜</a> <a href="logout.com">로그아웃</a>
-					<%
-					}
-					%>
+					<%}%>
 				</div>
 			</div>
 		</div>
@@ -70,9 +64,7 @@
 					</div>
 
 					<div class="twopack">
-					<% 
-					if(user == null){
-					%>
+					<%if(user == null){%>
 					<a class="menu button" href="login.com"> <img alt="판매하기 로고"
 					src="images/seller.png" width="23" height="26"> 판매하기</a>
 					<a class="menu button" href="login.com"> <img alt="내상점 로고"
@@ -122,6 +114,7 @@
 					</div>
 				</div>
 			</div>
+
 
 
 		</div>

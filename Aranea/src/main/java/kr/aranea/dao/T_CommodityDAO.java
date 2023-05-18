@@ -26,7 +26,7 @@ public class T_CommodityDAO {
 		session.close();
 		return list;
 	}
-	
+
 	// 판매글 클릭 후 내용 보여주는 코드
 	public T_Commodity view(int cm_seq) {
 		SqlSession session = factory.openSession(true);
@@ -39,6 +39,14 @@ public class T_CommodityDAO {
 	public List<T_Commodity> category(String cm_category) {
 		SqlSession session = factory.openSession(true);
 		List<T_Commodity> list = session.selectList("category", cm_category);
+		session.close();
+		return list;
+	}
+
+	// 판매내역 리스트 조회
+	public List<T_Commodity> sellingLIst() {
+		SqlSession session = factory.openSession(true);
+		List<T_Commodity> list = session.selectList("sellingList");
 		session.close();
 		return list;
 	}
