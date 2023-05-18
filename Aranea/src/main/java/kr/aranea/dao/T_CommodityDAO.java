@@ -44,9 +44,9 @@ public class T_CommodityDAO {
 	}
 
 	// 판매내역 리스트 조회
-	public List<T_Commodity> sellingLIst() {
+	public List<T_Commodity> sellingLIst(String user_id) {
 		SqlSession session = factory.openSession(true);
-		List<T_Commodity> list = session.selectList("sellingList");
+		List<T_Commodity> list = session.selectList("sellingList", user_id);
 		session.close();
 		return list;
 	}

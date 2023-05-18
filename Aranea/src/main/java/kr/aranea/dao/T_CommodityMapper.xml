@@ -57,6 +57,7 @@
 		  from t_commodity
 		 where deal_status = '판매중'
 		    or deal_status = '판매완료'
+		   and user_id = #{user_id}
 		 order by cm_seq desc
 	</select>
 
