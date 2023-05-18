@@ -110,7 +110,7 @@
 			<div class="list">
 				<div class="title">내 상점</div>
 				
-				<a href="bookmark.com" class="item">
+				<a href="bookmark2.com" class="item">
 					<div class="text">찜한상품</div>
 				</a> 
 				<a href="sellingList.com" class="item">

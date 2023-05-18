@@ -53,7 +53,7 @@ public class MyBookmarkCon implements Controller {
 		int row = daoo.insert(dto);
 				
 		
-		String nextview = "mybookmark";
+		String nextview = "redirect:/gomain.com";
 		
 		return nextview;
 	}
