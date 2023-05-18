@@ -192,11 +192,11 @@
 				
 										<ul>
 											<li>◾ 제목</li>
-											<br>
-											<li>${list.cm_name }</li>
-										
-											</li>◾ 가격</li><br>
-											</li>${list.cm_price}</li><br>
+											<li>${list.cm_name }</li><br>
+											<li>◾ 작성자</li>
+											<li>${list.user_name}</li><br>
+											<li>◾ 가격</li>
+											<li>${list.cm_price}</li><br>
 										</ul>
 				
 			

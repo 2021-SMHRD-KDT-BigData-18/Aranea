@@ -51,7 +51,7 @@ public class WritingUploadCon implements Controller {
 		String cm_status = multi.getParameter("cm_status");
 		String cm_price = multi.getParameter("cm_price");
 		String deal_status = "판매중";
-		
+		String user_name = user.getUser_name();
 
 		T_Commodity dto = new T_Commodity();
 		dto.setUser_id(user_id);
@@ -64,6 +64,7 @@ public class WritingUploadCon implements Controller {
 		dto.setCm_status(cm_status);
 		dto.setCm_price(cm_price);
 		dto.setDeal_status(deal_status);
+		dto.setUser_name(user_name);
 		
 
 		String nextview = "";

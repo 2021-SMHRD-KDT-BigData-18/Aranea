@@ -46,13 +46,14 @@ public class T_Commodity {
 	// 거래 상태
 	private String deal_status;
 
+	// 유저 닉네임
+	private String user_name;
 	
 	public T_Commodity() {}
 
-
 	public T_Commodity(int cm_seq, String cm_name, String user_id, String cm_desc, String cm_img1, String cm_img2,
 			String cm_img3, String cm_category, String cm_status, String cm_price, String cm_regdate, int loc_seq,
-			int cm_like, String deal_status) {
+			int cm_like, String deal_status, String user_name) {
 		super();
 		this.cm_seq = cm_seq;
 		this.cm_name = cm_name;
@@ -68,150 +69,129 @@ public class T_Commodity {
 		this.loc_seq = loc_seq;
 		this.cm_like = cm_like;
 		this.deal_status = deal_status;
+		this.user_name = user_name;
 	}
-
 
 	public int getCm_seq() {
 		return cm_seq;
 	}
 
-
 	public void setCm_seq(int cm_seq) {
 		this.cm_seq = cm_seq;
 	}
-
 
 	public String getCm_name() {
 		return cm_name;
 	}
 
-
 	public void setCm_name(String cm_name) {
 		this.cm_name = cm_name;
 	}
-
 
 	public String getUser_id() {
 		return user_id;
 	}
 
-
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
-
 
 	public String getCm_desc() {
 		return cm_desc;
 	}
 
-
 	public void setCm_desc(String cm_desc) {
 		this.cm_desc = cm_desc;
 	}
-
 
 	public String getCm_img1() {
 		return cm_img1;
 	}
 
-
 	public void setCm_img1(String cm_img1) {
 		this.cm_img1 = cm_img1;
 	}
-
 
 	public String getCm_img2() {
 		return cm_img2;
 	}
 
-
 	public void setCm_img2(String cm_img2) {
 		this.cm_img2 = cm_img2;
 	}
-
 
 	public String getCm_img3() {
 		return cm_img3;
 	}
 
-
 	public void setCm_img3(String cm_img3) {
 		this.cm_img3 = cm_img3;
 	}
-
 
 	public String getCm_category() {
 		return cm_category;
 	}
 
-
 	public void setCm_category(String cm_category) {
 		this.cm_category = cm_category;
 	}
-
 
 	public String getCm_status() {
 		return cm_status;
 	}
 
-
 	public void setCm_status(String cm_status) {
 		this.cm_status = cm_status;
 	}
-
 
 	public String getCm_price() {
 		return cm_price;
 	}
 
-
 	public void setCm_price(String cm_price) {
 		this.cm_price = cm_price;
 	}
-
 
 	public String getCm_regdate() {
 		return cm_regdate;
 	}
 
-
 	public void setCm_regdate(String cm_regdate) {
 		this.cm_regdate = cm_regdate;
 	}
-
 
 	public int getLoc_seq() {
 		return loc_seq;
 	}
 
-
 	public void setLoc_seq(int loc_seq) {
 		this.loc_seq = loc_seq;
 	}
-
 
 	public int getCm_like() {
 		return cm_like;
 	}
 
-
 	public void setCm_like(int cm_like) {
 		this.cm_like = cm_like;
 	}
-
 
 	public String getDeal_status() {
 		return deal_status;
 	}
 
-
 	public void setDeal_status(String deal_status) {
 		this.deal_status = deal_status;
 	}
 
+	public String getUser_name() {
+		return user_name;
+	}
 
-	
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
+
 	
 	
 }

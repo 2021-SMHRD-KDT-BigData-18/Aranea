@@ -23,7 +23,8 @@
 		sysdate,
 		#{loc_seq},
 		#{cm_like},
-		#{deal_status}
+		#{deal_status},
+		#{user_name}
 		)
 	</insert>
 
