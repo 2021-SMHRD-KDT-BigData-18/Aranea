@@ -61,9 +61,9 @@
   height:500px;
   margin-top: 2%;
   margin-left:50%;
-  background-color: aqua;
-  border: 2px solid red;
-  
+  background-color: white;
+  border: 2px solid crimson;
+  border-radius:5%;
   }
   .container{
   height: 100%;
@@ -72,7 +72,7 @@
    margin-top: 2%;
   margin-left:2%;
   margin-right:5%;
-  border:1px solid black;
+  border:2px solid gray;
   }
   
   
@@ -139,7 +139,7 @@
 							height="35">카테고리</a>
 						<ul class="categorybtn">
 							<table>
-								<tr bgcolor="lightgreen">
+								<tr bgcolor="white">
 									<td>
 										<li><a href="ctMenwear.com">남성복</a></li>
 										<li><a href="ctLadieswear.com">여성복</a></li>
@@ -191,33 +191,33 @@
 									
 				
 										<ul>
-											<li>제목</li>
+											<li>◾ 제목</li>
 											<br>
 											<li>${list.cm_name }</li>
 										
-											</li>가격</li><br>
+											</li>◾ 가격</li><br>
 											</li>${list.cm_price}</li><br>
 										</ul>
 				
 			
 										<tr>
-											<td>카테고리</td><br>
+											<td>◾ 카테고리</td><br>
 											<td>${list.cm_category }</td><br>
 										</tr>
 										<tr>
-											<td>거래지역</td><br>
+											<td>◾ 거래지역</td><br>
 											<td>${select.loc_name}</td><br>
 										</tr>
 										<tr>
-											<td>상태(중고상품/새상품)</td><br>
+											<td>◾ 상태(중고상품/새상품)</td><br>
 											<td>${list.cm_status}</td><br>
 										</tr>
 										
 										<tr>
 											<td colspan="2">
-												<button id="mybtn" onclick="location.href='bookmark.com?cm_seq=${list.cm_seq}'">찜</button>
-												<button id="chatbtn">채팅</button>
-												<button id="buybtn">구매신청</button> <br> <br> <a
+												<button id="mybtn" onclick="location.href='bookmark.com?cm_seq=${list.cm_seq}'">❤찜</button>
+												<button id="chatbtn">✉채팅</button>
+												<button id="buybtn">✔구매신청</button> <br> <br> <a
 												href="gomain.com"><button>
 														홈으로<br>돌아가기
 													</button></a>
