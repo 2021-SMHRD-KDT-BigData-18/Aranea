@@ -12,7 +12,7 @@ public class MyUpdateInfoCon implements Controller {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String nextview = "updateinfo";
+		String nextview = "myupdateInfo";
 		
 		return nextview;
 	}

@@ -12,7 +12,7 @@ public class MyBookmarkCon implements Controller {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String nextview = "bookmark";
+		String nextview = "mybookmark";
 		
 		return nextview;
 	}

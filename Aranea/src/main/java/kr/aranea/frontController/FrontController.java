@@ -23,6 +23,11 @@ import kr.aranea.controller.JoinCon;
 import kr.aranea.controller.LoginCon;
 import kr.aranea.controller.LoginSuccessCon;
 import kr.aranea.controller.LogoutCon;
+import kr.aranea.controller.MyBookmarkCon;
+import kr.aranea.controller.MyBuyingListCon;
+import kr.aranea.controller.MyPointCon;
+import kr.aranea.controller.MySellingListCon;
+import kr.aranea.controller.MyUpdateInfoCon;
 import kr.aranea.controller.SearchIdCon;
 import kr.aranea.controller.SearchIdSuccessCon;
 import kr.aranea.controller.SearchPwCon;
@@ -61,6 +66,11 @@ public class FrontController extends HttpServlet {
 		mappings.put("/writeMap.com", new WriteMapCon());
 		mappings.put("/writeMapUpload.com", new WriteMapUploadCon());
 		mappings.put("/category.com", new CategoryCon());
+		mappings.put("/bookmark.com", new MyBookmarkCon());
+		mappings.put("/sellingList.com", new MySellingListCon());
+		mappings.put("/buyingList.com", new MyBuyingListCon());
+		mappings.put("/updateinfo.com", new MyUpdateInfoCon());
+		mappings.put("/point.com", new MyPointCon());
 		
 	}
 	

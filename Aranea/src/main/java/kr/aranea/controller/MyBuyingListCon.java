@@ -6,14 +6,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class MyCreditCon implements Controller {
+public class MyBuyingListCon implements Controller {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		String nextview = "credit";
 		
+		String nextview = "myBuyingList";
+
 		return nextview;
 	}
 
