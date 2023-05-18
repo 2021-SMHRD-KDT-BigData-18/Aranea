@@ -55,50 +55,7 @@
 
 					</div>
 				</div>
-				<div class="side">
-
-					<div class="category">
-						<a><img alt="메뉴버튼" src="images/category.png" width="35"
-							height="35">카테고리</a>
-						<ul class="categorybtn">
-							<table>
-								<tr bgcolor="white">
-									<td>
-										<li><a href="ctMenwear.com">남성복</a></li>
-										<li><a href="ctLadieswear.com">여성복</a></li>
-										<li><a href="ctDevice.com">디지털기기</a></li>
-										<li><a href="ct_appliances.com">생활가전</a></li>
-										<li><a href="ctInterior.com">가구/인테리어</a></li>
-										<li><a href="ctBeauty.com">뷰티/미용</a></li>
-										<li><a href="ctSport.com">스포츠/레저</a></li>
-										<li><a href="ctBook.com">도서</a></li>
-										<li><a href="ctTicket.com">티켓/상품권</a></li>
-										<li><a href="ctPet.com">반려동물용품</a></li>
-									</td>
-								</tr>
-							</table>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="pure-menu custom-restricted-width">
-			<h2 class="pure-menu-heading">내 상점</h2>
-			<ul class="pure-menu-list">
-				<li class="pure-menu-item"><a href="bookmark.com"
-					class="pure-menu-link">찜한상품</a></li>
-				<li class="pure-menu-item"><a href="sellingList.com"
-					class="pure-menu-link">판매내역</a></li>
-				<li class="pure-menu-item"><a href="buyingList.com"
-					class="pure-menu-link">구매내역</a></li>
-				<li class="pure-menu-item"><a href="updateinfo.com"
-					class="pure-menu-link">정보수정</a></li>
-				<li class="pure-menu-item"><a href="point.com"
-					class="pure-menu-link">포인트확인</a></li>
-
-			</ul>
-		</div>
+				
 
 
 

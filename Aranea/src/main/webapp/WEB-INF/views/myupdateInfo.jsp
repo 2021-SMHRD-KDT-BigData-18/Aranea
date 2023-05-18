@@ -127,10 +127,10 @@
 					<tr>
 						<th>계좌번호</th>
 						<td><input type="text" name=intro id=intro disabled
-							value="<%=user.getUser_name()%>"> <input type=button
+							value="<%=user.getUser_v_account()%>"> <input type=button
 							id=intro_button value="변경" onclick="change_intro();"></td>
 						<input type=hidden name="user_v_account" id=intro2
-							value="<%=user.getUser_name()%>">
+							value="<%=user.getUser_v_account()%>">
 					</tr>
 				</table>
 				<input disabled id=submit type="submit" value="변경사항 확정하기">
