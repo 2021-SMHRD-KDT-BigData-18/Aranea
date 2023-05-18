@@ -73,16 +73,16 @@
 							<table>
 								<tr bgcolor="white">
 									<td>
-										<li><a href="ctMenwear.com">남성복</a></li>
-										<li><a href="ctLadieswear.com">여성복</a></li>
-										<li><a href="ctDevice.com">디지털기기</a></li>
-										<li><a href="ct_appliances.com">생활가전</a></li>
-										<li><a href="ctInterior.com">가구/인테리어</a></li>
-										<li><a href="ctBeauty.com">뷰티/미용</a></li>
-										<li><a href="ctSport.com">스포츠/레저</a></li>
-										<li><a href="ctBook.com">도서</a></li>
-										<li><a href="ctTicket.com">티켓/상품권</a></li>
-										<li><a href="ctPet.com">반려동물용품</a></li>
+										<li><a href="category.com?cm_category=남성복">남성복</a></li>
+										<li><a href="category.com?cm_category=여성복">여성복</a></li>
+										<li><a href="category.com?cm_category=디지털기기">디지털기기</a></li>
+										<li><a href="category.com?cm_category=생활가전">생활가전</a></li>
+										<li><a href="category.com?cm_category=가구/인테리어">가구/인테리어</a></li>
+										<li><a href="category.com?cm_category=뷰티/미용">뷰티/미용</a></li>
+										<li><a href="category.com?cm_category=스포츠/레저">스포츠/레저</a></li>
+										<li><a href="category.com?cm_category=도서">도서</a></li>
+										<li><a href="category.com?cm_category=티켓/상품권">티켓/상품권</a></li>
+										<li><a href="category.com?cm_category=반려동물용품">반려동물용품</a></li>
 									</td>
 								</tr>
 							</table>
@@ -90,8 +90,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
 
 		<div class=middle>
 			<form method=post action="updateinfoSuccess.com">

@@ -101,7 +101,6 @@
 					</div>
 				</div>
 			</div>
-	</div>
 
 	<div id="board">
 		<table id="list">
