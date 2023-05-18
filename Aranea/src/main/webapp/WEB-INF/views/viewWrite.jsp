@@ -197,6 +197,9 @@
                                  <li>◾ 제목</li>
                                  <br>
                                  <li>${list.cm_name }</li>
+                                 
+                                 <li>◾ 판매자</li><br>
+                                 <li>${list.user_name }</li><br>
                               
                                  </li>◾ 가격</li><br>
                                  </li>${list.cm_price}</li><br>
