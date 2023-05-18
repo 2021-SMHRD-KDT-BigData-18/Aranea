@@ -47,5 +47,15 @@
 		 where user_id = #{user_id}
 		   and user_phone = #{user_phone}
 	</update>
+	
+	<!-- 마이페이지 정보 수정 -->
+	<update id="updateInfo" parameterType="kr.aranea.entity.T_User">
+		update T_USER
+		   set user_name = #{user_name},
+		   	   user_pw = #{user_pw},
+		   	   user_phone = #{user_phone},
+		   	   user_v_account = #{user_v_account}
+		 where user_id = #{user_id}
+	</update>
 
 </mapper>

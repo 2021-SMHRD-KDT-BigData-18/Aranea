@@ -29,6 +29,7 @@ import kr.aranea.controller.MyBuyingListCon;
 import kr.aranea.controller.MyPointCon;
 import kr.aranea.controller.MySellingListCon;
 import kr.aranea.controller.MyUpdateInfoCon;
+import kr.aranea.controller.MyUpdateInfoSuccessCon;
 import kr.aranea.controller.SearchIdCon;
 import kr.aranea.controller.SearchIdSuccessCon;
 import kr.aranea.controller.SearchPwCon;
@@ -73,6 +74,7 @@ public class FrontController extends HttpServlet {
 		mappings.put("/updateinfo.com", new MyUpdateInfoCon());
 		mappings.put("/point.com", new MyPointCon());
 		mappings.put("/bookmark2.com", new MyBookmarkCon2());
+		mappings.put("/updateinfoSuccess.com", new MyUpdateInfoSuccessCon());
 	}
 	
 	

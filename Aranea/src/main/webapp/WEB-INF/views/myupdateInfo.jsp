@@ -89,28 +89,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="menu_list">
-			<div class="pure-menu custom-restricted-width">
-				<h2 class="pure-menu-heading">내 상점</h2>
-				<ul class="pure-menu-list">
-					<li class="pure-menu-item"><a href="bookmark.com"
-						class="pure-menu-link">찜한상품</a></li>
-					<li class="pure-menu-item"><a href="sellingList.com"
-						class="pure-menu-link">판매내역</a></li>
-					<li class="pure-menu-item"><a href="buyingList.com"
-						class="pure-menu-link">구매내역</a></li>
-					<li class="pure-menu-item"><a href="updateinfo.com"
-						class="pure-menu-link">정보수정</a></li>
-					<li class="pure-menu-item"><a href="point.com"
-						class="pure-menu-link">포인트확인</a></li>
-				</ul>
-			</div>
-		</div>
-
 
 
 		<div class=middle>
-			<form method=post action="#">
+			<form method=post action="updateinfoSuccess.com">
 				<br>
 				<h2>내 정보 수정</h2>
 				<table>
@@ -123,7 +105,7 @@
 						<td><input type=password name=pw id=pw disabled
 							placeholder="필수 입력 사항입니다." value="<%=user.getUser_pw()%>">
 							<input type=button id=pw_button value="변경" onclick="change_pw();"></td>
-						<input type=hidden name=pw2 id=pw2 value="<%=user.getUser_pw()%>">
+						<input type=hidden name="user_pw" id=pw2 value="<%=user.getUser_pw()%>">
 					</tr>
 					<tr>
 						<th>이름</th>
@@ -131,7 +113,7 @@
 							placeholder="필수 입력 사항입니다." value="<%=user.getUser_name()%>">
 							<input type=button id=name_button value="변경"
 							onclick="change_name();"></td>
-						<input type=hidden name=name2 id=name2
+						<input type=hidden name="user_name" id=name2
 							value="<%=user.getUser_name()%>">
 					</tr>
 					<tr>
@@ -139,19 +121,19 @@
 						<td><input type="text" name=phone id=phone disabled
 							value="<%=user.getUser_phone()%>"> <input type=button
 							id=phone_button value="변경" onclick="change_phone();"></td>
-						<input type=hidden name=phone2 id=phone2
+						<input type=hidden name="user_phone" id=phone2
 							value="<%=user.getUser_phone()%>">
 					</tr>
 					<tr>
-						<th>소개</th>
+						<th>계좌번호</th>
 						<td><input type="text" name=intro id=intro disabled
 							value="<%=user.getUser_name()%>"> <input type=button
 							id=intro_button value="변경" onclick="change_intro();"></td>
-						<input type=hidden name=intro2 id=intro2
+						<input type=hidden name="user_v_account" id=intro2
 							value="<%=user.getUser_name()%>">
 					</tr>
 				</table>
-				<input disabled id=submit type=submit value="변경사항을 확정하기">
+				<input disabled id=submit type="submit" value="변경사항 확정하기">
 			</form>
 		</div>
 
