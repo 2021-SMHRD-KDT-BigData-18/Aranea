@@ -119,7 +119,7 @@
 
 		</div>
 		<section class="card-menu">
-			<h2>NEW 등록 상품</h2>
+			<h2>등록 상품</h2>
 			<div class="card-list">
 				<div class="card-list2">
 					<div class="card-list3">
