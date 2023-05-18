@@ -72,7 +72,9 @@
    margin-top: 2%;
   margin-left:2%;
   margin-right:5%;
-  border:2px solid gray;
+  border-top:2px dashed crimson;
+  border-bottom:2px dashed crimson;
+  
   }
   
   

@@ -51,4 +51,12 @@ public class T_UserDAO {
 		session.close();
 		return row;
 	}
+
+	// 정보수정 후 수정된 데이터들로 조회
+	public T_User selectUi(String user_id) {
+		SqlSession session = factory.openSession(true);
+		T_User list = session.selectOne("selectUi", user_id);
+		session.close();
+		return list;
+	}
 }

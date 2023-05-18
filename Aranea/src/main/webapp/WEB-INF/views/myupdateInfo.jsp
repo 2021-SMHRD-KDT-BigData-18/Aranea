@@ -20,6 +20,8 @@
 <body>
 	<%
 	T_User user = (T_User) session.getAttribute("user");
+	
+	T_User list2 = (T_User)session.getAttribute("list2");
 	%>
 
 	<div class="container">
@@ -103,34 +105,34 @@
 					<tr>
 						<th>PW</th>
 						<td><input type=password name=pw id=pw disabled
-							placeholder="필수 입력 사항입니다." value="<%=user.getUser_pw()%>">
+							placeholder="필수 입력 사항입니다." value="<%=list2.getUser_pw()%>">
 							<input type=button id=pw_button value="변경" onclick="change_pw();"></td>
-						<input type=hidden name="user_pw" id=pw2 value="<%=user.getUser_pw()%>">
+						<input type=hidden name="user_pw" id=pw2 value="<%=list2.getUser_pw()%>">
 					</tr>
 					<tr>
 						<th>이름</th>
 						<td><input type=text name=name id=name disabled
-							placeholder="필수 입력 사항입니다." value="<%=user.getUser_name()%>">
+							placeholder="필수 입력 사항입니다." value="<%=list2.getUser_name()%>">
 							<input type=button id=name_button value="변경"
 							onclick="change_name();"></td>
 						<input type=hidden name="user_name" id=name2
-							value="<%=user.getUser_name()%>">
+							value="<%=list2.getUser_name()%>">
 					</tr>
 					<tr>
 						<th>연락처</th>
 						<td><input type="text" name=phone id=phone disabled
-							value="<%=user.getUser_phone()%>"> <input type=button
+							value="<%=list2.getUser_phone()%>"> <input type=button
 							id=phone_button value="변경" onclick="change_phone();"></td>
 						<input type=hidden name="user_phone" id=phone2
-							value="<%=user.getUser_phone()%>">
+							value="<%=list2.getUser_phone()%>">
 					</tr>
 					<tr>
 						<th>계좌번호</th>
 						<td><input type="text" name=intro id=intro disabled
-							value="<%=user.getUser_v_account()%>"> <input type=button
+							value="<%=list2.getUser_v_account()%>"> <input type=button
 							id=intro_button value="변경" onclick="change_intro();"></td>
 						<input type=hidden name="user_v_account" id=intro2
-							value="<%=user.getUser_v_account()%>">
+							value="<%=list2.getUser_v_account()%>">
 					</tr>
 				</table>
 				<input disabled id=submit type="submit" value="변경사항 확정하기">

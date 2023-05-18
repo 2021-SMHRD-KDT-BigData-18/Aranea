@@ -57,5 +57,12 @@
 		   	   user_v_account = #{user_v_account}
 		 where user_id = #{user_id}
 	</update>
+	
+	<!-- 정보수정 후 수정된 데이터들로 조회 -->
+	<select id="selectUi" resultType="kr.aranea.entity.T_User">
+		select *
+		  from T_USER
+		 where user_id = #{user_id}
+	</select>
 
 </mapper>
