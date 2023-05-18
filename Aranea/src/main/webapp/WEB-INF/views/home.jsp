@@ -17,11 +17,13 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="./assets/css/home.css">
+<script type="text/javascript" src="assets/JS/home.js"></script>
 <style>
 
 
 </style>
 <body>
+<div class="allcontainer">
 	<!--  <%
 	T_User user = (T_User) session.getAttribute("user");
 
@@ -164,7 +166,7 @@
 	</div>
 	<!-- 컨테이너 바디 -->
 
-
+</div>
 
 
 
