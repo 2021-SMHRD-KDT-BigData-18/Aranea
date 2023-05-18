@@ -22,5 +22,6 @@
     <mapper resource="kr/aranea/dao/T_DealingMapper.xml"/>
     <mapper resource="kr/aranea/dao/T_LocationMapper.xml"/>
     <mapper resource="kr/aranea/dao/T_UserMapper.xml"/>
+    <mapper resource="kr/aranea/dao/T_LikeMapper.xml"/>
   </mappers>
 </configuration>

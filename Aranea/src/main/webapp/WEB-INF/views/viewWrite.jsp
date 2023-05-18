@@ -215,7 +215,7 @@
 										
 										<tr>
 											<td colspan="2">
-												<button id="mybtn">찜</button>
+												<button id="mybtn" onclick="location.href='bookmark.com?cm_seq=${list.cm_seq}'">찜</button>
 												<button id="chatbtn">채팅</button>
 												<button id="buybtn">구매신청</button> <br> <br> <a
 												href="gomain.com"><button>
