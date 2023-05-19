@@ -49,14 +49,6 @@ img {
 
 /* header : 로그인/회원가입 화면 */
 .header {
-	/*       display: flex;
-            justify-content: center;
-            -webkit-box-pack: center;
-            height: 40px;
-            background: rgb(255, 255, 255);
-            margin-left: 100%;
-            margin-right: 20%;
-            float: right; */
 	left: 30%;
 	right: 30%;
 	border-bottom: 1px solid rgb(238, 238, 238);
@@ -76,17 +68,7 @@ img {
 .login {
 	color: black;
 }
-/* 
-         .a {
-            display: flex;
-            -webkit-box-align: center;
-            align-items: center;
-            font-size: 13px;
-            color: rgb(255, 6, 6);
-            padding: 0px 15px;
-            position: relative;
-            line-height: 1.4;
-        }  */
+
 .login:hover {
 	color: rgb(187, 7, 11);
 	text-decoration: underline;
@@ -123,6 +105,10 @@ img {
 	-webkit-box-align: center;
 	align-items: center;
 	float: left;
+}
+
+.logoimg{
+	margin-top: 20px; 
 }
 
 /* nav : 서치*/
@@ -197,10 +183,6 @@ input[type="text"] {
 	height: 50px;
 }
 
-.card-menu {
-	padding: 1rem 0px 1rem;
-}
-
 .h2 {
 	font-size: 1.5rem;
 	margin-bottom: 1.5rem;
@@ -211,10 +193,6 @@ input[type="text"] {
 	align-items: flex-start;
 	flex-wrap: wrap;
 	margin-left: 38px;
-}
-
-.card-menu {
-	padding: 1rem 0px 1rem;
 }
 
 .containerheader {
@@ -228,18 +206,7 @@ input[type="text"] {
 	height: 786px;
 }
 
-/* 주문/배송조회 타이틀 */
-.title {
-	padding: 20px 20px;
-	background-color: white;
-	font-size: 20px;
-	font-weight: bold;
-	margin-bottom: 10px;
-	color: rgb(187, 7, 11);
-	border-radius: 10%;
-}
-
-/*=================== 주문목록 ~ 찜한상품 리스트 ==================*/
+/*=================== 찜한상품~ 정보수정 리스트 ==================*/
 .menu_list {
 	float: left;
 	margin-right: 15px;

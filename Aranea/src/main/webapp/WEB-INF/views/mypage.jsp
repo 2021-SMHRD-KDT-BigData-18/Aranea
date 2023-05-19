@@ -7,7 +7,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <title>Bootstrap 4 Website Example</title>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <meta charset="utf-8">
@@ -15,7 +14,6 @@
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="./assets/css/mypage.css">
-
 </head>
 <body>
 	<div class="allcontainer">
@@ -56,7 +54,7 @@
 					<div class="rav">
 						<div class="logo">
 							<a class="logoimg" href="gomain.com"> <img alt="아라냐 로고"
-								src="images/araneaLogo.png" width="250px" height="110px">
+								src="images/AraneaLogo.png" width="300px" height="90px">
 							</a>
 						</div>
 
