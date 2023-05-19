@@ -36,7 +36,7 @@
 				<div class="rav">
 					<div class="logo">
 						<a class="logoimg" href="gomain.com"> <img alt="아라냐 로고"
-							src="images/araneaLogo.png" width="136px" height="40px">
+							src="images/AraneaLogo.PNG" width="136px" height="40px">
 						</a>
 					</div>
 

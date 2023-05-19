@@ -34,7 +34,7 @@
 
 			<div class="logo">
 				<a class="logoimg" href="gomain.com"> <img alt="아라냐 로고"
-					src="images/araneaLogo.png" width="300px" height="150px">
+					src="images/AraneaLogo.PNG" width="300px" height="150px">
 				</a>
 			</div>
 

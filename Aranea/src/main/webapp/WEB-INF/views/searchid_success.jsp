@@ -20,7 +20,7 @@
       
           <div class="logo">
              <a class="logoimg" href="gomain.com">
-               <img alt="아라냐 로고" src="../araneaLogo.png" width="300px" height="150px">
+               <img alt="아라냐 로고" src="images/AraneaLogo.PNG" width="300px" height="150px">
             </a>
           </div>
 		</div>
