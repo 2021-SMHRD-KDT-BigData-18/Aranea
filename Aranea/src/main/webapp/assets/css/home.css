@@ -219,8 +219,18 @@ input[type="text"] {
 }
 
 
+
+
 .viewImg{
-float: left;}
+float: left;
+width: 270px;
+height:270px;
+
+}
+.viewImg>Img{
+	width: 100%;
+	height:100%;
+}
 .viewWrap {
 	/* width: 25%;
 	height: 30%;

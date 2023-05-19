@@ -154,8 +154,7 @@
 						<a href="viewWriting.com?cm_seq=${list.cm_seq}">
 							<div class="viewImg">
 								<img alt="상품이미지"
-									src="http://211.228.63.186:8081/Aranea/file/${list.cm_img1}"
-									width="270" height="270">
+									src="http://211.228.63.186:8081/Aranea/file/${list.cm_img1}">
 							</div>
 							<div class="viewCard">
 								<div class="title">${list.cm_name}</div>
