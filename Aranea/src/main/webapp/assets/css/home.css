@@ -211,14 +211,11 @@ input[type="text"] {
 	align-items: flex-start;
 	flex-wrap: wrap;
 	margin-left: 38px;
-	    justify-content: space-around;
 	    margin-top:20px;
 }
 
 .viewCard {
 }
-
-
 
 
 .viewImg{
@@ -238,7 +235,9 @@ height:270px;
 	margin: 20px; */
 	padding: 20px 20px 0 20px;
     margin-bottom: 50px;
-     border: 1px solid lightgray;
+    border: 1px solid lightgray;
+        margin-left: 14px;
+    
     
 }
 
@@ -253,6 +252,6 @@ height:270px;
 	margin-right: 15%;
 }
 .allcontainer{
-width: 1920px;
+width: 1920px;	
 height: 786px;
 }
