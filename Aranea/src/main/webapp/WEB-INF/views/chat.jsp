@@ -155,7 +155,6 @@ h1 {
 
 
 	</div>
-	var content = $('#chatLog').innerHTML;
 
 	<!-- 채팅 div -->
 	<div id="chatting">
