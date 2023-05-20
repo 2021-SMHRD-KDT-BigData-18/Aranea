@@ -140,11 +140,11 @@
 					<td>판매자 아이디</td>
 				</tr>
 				<c:forEach items="${list}" var="item">
-					<tr>
+					<tr onclick="location.href='viewWriting.com?cm_seq=${item.cm_seq}'">
 						<td><img alt="상품이미지"
 							src="http://211.228.63.186:8081/Aranea/file/${item.cm_img1}"
 							width="194" height="194"></td>
-						<td><a href="viewWriting.com?cm_seq=${item.cm_seq}">${item.cm_name}</a></td>
+						<td>${item.cm_name}</td>
 						<td>${item.cm_price}</td>
 						<td>${item.cm_regdate}</td>
 						<td>${item.user_id}</td>
