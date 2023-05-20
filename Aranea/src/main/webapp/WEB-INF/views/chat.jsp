@@ -39,13 +39,16 @@ h1 {
 	text-align: center;
 	vertical-align: middle;
 }
+.mychat_content{
+	text-align: right;
+}
 </style>
 </head>
 <body>
 	<%
 	T_User user = (T_User) session.getAttribute("user");
 
-	T_Dealing list = (T_Dealing) request.getAttribute("list");
+	T_Commodity list = (T_Commodity)request.getAttribute("list");
 	request.setAttribute("list", list);
 	%>
 
@@ -77,7 +80,7 @@ h1 {
 				<div class="rav">
 					<div class="logo">
 						<a class="logoimg" href="gomain.com"> <img alt="아라냐 로고"
-							src="images/AraneaLogo.png" width="300px" height="90px">
+							src="images/AraneaLogo.PNG" width="250px" height="110px">
 						</a>
 					</div>
 
@@ -152,7 +155,7 @@ h1 {
 
 
 	</div>
-
+	var content = $('#chatLog').innerHTML;
 
 	<!-- 채팅 div -->
 	<div id="chatting">
@@ -164,6 +167,7 @@ h1 {
 			<input type="hidden" value="${user.getUser_name()}" id='chat_id' />
 
 			<div id="chatLog">
+				<!-- 
 				<div class="anotherMsg">
 					<span class="anotherName">${user.getUser_name()}</span> <br> <span
 						class="msg">Hello, Nice to meet you.</span>
@@ -172,24 +176,29 @@ h1 {
 					<span class="msg"></span> <span class="msg">Nice to meet
 						you, too.</span>
 				</div>
+				 -->
 			</div>
-			<form id="chatForm">
+			
 				<input id="inputMessage" class="send_btn" type="text"
 					autocomplete="off" size="30" onkeyup="enterkey()"
-					placeholder="메시지를 입력하세요"> <input class="send_btn"
-					type="submit" value="send" onclick="send()" />
-			</form>
+					placeholder="메시지를 입력하세요"> 
+				<input class="send_btn"
+					type="submit" value="send" onclick="send()">
+			
+
 		</div>
 	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
 <script type="text/javascript">
 	var textarea = document.getElementById("chatLog");
-	var path = 'ws://119.206.166.57:8081/Aranea_사본/broadcasting/';
-	if ('${user.getUser_id()}' == 'test1') {
+	var path = "ws://119.206.166.57:8081/Aranea_사본/broadcasting/";
+	
+	if ('${list.getUser_id()}' != null) {
+		path += '${user.getUser_id()}'+'${list.getUser_id()}';
+	} /*else if ('${user.getUser_id()}' == '111') {
 		path += '123';
-	} else if ('${user.getUser_id()}' == '111') {
-		path += '123';
-	}
+	}*/
 	var webSocket = new WebSocket(path);
 	var inputMessage = document.getElementById('inputMessage');
 	webSocket.onerror = function(event) {
@@ -226,16 +235,16 @@ h1 {
 				} else {
 				}
 			} else {
-				if (content.match("!")) {
+				if (sender == '${user.getUser_name()}') {
 					$("#chatLog")
 							.html(
 									$("#chatLog").html()
-											+ "<p class='chat_content'><b class='impress'>"
-											+ sender + " : " + content
+											+ "<p class='mychat_content'><b class='impress'>"
+											+ content
 											+ "</b></p>");
 				} else {
 					$("#chatLog").html(
-							$("#chatLog").html() + "<p class='chat_content'>"
+							$("#chatLog").html() + "<p class='otherchat_content'>"
 									+ sender + " : " + content + "</p>");
 				}
 			}
@@ -252,17 +261,17 @@ h1 {
 	};
 	function send() {
 		if (inputMessage.value == "") {
-			$("#chatLog").html(
+			/*$("#chatLog").html(
 			        $("#chatLog").html()
-			                + "<p class='chat_content'>${user.getUser_id()} : "
+			                + "<p class='chat_content'>${user.getUser_name()} : "
 			                + inputMessage.value
-			                + "</p>");
+			                + "</p>");*/
 		} else {
-			$("#chatLog").html(
+			/*$("#chatLog").html(
 			        $("#chatLog").html()
-			                + "<p class='chat_content'>${user.getUser_id()} : "
+			                + "<p class='chat_content'>${user.getUser_name()} : "
 			                + inputMessage.value
-			                + "</p>");
+			                + "</p>");*/
 			webSocket.send($("#chat_id").val() + ",!," + inputMessage.value);
 		}
 		inputMessage.value = "";
