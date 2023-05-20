@@ -77,7 +77,7 @@ h1 {
 				<div class="rav">
 					<div class="logo">
 						<a class="logoimg" href="gomain.com"> <img alt="아라냐 로고"
-							src="images/AraneaLogo.PNG" width="250px" height="110px">
+							src="images/AraneaLogo.png" width="300px" height="90px">
 						</a>
 					</div>
 

@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="logo">
 			<a class="logoimg" href="gomain.com"> 
-			<img alt="아라냐 로고" src="images/AraneaLogo.PNG" width="300" height="60">
+			<img alt="아라냐 로고" src="images/AraneaLogo.png" width="300" height="90">
 			</a>
 		</div>
 		
