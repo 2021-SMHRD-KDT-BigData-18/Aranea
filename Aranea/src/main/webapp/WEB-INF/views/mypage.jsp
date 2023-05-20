@@ -161,14 +161,39 @@
 			</div>
 
 
+
+
+			<div class="profile-info">
+				<%-- 사용자 정보가 있다면 --%>
+				<%
+				if (user != null) {
+				%>
+				<div class="profile-name">
+					<%=user.getUser_name()%>님
+				</div>
+				<div class="profile-details">
+					<p>
+						이름:
+						<%=user.getUser_name()%></p>
+					<p>
+						전화번호:
+						<%=user.getUser_phone()%></p>
+					<p>
+						계좌번호:
+						<%=user.getUser_v_account()%></p>
+					<%-- 추가적인 프로필 정보를 여기에 표시하세요 --%>
+				</div>
+				<%
+				} else {
+				%>
+				<div class="profile-name">로그인이 필요합니다.</div>
+				<%
+				}
+				%>
+			</div>
 		</div>
 		<!-- 컨테이너 바디 -->
 	</div>
-	</div>
-
-
-	</div>
-
 	<script type="text/javascript" src="assets/JS/home.js"></script>
 </body>
 </html>

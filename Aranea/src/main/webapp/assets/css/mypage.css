@@ -107,8 +107,8 @@ img {
 	float: left;
 }
 
-.logoimg{
-	margin-top: 20px; 
+.logoimg {
+	margin-top: 20px;
 }
 
 /* nav : 서치*/
@@ -233,53 +233,70 @@ input[type="text"] {
 	font-size: 45px;
 }
 
-.list {
-	width: 150px;
-}
-
 .containerbody {
-	margin-left: 15%;
-	margin-right: 15%;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 20px;
 }
 
 .listContainer {
-	display: flex;
-	justify-content: space-between;
+	margin-bottom: 20px;
 }
 
-.list{
-	width: 150px;
-	list-style-type: none;
-	padding: 0;
+.list {
+	display: flex;
+	padding: 10px 0;
 }
 
 .item {
-	display: block;
-	margin-bottom: 10px;
+	flex: 1;
+	padding: 10px;
+	background-color: #f1f1f1;
+	border-radius: 5px;
+	margin-right: 10px;
 }
 
 .item .text {
-	display: flex;
-	align-items: center;
-	color: black;
-	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .item .circle {
 	display: inline-block;
 	width: 8px;
 	height: 8px;
+	background-color: red;
 	border-radius: 50%;
-	background-color: rgb(187, 7, 11);
 	margin-left: 5px;
 }
 
-.hello {
-	margin-left: 30px;
-}
-
 .hello h2 {
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 10px;
+}
+
+.profile-info {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.profile-info p {
+	display: table-row;
+}
+
+.profile-info p span {
+	display: table-cell;
+	padding: 5px 10px;
+	border-bottom: 1px solid #ccc;
+	font-weight: bold;
+}
+
+.profile-info p span:first-child {
+	width: 150px;
+}
+
+.profile-info p span:last-child {
+	text-align: right;
 }
