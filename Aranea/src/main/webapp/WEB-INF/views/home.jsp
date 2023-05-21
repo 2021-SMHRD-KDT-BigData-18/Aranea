@@ -66,14 +66,9 @@
 							<div class="search">
 								<input type="text" name="searchContent" placeholder="키워드 검색"
 									class="inputTag" onkeyup="enterkey()"> 
-								<input type="image" src="images/searchbtn.jpg" width="32" height="32">
-								<!-- 
-								<a class="searchBtn" onclick="location.href='goSerachText.com'"> 
-								<img
-									alt="검색버튼 아이콘" src="images/searchbtn.jpg" width="20"
-									height="20">
-								</a>
-									 -->
+								<input  type="image" src="images/123.png" width="32" height="32" >
+							
+			
 							</div>
 						</div>
 						</form>

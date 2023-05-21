@@ -139,8 +139,9 @@ img {
 	display: flex;
 	-webkit-box-align: center;
 	align-items: center;
-	padding: 0px 15px;
+margin-left: 15px;
 }
+
 
 .searchBtn {
 	color: rgb(33, 33, 33);
@@ -153,7 +154,7 @@ img {
 }
 
 .inputTag {
-	width: 400px;
+	width: 340px;
 	border: none;
 	color: rgb(102, 102, 102);
 	-webkit-box-flex: 1;
