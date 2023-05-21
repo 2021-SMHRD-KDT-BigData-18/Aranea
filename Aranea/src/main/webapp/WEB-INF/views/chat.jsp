@@ -161,9 +161,7 @@ h1 {
 		<div id="chatWrap">
 			<div id="chatHeader">채팅</div>
 
-			<h1>${user.getUser_name()}</h1>
-
-			<input type="hidden" value="${user.getUser_name()}" id='chat_id' />
+			<input type="hidden" value="${user.getUser_name()}" id='chat_id'>
 
 			<div id="chatLog">
 				<!-- 
@@ -244,7 +242,7 @@ h1 {
 				} else {
 					$("#chatLog").html(
 							$("#chatLog").html() + "<p class='otherchat_content'>"
-									+ sender + " : " + content + "</p>");
+									+ sender + "<br>" + content + "</p>");
 				}
 			}
 		}
