@@ -25,7 +25,7 @@
 
 		List<T_Commodity> list = (List<T_Commodity>) request.getAttribute("list");
 		request.setAttribute("list", list);
-		;
+		
 		%>
 
 		<!--수정 컨테이너 헤더  -->

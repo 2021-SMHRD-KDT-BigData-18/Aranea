@@ -1,6 +1,9 @@
+<%@page import="kr.aranea.entity.T_Chat"%>
+<%@page import="java.util.List"%>
 <%@page import="kr.aranea.entity.T_User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +19,9 @@
 	<div class="allcontainer">
 		<%
 		T_User user = (T_User) session.getAttribute("user");
+		
+		List<T_Chat> list2 = (List<T_Chat>)request.getAttribute("list2");
+		request.setAttribute("list2", list2);
 		%>
 
 		<!--수정 컨테이너 헤더  -->
@@ -126,6 +132,7 @@
 			<h1>채팅방목록</h1>
 			<table id="list">
 				<tr>
+					<th>이미지</th>
 					<th>대화상대</th>
 					<th>상품명</th>
 					<th>대화시작시간</th>
@@ -140,6 +147,28 @@
 					</tr>
 				</c:forEach>
 			</table>
+
+		</div>
+		
+		<div class="containerbody">
+			<div class="main">
+
+
+				<c:forEach items="${list2}" var="dto">
+					<c:choose>
+						<c:when test="${dto.chat_sender ne user.getUser_name()}">
+					<div class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
+						
+							<div class="viewCard">
+								<div class="title">${dto.chat_sender}</div>
+							</div>
+
+					</div>
+						</c:when>
+
+					</c:choose>
+				</c:forEach>
+			</div>
 
 		</div>
 

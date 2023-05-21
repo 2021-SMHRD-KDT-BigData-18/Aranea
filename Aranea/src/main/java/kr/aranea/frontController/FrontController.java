@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import kr.aranea.controller.AddressSetCon;
 import kr.aranea.controller.CategoryCon;
 import kr.aranea.controller.ChatCon;
+import kr.aranea.controller.ChatViewCon;
 import kr.aranea.controller.CheckCon;
 import kr.aranea.controller.CheckCon1;
 import kr.aranea.controller.Controller;
@@ -83,6 +84,7 @@ public class FrontController extends HttpServlet {
 		mappings.put("/check.com", new CheckCon());
 		mappings.put("/check1.com", new CheckCon1());
 		mappings.put("/goSerachText.com", new GoSearchTextCon());
+		mappings.put("/chatView.com", new ChatViewCon());
 	}
 	
 	

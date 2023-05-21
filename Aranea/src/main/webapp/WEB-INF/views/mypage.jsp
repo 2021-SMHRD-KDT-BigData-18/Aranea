@@ -1,3 +1,4 @@
+<%@page import="kr.aranea.entity.T_Chat"%>
 <%@page import="kr.aranea.entity.T_Commodity"%>
 <%@page import="kr.aranea.entity.T_User"%>
 <%@page import="java.util.List"%>
@@ -22,7 +23,9 @@
 
 		List<T_Commodity> list = (List<T_Commodity>) request.getAttribute("list");
 		request.setAttribute("list", list);
-		;
+		
+		List<T_Chat> list2 = (List<T_Chat>)request.getAttribute("list2");
+		request.setAttribute("list2", list2);
 		%>
 
 		<!--수정 컨테이너 헤더  -->
@@ -151,7 +154,7 @@
 					</a> <a href="updateinfo.com" class="item">
 						<div class="text">정보수정</div>
 					</a> <a href="point.com" class="item">
-						<div class="text">대화목록</div>
+						<div class="text">채팅</div>
 					</a>
 				</div>
 

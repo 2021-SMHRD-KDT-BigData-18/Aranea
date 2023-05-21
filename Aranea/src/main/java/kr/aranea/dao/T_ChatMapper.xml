@@ -2,5 +2,47 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.aranea.dao.T_ChatMapperDAO">
 
+	<!-- 채팅 db에 저장 -->
+	<insert id="insertChat" parameterType="kr.aranea.entity.T_Chat">
+		insert into t_chat
+		values(NUM_T_CHAT.nextval,
+		#{chat_sender},
+		#{chat_content},
+		#{chat_urlpath},
+		sysdate
+		)
+	</insert>
+
+	<!-- 채팅 조회 -->
+	<!-- 
+	<select id="selectChat" resultType="kr.aranea.entity.T_Chat"
+		parameterType="kr.aranea.entity.T_Chat">
+		select *
+		from(
+			select chat_sender
+			, chat_content
+			, rank() over(partition by chat_sender order by chat_time desc) as
+			chat_time
+			from t_chat)
+		where chat_urlpath like '%${user_id}%'
+		and chat_time = '1';
+	</select>
+	 -->
+	 <select id="selectChat" resultType="kr.aranea.entity.T_Chat">
+	 	select distinct chat_urlpath, chat_sender
+	 	  from t_chat
+	 	 where chat_urlpath Like '%${user_id}%'
+	 </select>
+	 
+
+	<!-- 채팅클릭 후 내용 조회 -->
+	<select id="chatContent" resultType="kr.aranea.entity.T_Chat">
+		select *
+		from t_chat
+		where chat_urlpath = #{chat_urlpath}
+	</select>
+	
+
+	
 
 </mapper>

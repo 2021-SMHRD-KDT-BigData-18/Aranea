@@ -1,14 +1,16 @@
+<%@page import="kr.aranea.entity.T_Chat"%>
 <%@page import="kr.aranea.entity.T_Dealing"%>
 <%@page import="kr.aranea.entity.T_Commodity"%>
 <%@page import="java.util.List"%>
 <%@page import="kr.aranea.entity.T_User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="./assets/css/chat.css">
+<link rel="stylesheet" href="./assets/css/home.css">
 <title>Insert title here</title>
 <style type="text/css">
 #chatting {
@@ -50,6 +52,12 @@ h1 {
 
 	T_Commodity list = (T_Commodity)request.getAttribute("list");
 	request.setAttribute("list", list);
+	
+	List<T_Chat> list2 = (List<T_Chat>)request.getAttribute("list2");
+	request.setAttribute("list2", list2);
+	
+	String list3 = (String)request.getAttribute("list3");
+	request.setAttribute("list3", list3);
 	%>
 
 	<div class="containerheader">
@@ -155,11 +163,13 @@ h1 {
 
 
 	</div>
-
+	
 	<!-- 채팅 div -->
 	<div id="chatting">
 		<div id="chatWrap">
 			<div id="chatHeader">채팅</div>
+
+			
 
 			<input type="hidden" value="${user.getUser_name()}" id='chat_id'>
 
@@ -174,6 +184,25 @@ h1 {
 						you, too.</span>
 				</div>
 				 -->
+				 <c:forEach items="${list2}" var="dto">
+					<c:choose>
+						<c:when test="${dto.chat_sender eq user.getUser_name()}">
+
+							 <div class="myMsg">
+								<span class="msg">${dto.chat_content}</span>
+							</div>
+						 	
+					
+						</c:when>
+						<c:otherwise>
+							<div class="anotherMsg">
+							 	<span class="anotherName">${dto.chat_sender}</span> <br> <span
+							class="msg">${dto.chat_content}</span>
+							</div>
+						</c:otherwise>
+					</c:choose>
+					
+				 </c:forEach>
 			</div>
 			
 				<input id="inputMessage" class="send_btn" type="text"
@@ -192,7 +221,7 @@ h1 {
 	var path = "ws://119.206.166.57:8081/Aranea_사본/broadcasting/";
 	
 	if ('${list.getUser_id()}' != null) {
-		path += '${user.getUser_id()}'+'@'+'${list.getUser_id()}';
+		path += '${list3}'; 
 	} /*else if ('${user.getUser_id()}' == '111') {
 		path += '123';
 	}*/
@@ -235,14 +264,14 @@ h1 {
 				if (sender == '${user.getUser_name()}') {
 					$("#chatLog")
 							.html(
-									$("#chatLog").html()
-											+ "<p class='mychat_content'><b class='impress'>"
+									$("#chatLog").html() 
+											+ "<p class='myMsg'><b class='impress'>"
 											+ content
 											+ "</b></p>");
 				} else {
 					$("#chatLog").html(
-							$("#chatLog").html() + "<p class='otherchat_content'>"
-									+ sender + "<br>" + content + "</p>");
+							$("#chatLog").html() + "<p class='anotherMsg'>"
+									+ sender +"<br>" + content + "</p>");
 				}
 			}
 		}
