@@ -59,6 +59,14 @@
 		 	and	deal_status in ('판매중', '판매완료')
 		 order by cm_seq desc
 	</select>
-
+	
+	<!-- 키워드 검색 후 판매글 조회 -->
+	<select id="searchList" resultType="kr.aranea.entity.T_Commodity">
+		select *
+		  from t_commodity
+		 where cm_name = '${cm_name}'
+		    or cm_desc = '${cm_name}'
+		 order by cm_seq desc
+	</select>
 
 </mapper>

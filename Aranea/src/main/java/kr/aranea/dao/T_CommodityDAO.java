@@ -51,4 +51,12 @@ public class T_CommodityDAO {
 		return list;
 	}
 
+	// 키워드 검색 후 판매글 조회
+	public List<T_Commodity> searchList(T_Commodity dto) {
+		SqlSession session = factory.openSession(true);
+		List<T_Commodity> list = session.selectList("searchList", dto);
+		session.close();
+		return list;
+	}
+
 }

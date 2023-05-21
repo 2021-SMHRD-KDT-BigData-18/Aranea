@@ -61,15 +61,22 @@
 							</a>
 						</div>
 
+						<form action="goSerachText.com" method="post">
 						<div class="search_input">
 							<div class="search">
-								<input type="text" placeholder="상품명, 지역명, @상점명 입력"
-									class="inputTag"> <a class="searchBtn"> <img
-									alt="검색버튼 아이콘" src="images/123.png" width="32"
-									height="32">
+								<input type="text" name="cm_name" placeholder="키워드 검색"
+									class="inputTag" onkeyup="enterkey()"> 
+								<input type="image" src="images/searchbtn.jpg" width="32" height="32">
+								<!-- 
+								<a class="searchBtn" onclick="location.href='goSerachText.com'"> 
+								<img
+									alt="검색버튼 아이콘" src="images/searchbtn.jpg" width="20"
+									height="20">
 								</a>
+									 -->
 							</div>
 						</div>
+						</form>
 
 						<div class="twopack">
 							<%
