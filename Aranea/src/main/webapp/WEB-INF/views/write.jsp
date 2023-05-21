@@ -25,8 +25,6 @@
 	<%
 	T_User user = (T_User) session.getAttribute("user");
 	%>
-
-
 	<%
 	if (user == null) {
 	%>
@@ -42,11 +40,10 @@
 	<div class="container">
 		<div class="card">
 			<div class="card-header">
-				<h4>중고상품 글 작성</h4>
+				<h3>중고상품 글 작성</h3>
 			</div>
-				<hr style="margin-left:8%;">
+			<hr style="margin-left: 8%;">
 			<div class="card-body">
-
 				<form action="writingUpload.com" method="post"
 					enctype="multipart/form-data">
 					<strong>상품이미지</strong><br>
@@ -64,7 +61,8 @@
 					</div>
 					<hr>
 
-					<strong>제목</strong><br> <input type="text" name="cm_name">
+					<strong>제목</strong><br> <input type="text" name="cm_name"
+						id="cm_name">
 					<hr>
 
 					<strong>카테고리</strong><br> <select name="cm_category"
@@ -84,42 +82,71 @@
 					<hr>
 
 					<strong>거래지역설정</strong><br>
-					<!-- 
-						<input type="text" name="loc_seq" id="check">
-					 -->
+					<!-- <input type="text" name="loc_seq" id="check"> -->
 					<p id="result"></p>
 					<a href="javascript:openWindow();">거래지역 검색</a>
-
-
 					<hr>
 
-					<strong>상태(중고상품/새상품)</strong><br> 중고상품<input type="radio"
+					<strong>상태(중고상품/새상품)</strong><br> 중고상품 <input type="radio"
 						name="cm_status" value="중고상품"> 새상품 <input type="radio"
 						name="cm_status" value="새상품">
 					<hr>
 
 					<strong>가격</strong><br> <input type="text" name="cm_price"
-						onkeyup="inputNumberFormat(this)" />
+						onkeyup="inputNumberFormat(this)" /> 원
 					<hr>
 
 					<strong>설명</strong><br>
-					<textarea rows="10" cols="50" name="cm_desc"></textarea>
+					<textarea rows="10" cols="30" name="cm_desc"></textarea>
 					<hr>
 
-
-					<button class="btn btn-primary btn-sm">작성완료</button>
+					<button class="btn btn-primary btn-sm" id="submitBtn" disabled>작성완료</button>
 				</form>
-
 			</div>
 			<div class="card-footer"></div>
 		</div>
+
+		<script>
+  // 입력값이 모두 채워져있을 때 작성완료 버튼 활성화
+  const cmNameInput = document.getElementById('cm_name');
+  const categorySelect = document.getElementById('category');
+  const priceInput = document.getElementsByName('cm_price')[0];
+  const descTextarea = document.getElementsByName('cm_desc')[0];
+  const submitBtn = document.getElementById('submitBtn');
+
+  cmNameInput.addEventListener('input', validateInputs);
+  categorySelect.addEventListener('change', validateInputs);
+  priceInput.addEventListener('input', validateInputs);
+  descTextarea.addEventListener('input', validateInputs);
+
+  function validateInputs() {
+    if (
+      cmNameInput.value.trim() !== '' &&
+      categorySelect.value !== '' &&
+      priceInput.value.trim() !== '' &&
+      descTextarea.value.trim() !== ''
+    ) {
+      submitBtn.disabled = false;
+    } else {
+      submitBtn.disabled = true;
+    }
+  }
+
+  // 가격 입력 시 숫자 형식 변환
+  function inputNumberFormat(element) {
+    const { value } = element;
+    const numValue = value.replace(/\D/g, '');
+    element.value = numberWithCommas(numValue);
+  }
+
+  function numberWithCommas(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+</script>
 	</div>
-	
 	<%
 	}
 	%>
-
-
 	<script type="text/javascript" src="assets/JS/write.js"></script>
 	<script type="text/javascript" src="assets/JS/geolocation.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.4.js"></script>

@@ -59,4 +59,24 @@ public class T_UserDAO {
 		session.close();
 		return list;
 	}
+	
+	// 아이디 	중복체크
+		public T_User check(String user_id) {
+			SqlSession session = factory.openSession(true);
+			T_User list = session.selectOne("selectUi", user_id);
+			session.close();
+			return list;
+
+
+		}
+	// 닉네임 중복
+		public T_User check1(String user_name) {
+			SqlSession session = factory.openSession(true);
+			T_User list = session.selectOne("selectUi", user_name);
+			session.close();
+			return list;
+
+
+		}
+		
 }

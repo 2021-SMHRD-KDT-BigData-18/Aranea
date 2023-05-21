@@ -64,5 +64,17 @@
 		  from T_USER
 		 where user_id = #{user_id}
 	</select>
+	
+	<!--  중복체크 -->
+<select id="check" resultType="kr.aranea.entity.T_User">
+
+	select* from T_USER
+	where user_id=#{user_id}
+</select>
+<select id="check1" resultType="kr.aranea.entity.T_User">
+
+	select* from T_USER
+	where user_name=#{user_name}
+</select>
 
 </mapper>

@@ -57,7 +57,7 @@
 					<div class="rav">
 						<div class="logo">
 							<a class="logoimg" href="gomain.com"> <img alt="아라냐 로고"
-								src="images/AraneaLogo.png" width="300px" height="90px">
+								src="images/ARANEALOG2.png" width="300px" height="90px">
 							</a>
 						</div>
 
@@ -65,8 +65,8 @@
 							<div class="search">
 								<input type="text" placeholder="상품명, 지역명, @상점명 입력"
 									class="inputTag"> <a class="searchBtn"> <img
-									alt="검색버튼 아이콘" src="images/searchbtn.jpg" width="20"
-									height="20">
+									alt="검색버튼 아이콘" src="images/123.png" width="32"
+									height="32">
 								</a>
 							</div>
 						</div>
@@ -76,25 +76,25 @@
 							if (user == null) {
 							%>
 							<a class="menu button" href="login.com"> <img alt="판매하기 로고"
-								src="images/seller.png" width="23" height="26"> 판매하기
+								src="images/KakaoTalk_20230520_190952023.png" width="32" height="32"> 판매하기
 							</a> <a class="menu button" href="login.com"> <img alt="내상점 로고"
-								src="images/mystore.png" width="23" height="24"> 내 상점 ｜
+								src="images/KakaoTalk_20230520_191255450.png" width="32" height="32"> 내 정보 ｜
 							</a> <a class="menu button" href="login.com"> <img
-								alt="스파이더맨 신청 로고" src="images/mystore.png" width="23"
-								height="24"> 스파이더맨 신청 ｜
+								alt="스파이더맨 신청 로고" src="images/pngegg.png" width="32"
+								height="32"> 스파이더맨 신청 ｜
 							</a>
 
 							<%
 							} else {
 							%>
 							<a class="menu button" href="goWrite.com"> <img alt="판매하기 로고"
-								src="images/seller.png" width="23" height="26"> 판매하기
+								src="images/KakaoTalk_20230520_190952023.png" width="32" height="32"> 판매하기
 							</a> <a class="menu button" href="goMypage.com"> <img
-								alt="내상점 로고" src="images/mystore.png" width="23" height="24">
-								내 상점 ｜
+								alt="내상점 로고" src="images/KakaoTalk_20230520_191255450.png" width="32" height="32">
+								내 정보 ｜
 							</a> <a class="menu button" href="goSpiderman.com"> <img
-								alt="스파이더맨 신청 로고" src="images/mystore.png" width="23"
-								height="24"> 스파이더맨 신청 ｜
+								alt="스파이더맨 신청 로고" src="images/pngegg.png" width="32"
+								height="32"> 스파이더맨 신청 ｜
 							</a>
 							<%
 							}
