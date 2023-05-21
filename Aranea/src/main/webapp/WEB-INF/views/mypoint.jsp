@@ -1,3 +1,4 @@
+<%@page import="kr.aranea.entity.T_Commodity"%>
 <%@page import="kr.aranea.entity.T_Chat"%>
 <%@page import="java.util.List"%>
 <%@page import="kr.aranea.entity.T_User"%>
@@ -19,6 +20,9 @@
 	<div class="allcontainer">
 		<%
 		T_User user = (T_User) session.getAttribute("user");
+		
+		List<T_Commodity> list = (List<T_Commodity>) request.getAttribute("list");
+		request.setAttribute("list", list);
 		
 		List<T_Chat> list2 = (List<T_Chat>)request.getAttribute("list2");
 		request.setAttribute("list2", list2);
@@ -137,6 +141,7 @@
 					<th>상품명</th>
 					<th>대화시작시간</th>
 				</tr>
+				<!-- 
 				<c:forEach items="${list}" var="item">
 					<tr onclick="location.href='viewWriting.com?cm_seq=${item.cm_seq}'">
 						<td><img alt="상품이미지"
@@ -146,6 +151,26 @@
 						<td>${item.cm_price}원</td>
 					</tr>
 				</c:forEach>
+				 -->
+				<c:forEach items="${list2}" var="dto">
+					
+					<c:choose>
+						<c:when test="${dto.chat_sender ne user.getUser_name()}">
+						<tr class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
+						
+							<td><img alt="상품이미지"
+							src="http://211.228.63.186:8081/Aranea/file/${list.cm_img1}"
+							width="150" height="150"></td>
+							<td class="title">${dto.chat_sender}</td>
+							<td>${list.cm_name}</td>
+							<td>${dto.chat_time}</td>
+
+						</tr>
+						</c:when>
+
+					</c:choose>
+					
+				</c:forEach>
 			</table>
 
 		</div>
@@ -154,20 +179,6 @@
 			<div class="main">
 
 
-				<c:forEach items="${list2}" var="dto">
-					<c:choose>
-						<c:when test="${dto.chat_sender ne user.getUser_name()}">
-					<div class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
-						
-							<div class="viewCard">
-								<div class="title">${dto.chat_sender}</div>
-							</div>
-
-					</div>
-						</c:when>
-
-					</c:choose>
-				</c:forEach>
 			</div>
 
 		</div>
