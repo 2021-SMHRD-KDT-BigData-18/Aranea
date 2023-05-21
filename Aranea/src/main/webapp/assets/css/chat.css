@@ -206,114 +206,45 @@ input[type="text"] {
 	height: 786px;
 }
 
-/*=================== 찜한상품~ 정보수정 리스트 ==================*/
-.menu_list {
-	float: left;
-	margin-right: 15px;
-	border: 3px solid black;
-}
-
-.custom-restricted-width .pure-menu-link {
-	display: flex;
-	align-items: center;
-	padding: 16px;
-	color: black;
-	text-decoration: none;
-	height: 56px;
-	box-sizing: border-box;
-}
-
-.pure-menu-link:hover {
-	text-underline-position: under;
-	text-decoration: underline;
-	color: rgb(187, 7, 11);
-}
-
-.pure-menu-heading {
-	font-size: 45px;
-}
-
-.containerbody {
-	max-width: 900px;
-	margin: 0 auto;
+#chatting {
+	background-color: #f2f2f2;
 	padding: 20px;
+	height: 100%;
+	overflow-y: auto;
 }
 
-.listContainer {
+#chatWrap {
+	border: 1px solid #ccc;
+	background-color: #fff;
+	padding: 10px;
+	max-width: 600px; /* 최대 너비를 500px로 제한 */
+	margin: 0 auto; /* 가운데 정렬 */
+}
+
+#chatHeader {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+h1 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+#chatLog {
 	margin-bottom: 20px;
 }
 
-.list {
-	display: flex;
-	padding: 10px 0;
-}
-
-.item {
-	flex: 1;
-	padding: 10px;
-	background-color: #f1f1f1;
+.send_btn {
+	background-color: #4caf50;
+	color: #fff;
+	border: none;
+	padding: 5px 10px;
 	border-radius: 5px;
-	margin-right: 10px;
+	cursor: pointer;
 }
 
-.item .text {
-	font-size: 16px;
-	font-weight: bold;
-}
-
-.item .circle {
-	display: inline-block;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	margin-left: 5px;
-}
-
-.item:hover {
-	background-color: rgb(187, 7, 11);
-	color: white;
-}
-
-.info {
-	border: 1px solid rgb(187, 7, 11);
-	padding: 20px;
-	border-radius: 5px;
-}
-
-.hello {
-	text-align: center;
-}
-
-.hello h2 {
-	font-size: 32px;
-	margin-bottom: 10px;
-	font-weight: bold;
-}
-
-.profile-info {
-	margin-top: 20px;
-}
-
-.profile-name {
-	font-size: 25px;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
-
-.profile-details {
-	display: grid;
-	grid-template-columns: auto;
-	gap: 10px;
-}
-
-.profile-details p {
-	margin: 0;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-.profile-details p span {
-	font-weight: bold;
-	margin-right: 5px;
-	font-size: 18px;
+.send_btn:hover {
+	background-color: #45a049;
 }
