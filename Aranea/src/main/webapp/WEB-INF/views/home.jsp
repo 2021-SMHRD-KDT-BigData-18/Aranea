@@ -64,7 +64,7 @@
 						<form action="goSerachText.com" method="post">
 						<div class="search_input">
 							<div class="search">
-								<input type="text" name="cm_name" placeholder="키워드 검색"
+								<input type="text" name="searchContent" placeholder="키워드 검색"
 									class="inputTag" onkeyup="enterkey()"> 
 								<input type="image" src="images/searchbtn.jpg" width="32" height="32">
 								<!-- 

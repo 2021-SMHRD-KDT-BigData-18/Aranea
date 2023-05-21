@@ -64,8 +64,8 @@
 	<select id="searchList" resultType="kr.aranea.entity.T_Commodity">
 		select *
 		  from t_commodity
-		 where cm_name = '${cm_name}'
-		    or cm_desc = '${cm_name}'
+		 where cm_name Like '%${searchContent}%'
+		    or cm_desc Like '%${searchContent}%'
 		 order by cm_seq desc
 	</select>
 

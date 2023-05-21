@@ -52,9 +52,9 @@ public class T_CommodityDAO {
 	}
 
 	// 키워드 검색 후 판매글 조회
-	public List<T_Commodity> searchList(T_Commodity dto) {
+	public List<T_Commodity> searchList(String searchContent) {
 		SqlSession session = factory.openSession(true);
-		List<T_Commodity> list = session.selectList("searchList", dto);
+		List<T_Commodity> list = session.selectList("searchList", searchContent);
 		session.close();
 		return list;
 	}

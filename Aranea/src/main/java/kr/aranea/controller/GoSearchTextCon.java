@@ -19,28 +19,24 @@ public class GoSearchTextCon implements Controller {
 		
 		request.setCharacterEncoding("UTF-8");
 		
-		String cm_name = request.getParameter("cm_name");
+		String searchContent = request.getParameter("searchContent");
 		
-//		HttpSession session = request.getSession();
-//		T_Commodity list = (T_Commodity)session.getAttribute("list");
-//		String cm_name = list.getCm_name();
-//		String cm_desc = list.getCm_desc();
 		
-		T_Commodity dto = new T_Commodity();
+//		T_Commodity dto = new T_Commodity();
 //		dto.setCm_name(cm_name);
 //		dto.setCm_desc(cm_desc);
-		dto.setCm_name(cm_name);
-		dto.setCm_desc(cm_name);
+//		dto.setCm_name(searchContent);
+//		dto.setCm_desc(searchContent);
 		
 		T_CommodityDAO dao = new T_CommodityDAO();
-		List<T_Commodity> list = dao.searchList(dto);
+		List<T_Commodity> list = dao.searchList(searchContent);
 		
 		request.setAttribute("list", list);
 		
 		
-		String nextView = "";
+		String nextView = "home";
 		
-		nextView = "home";
+//		if(cm_name.contains(searchContent)||cm_desc.contains(searchContent)) nextView = "home";
 		
 		return nextView;
 	}
