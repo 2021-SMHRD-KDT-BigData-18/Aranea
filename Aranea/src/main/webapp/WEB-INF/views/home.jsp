@@ -65,8 +65,8 @@
 							<div class="search">
 								<input type="text" placeholder="상품명, 지역명, @상점명 입력"
 									class="inputTag"> <a class="searchBtn"> <img
-									alt="검색버튼 아이콘" src="123.png" width="20"
-									height="20">
+									alt="검색버튼 아이콘" src="images/123.png" width="32"
+									height="32">
 								</a>
 							</div>
 						</div>
