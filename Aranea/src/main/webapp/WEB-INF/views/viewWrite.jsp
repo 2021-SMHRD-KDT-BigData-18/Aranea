@@ -39,7 +39,7 @@
 
                <div class="header">
                   <div class="rose">
-                     <div class="create">로그인/회원가입
+                     <div class="create">
 
                         <% if (user==null) { %>
                            <a class="login" href="login.com">로그인/회원가입</a>
