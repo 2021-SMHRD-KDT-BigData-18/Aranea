@@ -131,23 +131,25 @@
 
 		</div>
 		<div id="board">
+			<h1>판매내역</h1>
 			<table id="list">
 				<tr>
-					<td>이미지</td>
-					<td>상품명</td>
-					<td>가격</td>
-					<td>날짜</td>
-					<td>판매자 아이디</td>
+					<th>이미지</th>
+					<th>상품명</th>
+					<th>가격</th>
+					<th>날짜</th>
+
 				</tr>
 				<c:forEach items="${list}" var="item">
-					<tr onclick="location.href='viewWriting.com?cm_seq=${item.cm_seq}'">
+					<tr id="ho"
+						onclick="location.href='viewWriting.com?cm_seq=${item.cm_seq}'">
 						<td><img alt="상품이미지"
 							src="http://211.228.63.186:8081/Aranea/file/${item.cm_img1}"
-							width="194" height="194"></td>
+							width="150" height="150"></td>
 						<td>${item.cm_name}</td>
-						<td>${item.cm_price}</td>
+						<td>${item.cm_price}원</td>
 						<td>${item.cm_regdate}</td>
-						<td>${item.user_id}</td>
+
 					</tr>
 				</c:forEach>
 			</table>

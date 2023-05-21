@@ -151,45 +151,55 @@
 					</a> <a href="updateinfo.com" class="item">
 						<div class="text">정보수정</div>
 					</a> <a href="point.com" class="item">
-						<div class="text">포인트확인</div>
+						<div class="text">대화목록</div>
 					</a>
 				</div>
-				<div class="hello">
-					<h2>기본 정보</h2>
 
-				</div>
 			</div>
-
-
-
-
-			<div class="profile-info">
-				<%-- 사용자 정보가 있다면 --%>
-				<%
-				if (user != null) {
-				%>
-				<div class="profile-name">
-					<%=user.getUser_name()%>님
+			<div class="info">
+				<div class="hello">
+					<h2>내 정보</h2>
 				</div>
-				<div class="profile-details">
-					<p>
-						이름:
-						<%=user.getUser_name()%></p>
-					<p>
-						전화번호:
-						<%=user.getUser_phone()%></p>
-					<p>
-						계좌번호:
-						<%=user.getUser_v_account()%></p>
-					<%-- 추가적인 프로필 정보를 여기에 표시하세요 --%>
+				<div class="profile-info">
+					<%-- 사용자 정보가 있다면 --%>
+					<%
+					if (user != null) {
+					%>
+					<div class="profile-name">
+						<%=user.getUser_name()%>님
+					</div>
+					<div class="profile-details">
+						<p>
+							ID :
+							<%=user.getUser_id()%>
+						</p>
+						<p>
+							전화번호 :
+							<%=user.getUser_phone()%>
+						</p>
+						<p>
+							계좌번호 :
+							<%=user.getUser_v_account()%>
+						</p>
+						<p>
+							아라냐포인트 :
+							<%=user.getUser_point()%>
+							점
+						</p>
+						<p>
+							아라냐머니 :
+							<%=user.getUser_account_balance()%>
+							원
+							<%-- 추가적인 프로필 정보를 여기에 표시하세요 --%>
+					</div>
+					<%
+					} else {
+					%>
+					<div class="profile-name">로그인이 필요합니다.</div>
+					<%
+					}
+					%>
 				</div>
-				<%
-				} else {
-				%>
-				<div class="profile-name">로그인이 필요합니다.</div>
-				<%
-				}
-				%>
 			</div>
 		</div>
 		<!-- 컨테이너 바디 -->

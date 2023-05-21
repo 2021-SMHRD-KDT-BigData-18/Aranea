@@ -133,11 +133,11 @@
 		<div id="board">
 			<table id="list">
 				<tr>
-					<td>이미지</td>
-					<td>상품명</td>
-					<td>가격</td>
-					<td>날짜</td>
-					<td>구매자 아이디</td>
+					<th>이미지</th>
+					<th>상품명</th>
+					<th>가격</th>
+					<th>날짜</th>
+					<th>구매자 아이디</th>
 				</tr>
 				<c:forEach items="${list}" var="item">
 					<tr>
