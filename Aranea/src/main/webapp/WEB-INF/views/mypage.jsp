@@ -23,8 +23,8 @@
 
 		List<T_Commodity> list = (List<T_Commodity>) request.getAttribute("list");
 		request.setAttribute("list", list);
-		
-		List<T_Chat> list2 = (List<T_Chat>)request.getAttribute("list2");
+
+		List<T_Chat> list2 = (List<T_Chat>) request.getAttribute("list2");
 		request.setAttribute("list2", list2);
 		%>
 
@@ -57,7 +57,7 @@
 					<div class="rav">
 						<div class="logo">
 							<a class="logoimg" href="gomain.com"> <img alt="아라냐 로고"
-								src="images/AraneaLogo.png" width="300px" height="90px">
+								src="images/ARANEALOG2.png" width="300px" height="90px">
 							</a>
 						</div>
 
@@ -194,6 +194,10 @@
 							<%=user.getUser_account_balance()%>
 							원
 							<%-- 추가적인 프로필 정보를 여기에 표시하세요 --%>
+					</div>
+					<div class="profile-buttons">
+						<button class="bttn">입금</button>
+						<button class="bttn">출금</button>
 					</div>
 					<%
 					} else {

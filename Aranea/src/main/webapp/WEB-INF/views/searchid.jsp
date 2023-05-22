@@ -20,7 +20,7 @@
         <div class="container">
                <div class="logo">
                   <a class="logoimg" href="gomain.com"> 
-                        <img alt="아라냐 로고" src="images/AraneaLogo.png" width="300px" height="90px">
+                        <img alt="아라냐 로고" src="images/ARANEALOG2.png" width="300px" height="90px">
                     </a>
                </div>
         </div>

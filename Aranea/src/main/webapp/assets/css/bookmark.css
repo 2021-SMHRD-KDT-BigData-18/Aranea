@@ -238,13 +238,18 @@ input[type="text"] {
 	width: 100%;
 }
 
+#font {
+	font-weight: bold;
+	text-align: center;
+}
+
 #list td, #list th {
 	border: 1px solid #ddd;
 	padding: 8px;
 }
 
 #list tr:nth-child(even) {
-	background-color:lightgray;
+	background-color: lightgray;
 }
 
 #list tr:hover {
@@ -261,6 +266,6 @@ input[type="text"] {
 }
 
 #board {
-  max-width: 1200px; /* 원하는 최대 너비로 변경하세요 */
-  margin: 0 auto;
+	max-width: 1200px; /* 원하는 최대 너비로 변경하세요 */
+	margin: 0 auto;
 }
