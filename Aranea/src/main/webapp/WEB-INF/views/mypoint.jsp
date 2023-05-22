@@ -159,11 +159,11 @@
 				<c:forEach items="${list2}" var="dto">
 					
 					<c:choose>
-						<c:when test="${dto.chat_sender ne user.getUser_name()}">
+						<c:when test="${dto.chat_name ne user.getUser_name()}">
 				<tr class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
 						
 							
-							<td class="title">${dto.chat_sender}</td>
+							<td class="title">${dto.chat_name}</td>
 							<!-- <td>${list.cm_name}</td> -->
 							<td>${dto.chat_content}</td>
 							<td>${dto.chat_time}</td>

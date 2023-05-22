@@ -155,13 +155,14 @@ h1 {
 
 
 	</div>
-
+	
 	<!-- 채팅 div -->
 	<div id="chatting">
 		<div id="chatWrap">
 			<div id="chatHeader">채팅</div>
 
 			<input type="hidden" value="${user.getUser_name()}" id='chat_id'>
+			<input type="hidden" value="${list.getUser_name()}" id='chat_name'>
 
 			<div id="chatLog">
 				<!-- 
@@ -269,7 +270,7 @@ h1 {
 			                + "<p class='chat_content'>${user.getUser_name()} : "
 			                + inputMessage.value
 			                + "</p>");*/
-			webSocket.send($("#chat_id").val() + ",!," + inputMessage.value);
+			webSocket.send($("#chat_id").val() + ",!," + inputMessage.value + ",!," + '${list.getUser_name()}');
 		}
 		inputMessage.value = "";
 	};

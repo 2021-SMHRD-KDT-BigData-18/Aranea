@@ -90,6 +90,7 @@ public class Chat {
         }
         String sender = message[0];
         String content = message[1];
+        String name = message[2];
         
 //        T_CHATTING dto = new T_CHATTING();
 //        T_CHATTINGDAO dao = new T_CHATTINGDAO();
@@ -102,10 +103,13 @@ public class Chat {
 //        if(res!=0)
 //        	System.out.println("OK!");
         
+        
+        
         T_Chat dto = new T_Chat();
         dto.setChat_sender(sender);
         dto.setChat_urlpath(roomId);
         dto.setChat_content(content);
+        dto.setChat_name(name);
         
         T_ChatDAO dao = new T_ChatDAO();
         int row = dao.insertChat(dto);

@@ -298,7 +298,7 @@ h1 {
 			                + "<p class='chat_content'>${user.getUser_name()} : "
 			                + inputMessage.value
 			                + "</p>");*/
-			webSocket.send($("#chat_id").val() + ",!," + inputMessage.value);
+			webSocket.send($("#chat_id").val() + ",!," + inputMessage.value + ",!," + '${list.getUser_name()}');
 		}
 		inputMessage.value = "";
 	};
