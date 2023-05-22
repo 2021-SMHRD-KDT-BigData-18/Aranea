@@ -29,9 +29,12 @@
 	</select>
 	 -->
 	 <select id="selectChat" resultType="kr.aranea.entity.T_Chat">
-	 	select distinct chat_urlpath, chat_sender
-	 	  from t_chat
-	 	 where chat_urlpath Like '%${user_id}%'
+	 
+	 	 select distinct chat_urlpath, chat_sender, max(chat_content) as chat_content, max(chat_time) as chat_time
+		   from t_chat
+		  where chat_urlpath like '%${user_id}%'
+		  group by chat_urlpath, chat_sender
+	 
 	 </select>
 	 
 
