@@ -158,8 +158,7 @@
 				
 				<c:forEach items="${list2}" var="dto">
 					
-					<c:choose>
-						<c:when test="${dto.chat_name ne user.getUser_name()}">
+					
 				<tr class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
 						
 							
@@ -169,9 +168,6 @@
 							<td>${dto.chat_time}</td>
 
 				</tr>
-						</c:when>
-
-					</c:choose>
 					
 				</c:forEach>
 			</table>
