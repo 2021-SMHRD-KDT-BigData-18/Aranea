@@ -218,7 +218,7 @@ h1 {
 
 <script type="text/javascript">
 	var textarea = document.getElementById("chatLog");
-	var path = "ws://119.206.166.57:8081/Aranea/broadcasting/";
+	var path = "ws://119.206.166.57:8081/Aranea_사본/broadcasting/";
 	
 	if ('${list.getUser_id()}' != null) {
 		path += '${list3}'; 

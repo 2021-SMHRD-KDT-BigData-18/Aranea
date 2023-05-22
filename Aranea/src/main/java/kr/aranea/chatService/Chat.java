@@ -18,7 +18,7 @@ import kr.aranea.dao.T_ChatDAO;
 import kr.aranea.entity.T_Chat;
 
 @ServerEndpoint(value="/broadcasting/{roomId}")
-public class ChatCon {
+public class Chat {
 	private static Set<Session> sessionSet = Collections.synchronizedSet(new HashSet<Session>());
 	private static Map<String, ArrayList<Session>> sessionMap = Collections.synchronizedMap(new HashMap<String, ArrayList<Session>>());
 
@@ -110,6 +110,9 @@ public class ChatCon {
         T_ChatDAO dao = new T_ChatDAO();
         int row = dao.insertChat(dto);
         
+        System.out.println(sender);
+        System.out.println(roomId);
+        System.out.println(content);
 
         //같은 방에 있는 사람에게만 보낸다.
         for(Session session : tmpSessionSet) {

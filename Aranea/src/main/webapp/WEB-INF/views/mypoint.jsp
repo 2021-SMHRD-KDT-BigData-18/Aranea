@@ -155,21 +155,12 @@
 					</tr>
 				</c:forEach>
 				 -->
-				<tr class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
-				<!-- 
-				<c:forEach items="${list}" var="dto">
-				
-						<td><img alt="상품이미지"
-									src="http://211.228.63.186:8081/Aranea/file/${list.cm_img1}"></td>
-						<td>${list.cm_name}</td>
-
-				</c:forEach>
-				 -->
 				
 				<c:forEach items="${list2}" var="dto">
 					
 					<c:choose>
 						<c:when test="${dto.chat_sender ne user.getUser_name()}">
+				<tr class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
 						
 							
 							<td class="title">${dto.chat_sender}</td>
@@ -177,12 +168,12 @@
 							<td>${dto.chat_content}</td>
 							<td>${dto.chat_time}</td>
 
+				</tr>
 						</c:when>
 
 					</c:choose>
 					
 				</c:forEach>
-				</tr>
 			</table>
 
 		</div>
