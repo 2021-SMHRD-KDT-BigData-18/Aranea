@@ -189,10 +189,10 @@ h1 {
 
 <script type="text/javascript">
 	var textarea = document.getElementById("chatLog");
-	var path = "ws://119.206.166.57:8081/Aranea_사본/broadcasting/";
+	var path = "ws://119.206.166.57:8081/Aranea/broadcasting/";
 	
 	if ('${list.getUser_id()}' != null) {
-		path += '${user.getUser_id()}'+'1'+'${list.getUser_id()}';
+		path += '${user.getUser_id()}'+'${list.getUser_id()}';
 	} /*else if ('${user.getUser_id()}' == '111') {
 		path += '123';
 	}*/

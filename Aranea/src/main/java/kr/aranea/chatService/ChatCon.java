@@ -14,14 +14,17 @@ import javax.websocket.Session;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 
+import kr.aranea.dao.T_ChatDAO;
+import kr.aranea.entity.T_Chat;
+
 @ServerEndpoint(value="/broadcasting/{roomId}")
 public class ChatCon {
 	private static Set<Session> sessionSet = Collections.synchronizedSet(new HashSet<Session>());
-	private static Map<Integer, ArrayList<Session>> sessionMap = Collections.synchronizedMap(new HashMap<Integer, ArrayList<Session>>());
+	private static Map<String, ArrayList<Session>> sessionMap = Collections.synchronizedMap(new HashMap<String, ArrayList<Session>>());
 
 
 	@OnOpen
-    public void onOpen(Session s, @PathParam("roomId") int roomId ) {
+    public void onOpen(Session s, @PathParam("roomId") String roomId ) {
 
         // 방 처음 들어왔으면 해당 방 세션리스트생성
         if(!sessionMap.containsKey(roomId)){
@@ -44,7 +47,7 @@ public class ChatCon {
         }
 
         System.out.println("*******방마다 세션 객체 불러오기*******");
-        for(Integer key: sessionMap.keySet()){
+        for(String key: sessionMap.keySet()){
         	System.out.println(key+"번방 : ");
             for(int j=0; j<sessionMap.get(key).size();j++){
             	System.out.println(String.valueOf(sessionMap.get(key).get(j)));
@@ -55,10 +58,10 @@ public class ChatCon {
 
 
 	@OnMessage
-    public void onMessage(String msg, Session s, @PathParam("roomId") int roomId) throws Exception{
+    public void onMessage(String msg, Session s, @PathParam("roomId") String roomId) throws Exception{
         //사용자가 어느 방에 있는지 찾기
-        Integer findkey = -1;
-        for(int key: sessionMap.keySet()){
+        String findkey = "";
+        for(String key: sessionMap.keySet()){
             for(int j=0; j<sessionMap.get(key).size();j++){
                 if(sessionMap.get(key).get(j).equals(s)){
                     findkey = key;
@@ -98,6 +101,15 @@ public class ChatCon {
 //        int res = dao.chat(dto);
 //        if(res!=0)
 //        	System.out.println("OK!");
+        
+        T_Chat dto = new T_Chat();
+        dto.setChat_sender(sender);
+        dto.setChat_urlpath(roomId);
+        dto.setChat_content(content);
+        
+        T_ChatDAO dao = new T_ChatDAO();
+        int row = dao.insertChat(dto);
+        
 
         //같은 방에 있는 사람에게만 보낸다.
         for(Session session : tmpSessionSet) {
@@ -113,8 +125,8 @@ public class ChatCon {
     	System.out.println("세션 닫힘 : " + s);
         sessionSet.remove(s);
 
-        Integer findkey = -1;
-        for(int key: sessionMap.keySet()){
+        String findkey = "";
+        for(String key: sessionMap.keySet()){
             for(int j=0; j<sessionMap.get(key).size();j++){
                 if(sessionMap.get(key).get(j).equals(s)){
                     findkey = key;
