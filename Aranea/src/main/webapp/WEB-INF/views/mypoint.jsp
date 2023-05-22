@@ -136,10 +136,13 @@
 			<h1>채팅방목록</h1>
 			<table id="list">
 				<tr>
+					<!-- 
 					<th>이미지</th>
-					<th>대화상대</th>
 					<th>상품명</th>
-					<th>대화시작시간</th>
+					 -->
+					<th>대화상대</th>
+					<th>대화내용</th>
+					<th>시간</th>
 				</tr>
 				<!-- 
 				<c:forEach items="${list}" var="item">
@@ -152,25 +155,34 @@
 					</tr>
 				</c:forEach>
 				 -->
+				<tr class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
+				<!-- 
+				<c:forEach items="${list}" var="dto">
+				
+						<td><img alt="상품이미지"
+									src="http://211.228.63.186:8081/Aranea/file/${list.cm_img1}"></td>
+						<td>${list.cm_name}</td>
+
+				</c:forEach>
+				 -->
+				
 				<c:forEach items="${list2}" var="dto">
 					
 					<c:choose>
 						<c:when test="${dto.chat_sender ne user.getUser_name()}">
-						<tr class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
 						
-							<td><img alt="상품이미지"
-							src="http://211.228.63.186:8081/Aranea/file/${list.cm_img1}"
-							width="150" height="150"></td>
+							
 							<td class="title">${dto.chat_sender}</td>
-							<td>${list.cm_name}</td>
+							<!-- <td>${list.cm_name}</td> -->
+							<td>${dto.chat_content}</td>
 							<td>${dto.chat_time}</td>
 
-						</tr>
 						</c:when>
 
 					</c:choose>
 					
 				</c:forEach>
+				</tr>
 			</table>
 
 		</div>
