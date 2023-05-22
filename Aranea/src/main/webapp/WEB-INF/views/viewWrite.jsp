@@ -224,7 +224,7 @@
                      <div id="footerbtn">
                         <button id="mybtn" onclick="location.href='bookmark.com?cm_seq=${list.cm_seq}'">찜</button>
                         <button id="chatbtn" onclick="location.href='chat.com?cm_seq=${list.cm_seq}'">✉채팅</button>
-                        <button id="buybtn">✔구매신청</button>
+                       <button id="buybtn" onclick="location.href='buypage.com?cm_seq=${list.cm_seq}'">✔구매신청</button>
                      </div>
                   </div>
                </div>

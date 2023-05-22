@@ -339,17 +339,22 @@
 
    }
 
-   #mybtn {
-      background-color: rgba(238, 186, 182, 0.5);
+  #mybtn {
+   background-color:white;
+   border: 2px solid rgba(187, 7, 11);
    }
 
    #chatbtn {
-      background-color: rgba(245, 121, 112, 0.6);
+     background-color:white;
+   border: 2px solid rgba(187, 7, 11);
    }
 
    #buybtn {
-      background-color: rgba(247, 42, 28, 0.6);
+      background-color:white;
+   border: 2px solid rgba(187, 7, 11);
+   
    }
+
 
    .realimglist {
       width: 100%;

@@ -191,15 +191,35 @@ input[type="text"] {
 	display: none;
 }
 
+
 .category {
 	margin-top: 10px;
 	-webkit-box-align: center;
 	align-items: center;
 	height: 50px;
 }
+#catebtn{
+	
+	margin-bottom: 15px;
+}
+#catebtn:hover {
+	
+    transition: 1s ease-out;
+    background-color: rgb(187,7,11);
+    color: white;
+
+}
+
+
 
 .card-menu {
 	padding: 1rem 0px 1rem;
+	display: flex;
+	justify-content: left;
+	margin-left: 15%;
+	margin-top: 20px;
+	
+	
 }
 
 .h2 {

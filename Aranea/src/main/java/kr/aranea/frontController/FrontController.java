@@ -43,6 +43,7 @@ import kr.aranea.controller.ViewWritingCon;
 import kr.aranea.controller.WriteMapCon;
 import kr.aranea.controller.WriteMapUploadCon;
 import kr.aranea.controller.WritingUploadCon;
+import kr.aranea.controller.buypageCon;
 
 @WebServlet("*.com")
 public class FrontController extends HttpServlet {
@@ -85,6 +86,7 @@ public class FrontController extends HttpServlet {
 		mappings.put("/check1.com", new CheckCon1());
 		mappings.put("/goSerachText.com", new GoSearchTextCon());
 		mappings.put("/chatView.com", new ChatViewCon());
+		mappings.put("/buypage.com", new buypageCon());
 	}
 	
 	
