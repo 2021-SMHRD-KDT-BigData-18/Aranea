@@ -75,7 +75,7 @@ public class WritingUploadCon implements Controller {
 		session.setAttribute("row", row);
 
 		if (row > 0) {
-			nextview = "viewWrite";
+			nextview = "redirect:/gomain.com";
 
 		}
 
