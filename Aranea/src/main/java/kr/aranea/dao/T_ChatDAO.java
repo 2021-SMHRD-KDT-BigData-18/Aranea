@@ -35,9 +35,15 @@ public class T_ChatDAO {
 	
 	
 	// 채팅클릭 후 내용 조회
-	public List<T_Chat> chatContent(String chat_urlpath) {
+	public T_Chat chatContent(String chat_urlpath) {
 		SqlSession session = factory.openSession(true);
-		List<T_Chat> list = session.selectList("chatContent", chat_urlpath);
+		T_Chat list = session.selectOne("chatContent", chat_urlpath);
+		session.close();
+		return list;
+	}
+	public List<T_Chat> chatContent1(String chat_urlpath) {
+		SqlSession session = factory.openSession(true);
+		List<T_Chat> list = session.selectList("chatContent1", chat_urlpath);
 		session.close();
 		return list;
 	}

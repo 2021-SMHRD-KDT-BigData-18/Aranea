@@ -158,17 +158,22 @@
 				
 				<c:forEach items="${list2}" var="dto">
 					
-					
+				
 				<tr class="viewWrap" onclick="location.href='chatView.com?chat_urlpath=${dto.chat_urlpath}'">
-						
-							
-							<td class="title">${dto.chat_name}</td>
+						<c:choose>
+							<c:when test="${user.getUser_name() eq dto.buyer_name}">
+							<td class="title">${dto.seller_name}</td>
+							</c:when>
+							<c:otherwise>
+							<td class="title">${dto.buyer_name}</td>
+							</c:otherwise>
+						</c:choose>
 							<!-- <td>${list.cm_name}</td> -->
 							<td>${dto.chat_content}</td>
 							<td>${dto.chat_time}</td>
 
 				</tr>
-					
+						
 				</c:forEach>
 			</table>
 

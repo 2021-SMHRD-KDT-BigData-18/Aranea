@@ -157,7 +157,7 @@
 
 	<script type="text/javascript">
 		var textarea = document.getElementById("chatLog");
-		var path = "ws://119.206.166.57:8081/Aranea_사본/broadcasting/";
+		var path = "ws://121.147.185.89:8081/Aranea_사본/broadcasting/";
 
 		if ('${list.getUser_id()}' != null) {
 			path += '${user.getUser_id()}' + '!' + '${list.getUser_id()}';
@@ -178,39 +178,42 @@
 		function onMessage(event) {
 			var message = event.data.split(",!,");
 			console.log(event.data);
-			var sender = message[0];
-			var content = message[1];
-			if (content == "") {
+			var buyer_name = message[0];
+			var buyer_id = message[1];
+	        var chat_content = message[2];
+	        var seller_name = message[3];
+	        var seller_id = message[4];
+			if (chat_content == "") {
 
 			} else {
-				if (content.match("/")) {
-					if (content.match(("/" + $("#chat_id").val()))) {
-						var temp = content.replace("/" + $("#chat_id").val(),
+				if (chat_content.match("/")) {
+					if (chat_content.match(("/" + $("#chat_id").val()))) {
+						var temp = chat_content.replace("/" + $("#chat_id").val(),
 								"(귓속말) :").split(":");
 						if (temp[1].trim() == "") {
 						} else {
 							$("#chatLog").html(
 									$("#chatLog").html()
 											+ "<p class='whisper'>"
-											+ sender
-											+ content.replace("/"
+											+ seller_name
+											+ chat_content.replace("/"
 													+ $("#chat_id").val(),
 													"(귓속말) :") + "</p>");
 						}
 					} else {
 					}
 				} else {
-					if (sender == '${user.getUser_name()}') {
+					if (buyer_name == '${user.getUser_name()}') {
 						$("#chatLog")
 								.html(
 										$("#chatLog").html()
-												+ "<p class='mychat_content'><b class='impress'>"
-												+ content + "</b></p>");
+												+ "<p class='myMsg'><b class='impress'>"
+												+ chat_content
+												+ "</b></p>");
 					} else {
 						$("#chatLog").html(
-								$("#chatLog").html()
-										+ "<p class='otherchat_content'>"
-										+ sender + "<br>" + content + "</p>");
+								$("#chatLog").html() + "<p class='anotherMsg'>"
+										+ seller_name + "<br>" + chat_content + "</p>");
 					}
 				}
 			}
@@ -237,8 +240,9 @@
 				                + "<p class='chat_content'>${user.getUser_name()} : "
 				                + inputMessage.value
 				                + "</p>");*/
-				webSocket.send($("#chat_id").val() + ",!," + inputMessage.value
-						+ ",!," + '${list.getUser_name()}');
+				webSocket.send('${user.getUser_name()}' + ",!," + '${user.getUser_id()}' + ",!," + inputMessage.value 
+						+ ",!," + '${list.getUser_name()}'  + ",!," + '${list.getUser_id()}'
+						+ ",!," + '${user.getUser_name()}' + ",!," + '${list.getUser_name()}');
 			}
 			inputMessage.value = "";
 		};

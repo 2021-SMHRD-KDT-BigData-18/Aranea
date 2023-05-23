@@ -26,6 +26,9 @@ public class Chat {
 	@OnOpen
     public void onOpen(Session s, @PathParam("roomId") String roomId ) {
 
+		System.out.println(roomId);
+		System.out.println("-----------");
+		System.out.println(!sessionMap.containsKey(roomId));
         // 방 처음 들어왔으면 해당 방 세션리스트생성
         if(!sessionMap.containsKey(roomId)){
             sessionMap.put(roomId, new ArrayList<>());
@@ -88,9 +91,13 @@ public class Chat {
         	System.out.println(i);
         	System.out.println(message[i]);
         }
-        String sender = message[0];
-        String content = message[1];
-        String name = message[2];
+        String buyer_name = message[0];
+        String buyer_id = message[1];
+        String chat_content = message[2];
+        String seller_name = message[3];
+        String seller_id = message[4];
+        String myname = message[5];
+        String othername = message[6];
         
 //        T_CHATTING dto = new T_CHATTING();
 //        T_CHATTINGDAO dao = new T_CHATTINGDAO();
@@ -103,20 +110,22 @@ public class Chat {
 //        if(res!=0)
 //        	System.out.println("OK!");
         
+        System.out.println(roomId);
         
         
         T_Chat dto = new T_Chat();
-        dto.setChat_sender(sender);
+        dto.setBuyer_id(buyer_id);
+        dto.setBuyer_name(buyer_name);
+        dto.setSeller_id(seller_id);
+        dto.setSeller_name(seller_name);
         dto.setChat_urlpath(roomId);
-        dto.setChat_content(content);
-        dto.setChat_name(name);
+        dto.setChat_content(chat_content);
+        dto.setMyname(myname);
+        dto.setOthername(othername);
         
         T_ChatDAO dao = new T_ChatDAO();
         int row = dao.insertChat(dto);
         
-        System.out.println(sender);
-        System.out.println(roomId);
-        System.out.println(content);
 
         //같은 방에 있는 사람에게만 보낸다.
         for(Session session : tmpSessionSet) {

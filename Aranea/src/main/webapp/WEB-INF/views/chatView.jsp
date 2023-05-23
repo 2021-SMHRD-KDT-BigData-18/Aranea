@@ -50,14 +50,11 @@ h1 {
 	<%
 	T_User user = (T_User) session.getAttribute("user");
 
-	T_Commodity list = (T_Commodity)request.getAttribute("list");
+	T_Chat list = (T_Chat) request.getAttribute("list");
 	request.setAttribute("list", list);
-	
-	List<T_Chat> list2 = (List<T_Chat>)request.getAttribute("list2");
+
+	List<T_Chat> list2 = (List<T_Chat>) request.getAttribute("list2");
 	request.setAttribute("list2", list2);
-	
-	String list3 = (String)request.getAttribute("list3");
-	request.setAttribute("list3", list3);
 	%>
 
 	<div class="containerheader">
@@ -186,23 +183,24 @@ h1 {
 				 -->
 				 <c:forEach items="${list2}" var="dto">
 					<c:choose>
-						<c:when test="${dto.chat_sender eq user.getUser_name()}">
+						<c:when test="${dto.myname eq user.getUser_name()}">
 
-							 <div class="myMsg">
+							<div class="myMsg">
 								<span class="msg">${dto.chat_content}</span>
 							</div>
-						 	
-					
+
+
 						</c:when>
 						<c:otherwise>
 							<div class="anotherMsg">
-							 	<span class="anotherName">${dto.chat_sender}</span> <br> <span
-							class="msg">${dto.chat_content}</span>
+								<span class="anotherName">${dto.myname}</span> <br> <span
+									class="msg">${dto.chat_content}</span>
 							</div>
 						</c:otherwise>
+
 					</c:choose>
-					
-				 </c:forEach>
+
+				</c:forEach>
 			</div>
 			
 				<input id="inputMessage" class="send_btn" type="text"
@@ -218,10 +216,10 @@ h1 {
 
 <script type="text/javascript">
 	var textarea = document.getElementById("chatLog");
-	var path = "ws://119.206.166.57:8081/Aranea_사본/broadcasting/";
+	var path = "ws://121.147.185.89:8081/Aranea_사본/broadcasting/";
 	
-	if ('${list.getUser_id()}' != null) {
-		path += '${list3}'; 
+	if ('${user.getUser_id()}' != null) {
+		path += '${list.getChat_urlpath()}'; 
 	} /*else if ('${user.getUser_id()}' == '111') {
 		path += '123';
 	}*/
@@ -239,39 +237,44 @@ h1 {
 	function onMessage(event) {
 		var message = event.data.split(",!,");
 		console.log(event.data);
-		var sender = message[0];
-		var content = message[1];
-		if (content == "") {
+		var buyer_name = message[0];
+		var buyer_id = message[1];
+        var chat_content = message[2];
+        var seller_name = message[3];
+        var seller_id = message[4];
+        var myname = message[5];
+        var othername = message[6];
+		if (chat_content == "") {
 
 		} else {
-			if (content.match("/")) {
-				if (content.match(("/" + $("#chat_id").val()))) {
-					var temp = content.replace("/" + $("#chat_id").val(),
+			if (chat_content.match("/")) {
+				if (chat_content.match(("/" + $("#chat_id").val()))) {
+					var temp = chat_content.replace("/" + $("#chat_id").val(),
 							"(귓속말) :").split(":");
 					if (temp[1].trim() == "") {
 					} else {
 						$("#chatLog").html(
 								$("#chatLog").html()
 										+ "<p class='whisper'>"
-										+ sender
-										+ content.replace("/"
+										+ seller_name
+										+ chat_content.replace("/"
 												+ $("#chat_id").val(),
 												"(귓속말) :") + "</p>");
 					}
 				} else {
 				}
 			} else {
-				if (sender == '${user.getUser_name()}') {
+				if (myname == '${user.getUser_name()}') {
 					$("#chatLog")
 							.html(
-									$("#chatLog").html() 
+									$("#chatLog").html()
 											+ "<p class='myMsg'><b class='impress'>"
-											+ content
+											+ chat_content
 											+ "</b></p>");
 				} else {
 					$("#chatLog").html(
 							$("#chatLog").html() + "<p class='anotherMsg'>"
-									+ sender +"<br>" + content + "</p>");
+									+ myname + "<br>" + chat_content + "</p>");
 				}
 			}
 		}
@@ -298,7 +301,16 @@ h1 {
 			                + "<p class='chat_content'>${user.getUser_name()} : "
 			                + inputMessage.value
 			                + "</p>");*/
-			webSocket.send($("#chat_id").val() + ",!," + inputMessage.value + ",!," + '${list.getUser_name()}');
+			if ('${list.getBuyer_name()}' == '${user.getUser_name()}'){
+            	webSocket.send('${list.getBuyer_name()}' + ",!," + '${list.getBuyer_id()}' + ",!," + inputMessage.value + ",!," + 
+								'${list.getSeller_name()}'  + ",!," + '${list.getSeller_id()}'
+								+ ",!," + '${user.getUser_name()}' + ",!," + '${list.getSeller_name()}');
+            }else{
+            	webSocket.send('${list.getBuyer_name()}' + ",!," + '${list.getBuyer_id()}' + ",!," + inputMessage.value + ",!," + 
+								'${list.getSeller_name()}'  + ",!," + '${list.getSeller_id()}'
+								+ ",!," + '${user.getUser_name()}' + ",!," + '${list.getBuyer_name()}');
+
+            }
 		}
 		inputMessage.value = "";
 	};

@@ -6,11 +6,15 @@
 	<insert id="insertChat" parameterType="kr.aranea.entity.T_Chat">
 		insert into t_chat
 		values(NUM_T_CHAT.nextval,
-		#{chat_sender},
-		#{chat_content},
+		#{seller_id},
+		#{seller_name},
+		#{buyer_id},
+		#{buyer_name},
 		#{chat_urlpath},
+		#{chat_content},
 		sysdate,
-		#{chat_name}
+		#{myname},
+		#{othername}
 		)
 	</insert>
 
@@ -31,19 +35,30 @@
 	 -->
 	 <select id="selectChat" resultType="kr.aranea.entity.T_Chat">
 	 
-	 	 select distinct chat_urlpath, chat_sender, chat_name, min(chat_content) as chat_content, max(chat_time) as chat_time
+	 	 select distinct chat_urlpath, seller_id, seller_name, buyer_id, buyer_name
+	 	 		, myname, othername
+	 	 		, max(chat_time) as chat_time, max(chat_content) as chat_content
 		   from t_chat
 		  where chat_urlpath like '%${user_id}%'
-		  group by chat_urlpath, chat_sender, chat_name
+		  group by chat_urlpath, seller_id, seller_name, buyer_id, buyer_name, myname, othername
 	 
 	 </select>
 	 
 
 	<!-- 채팅클릭 후 내용 조회 -->
 	<select id="chatContent" resultType="kr.aranea.entity.T_Chat">
+		select distinct chat_urlpath, seller_id, seller_name, buyer_id, buyer_name, myname, othername
+		  from t_chat
+		 where chat_urlpath = #{chat_urlpath}
+		   and  rownum = 1
+		 group by chat_urlpath, seller_id, seller_name, buyer_id, buyer_name, myname, othername
+	</select>
+	
+	<select id="chatContent1" resultType="kr.aranea.entity.T_Chat">
 		select *
 		from t_chat
 		where chat_urlpath = #{chat_urlpath}
+		order by chat_time
 	</select>
 	
 
