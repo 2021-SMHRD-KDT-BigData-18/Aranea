@@ -98,7 +98,7 @@
 
       loader.style.display = 'none'; // 로딩 창 숨김
       photo2.classList.add('show'); // 사진 2 표시
-      text.innerHTML = '<a href="gomain.com" style="text-decoration: none; color: inherit;">스파이더맨 매칭 완료</a>';
+      text.innerHTML = '<a href="spiderInfo.com" style="text-decoration: none; color: inherit;">스파이더맨 매칭 완료</a>';
     }, 5000);
   }, 5000);
 </script>

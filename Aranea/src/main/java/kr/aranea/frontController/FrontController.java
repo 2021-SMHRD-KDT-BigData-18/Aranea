@@ -21,6 +21,7 @@ import kr.aranea.controller.CreateAccountCon;
 import kr.aranea.controller.GoMainCon;
 import kr.aranea.controller.GoMypageCon;
 import kr.aranea.controller.GoSearchTextCon;
+import kr.aranea.controller.GoSpiderInfoCon;
 import kr.aranea.controller.GoSpiderman;
 import kr.aranea.controller.GoSuccessCon;
 import kr.aranea.controller.GoWriteCon;
@@ -93,6 +94,8 @@ public class FrontController extends HttpServlet {
 		mappings.put("/gomatching.com", new GomatchingCon());
 		mappings.put("/matching.com", new MatchingCon());
 		mappings.put("/spidermanSuccess.com", new SpidermanSuccessCon());
+		mappings.put("/spiderInfo.com", new GoSpiderInfoCon());
+
 	}
 	
 	
