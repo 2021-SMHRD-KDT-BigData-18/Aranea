@@ -131,16 +131,7 @@
 				<input type="hidden" value="${list.getUser_name()}" id='chat_name'>
 
 				<div id="chatLog">
-					<!-- 
-				<div class="anotherMsg">
-					<span class="anotherName">${user.getUser_name()}</span> <br> <span
-						class="msg">Hello, Nice to meet you.</span>
-				</div>
-				<div class="myMsg">
-					<span class="msg"></span> <span class="msg">Nice to meet
-						you, too.</span>
-				</div>
-				 -->
+				
 				</div>
 
 				<input id="inputMessage" class="send_btn" type="text"
@@ -207,12 +198,12 @@
 						$("#chatLog")
 								.html(
 										$("#chatLog").html()
-												+ "<p class='myMsg'><b class='impress'>"
+												+ "<p class='myMsg'><b class='msg'>"
 												+ chat_content
 												+ "</b></p>");
 					} else {
 						$("#chatLog").html(
-								$("#chatLog").html() + "<p class='anotherMsg'>"
+								$("#chatLog").html() + "<p class='anotherMsg'><b class='msg'>"
 										+ seller_name + "<br>" + chat_content + "</p>");
 					}
 				}
