@@ -10,50 +10,16 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./assets/css/chat.css">
 <title>Insert title here</title>
-<style type="text/css">
-#chatting {
-	font-size: 24px;
-	margin: 25px;
-	width: 60%;
-	height: 60%;
-	outline: dashed 1px black;
-}
-
-#chatHeader {
-	text-align: center;
-}
-
-.anotherMsg {
-	text-align: left;
-}
-
-.myMsg {
-	text-align: right;
-}
-
-h1 {
-	text-align: center;
-}
-
-.send_btn {
-	text-align: center;
-	vertical-align: middle;
-}
-.mychat_content{
-	text-align: right;
-}
-</style>
 </head>
 <body>
 	<%
 	T_User user = (T_User) session.getAttribute("user");
 
-	T_Commodity list = (T_Commodity)request.getAttribute("list");
+	T_Commodity list = (T_Commodity) request.getAttribute("list");
 	request.setAttribute("list", list);
 	%>
 
 	<div class="containerheader">
-
 
 		<div class="header">
 			<div class="rose">
@@ -154,18 +120,18 @@ h1 {
 		</div>
 
 
-	</div>
-	
-	<!-- 채팅 div -->
-	<div id="chatting">
-		<div id="chatWrap">
-			<div id="chatHeader">채팅</div>
 
-			<input type="hidden" value="${user.getUser_name()}" id='chat_id'>
-			<input type="hidden" value="${list.getUser_name()}" id='chat_name'>
 
-			<div id="chatLog">
-				<!-- 
+		<!-- 채팅 div -->
+		<div id="chatting">
+			<div id="chatWrap">
+				<div id="chatHeader">채팅</div>
+
+				<input type="hidden" value="${user.getUser_name()}" id='chat_id'>
+				<input type="hidden" value="${list.getUser_name()}" id='chat_name'>
+
+				<div id="chatLog">
+					<!-- 
 				<div class="anotherMsg">
 					<span class="anotherName">${user.getUser_name()}</span> <br> <span
 						class="msg">Hello, Nice to meet you.</span>
@@ -175,116 +141,118 @@ h1 {
 						you, too.</span>
 				</div>
 				 -->
-			</div>
-			
+				</div>
+
 				<input id="inputMessage" class="send_btn" type="text"
 					autocomplete="off" size="30" onkeyup="enterkey()"
-					placeholder="메시지를 입력하세요"> 
-				<input class="send_btn"
+					placeholder="메시지를 입력하세요"> <input class="send_btn"
 					type="submit" value="send" onclick="send()">
-			
 
+
+			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<script type="text/javascript"
+		src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
-<script type="text/javascript">
-	var textarea = document.getElementById("chatLog");
-	var path = "ws://119.206.166.57:8081/Aranea_사본/broadcasting/";
-	
-	if ('${list.getUser_id()}' != null) {
-		path += '${user.getUser_id()}'+'!'+'${list.getUser_id()}';
-	} /*else if ('${user.getUser_id()}' == '111') {
-		path += '123';
-	}*/
-	var webSocket = new WebSocket(path);
-	var inputMessage = document.getElementById('inputMessage');
-	webSocket.onerror = function(event) {
-		onError(event)
-	};
-	webSocket.onopen = function(event) {
-		onOpen(event)
-	};
-	webSocket.onmessage = function(event) {
-		onMessage(event)
-	};
-	function onMessage(event) {
-		var message = event.data.split(",!,");
-		console.log(event.data);
-		var sender = message[0];
-		var content = message[1];
-		if (content == "") {
+	<script type="text/javascript">
+		var textarea = document.getElementById("chatLog");
+		var path = "ws://119.206.166.57:8081/Aranea_사본/broadcasting/";
 
-		} else {
-			if (content.match("/")) {
-				if (content.match(("/" + $("#chat_id").val()))) {
-					var temp = content.replace("/" + $("#chat_id").val(),
-							"(귓속말) :").split(":");
-					if (temp[1].trim() == "") {
+		if ('${list.getUser_id()}' != null) {
+			path += '${user.getUser_id()}' + '!' + '${list.getUser_id()}';
+		} /*else if ('${user.getUser_id()}' == '111') {
+			path += '123';
+		}*/
+		var webSocket = new WebSocket(path);
+		var inputMessage = document.getElementById('inputMessage');
+		webSocket.onerror = function(event) {
+			onError(event)
+		};
+		webSocket.onopen = function(event) {
+			onOpen(event)
+		};
+		webSocket.onmessage = function(event) {
+			onMessage(event)
+		};
+		function onMessage(event) {
+			var message = event.data.split(",!,");
+			console.log(event.data);
+			var sender = message[0];
+			var content = message[1];
+			if (content == "") {
+
+			} else {
+				if (content.match("/")) {
+					if (content.match(("/" + $("#chat_id").val()))) {
+						var temp = content.replace("/" + $("#chat_id").val(),
+								"(귓속말) :").split(":");
+						if (temp[1].trim() == "") {
+						} else {
+							$("#chatLog").html(
+									$("#chatLog").html()
+											+ "<p class='whisper'>"
+											+ sender
+											+ content.replace("/"
+													+ $("#chat_id").val(),
+													"(귓속말) :") + "</p>");
+						}
+					} else {
+					}
+				} else {
+					if (sender == '${user.getUser_name()}') {
+						$("#chatLog")
+								.html(
+										$("#chatLog").html()
+												+ "<p class='mychat_content'><b class='impress'>"
+												+ content + "</b></p>");
 					} else {
 						$("#chatLog").html(
 								$("#chatLog").html()
-										+ "<p class='whisper'>"
-										+ sender
-										+ content.replace("/"
-												+ $("#chat_id").val(),
-												"(귓속말) :") + "</p>");
+										+ "<p class='otherchat_content'>"
+										+ sender + "<br>" + content + "</p>");
 					}
-				} else {
-				}
-			} else {
-				if (sender == '${user.getUser_name()}') {
-					$("#chatLog")
-							.html(
-									$("#chatLog").html()
-											+ "<p class='mychat_content'><b class='impress'>"
-											+ content
-											+ "</b></p>");
-				} else {
-					$("#chatLog").html(
-							$("#chatLog").html() + "<p class='otherchat_content'>"
-									+ sender + "<br>" + content + "</p>");
 				}
 			}
-		}
-	};
+		};
 
-	function onOpen(event) {
-		/*    $("#messageWindow")
-		            .html("<p class='chat_content'>채팅에 참여하였습니다.</p>");
-		 */};
+		function onOpen(event) {
+			/*    $("#messageWindow")
+			            .html("<p class='chat_content'>채팅에 참여하였습니다.</p>");
+			 */};
 
-	function onError(event) {
-		alert(event.data);
-	};
-	function send() {
-		if (inputMessage.value == "") {
-			/*$("#chatLog").html(
-			        $("#chatLog").html()
-			                + "<p class='chat_content'>${user.getUser_name()} : "
-			                + inputMessage.value
-			                + "</p>");*/
-		} else {
-			/*$("#chatLog").html(
-			        $("#chatLog").html()
-			                + "<p class='chat_content'>${user.getUser_name()} : "
-			                + inputMessage.value
-			                + "</p>");*/
-			webSocket.send($("#chat_id").val() + ",!," + inputMessage.value + ",!," + '${list.getUser_name()}');
-		}
-		inputMessage.value = "";
-	};
-	//     엔터키를 통해 send함
-	function enterkey() {
-		if (window.event.keyCode == 13) {
-			send();
-		}
-	};
-	//     채팅이 많아져 스크롤바가 넘어가더라도 자동적으로 스크롤바가 내려가게함
-	window.setInterval(function() {
-		var elem = document.getElementById('chatLog');
-		elem.scrollTop = elem.scrollHeight;
-	}, 0);
-</script>
+		function onError(event) {
+			alert(event.data);
+		};
+		function send() {
+			if (inputMessage.value == "") {
+				/*$("#chatLog").html(
+				        $("#chatLog").html()
+				                + "<p class='chat_content'>${user.getUser_name()} : "
+				                + inputMessage.value
+				                + "</p>");*/
+			} else {
+				/*$("#chatLog").html(
+				        $("#chatLog").html()
+				                + "<p class='chat_content'>${user.getUser_name()} : "
+				                + inputMessage.value
+				                + "</p>");*/
+				webSocket.send($("#chat_id").val() + ",!," + inputMessage.value
+						+ ",!," + '${list.getUser_name()}');
+			}
+			inputMessage.value = "";
+		};
+		//     엔터키를 통해 send함
+		function enterkey() {
+			if (window.event.keyCode == 13) {
+				send();
+			}
+		};
+		//     채팅이 많아져 스크롤바가 넘어가더라도 자동적으로 스크롤바가 내려가게함
+		window.setInterval(function() {
+			var elem = document.getElementById('chatLog');
+			elem.scrollTop = elem.scrollHeight;
+		}, 0);
+	</script>
 </body>
 </html>
