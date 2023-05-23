@@ -144,7 +144,7 @@
 							<c:when test="${dto.myname eq user.getUser_name()}">
 
 								<div class="myMsg">
-									<span class="msg">${dto.chat_content}</span>
+									<span class="impress">${dto.chat_content}</span>
 								</div>
 
 
@@ -232,9 +232,9 @@
 												+ chat_content + "</b></p>");
 					} else {
 						$("#chatLog").html(
-								$("#chatLog").html() + "<p class='anotherMsg'>"
-										+ myname + "<br>" + chat_content
-										+ "</p>");
+								$("#chatLog").html() + "<p class='anotherMsg'><span class='anotherName'>"
+										+ myname +"님"+ "</span><br><b class='msg'>" + chat_content
+										+ "</b></p>");
 					}
 				}
 			}
