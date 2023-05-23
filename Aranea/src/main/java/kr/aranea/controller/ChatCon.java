@@ -11,6 +11,7 @@ import kr.aranea.dao.T_CommodityDAO;
 import kr.aranea.dao.T_DealingDAO;
 import kr.aranea.entity.T_Commodity;
 import kr.aranea.entity.T_Dealing;
+import kr.aranea.entity.T_User;
 
 public class ChatCon implements Controller {
 
@@ -33,8 +34,16 @@ public class ChatCon implements Controller {
 		request.setAttribute("list", list);
 		
 		
+		HttpSession session = request.getSession();
+
+		T_User user = (T_User)session.getAttribute("user");
+		
+		
 		String nextView = "";
-		nextView = "chat";
+		
+		if(user == null) nextView = "login";
+		else nextView = "chat";
+		
 		return nextView;
 	}
 

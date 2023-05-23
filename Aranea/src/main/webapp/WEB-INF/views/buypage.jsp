@@ -240,13 +240,13 @@
 									<div
 										style="display: flex; justify-content: space-between; margin-bottom: 5px;">
 										<div style="color: rgb(127, 127, 127)">상품금액</div>
-										<strong style="font-weight: 700;"> 5000만원</strong>
+										<strong style="font-weight: 700;"> ${list.getCm_price()}</strong>
 
 									</div>
 									<div
 										style="display: flex; justify-content: space-between; margin-bottom: 5px;">
 										<div style="color: rgb(127, 127, 127)">포인트 사용</div>
-										<strong style="font-weight: 700;"> 5000만원</strong>
+										<strong style="font-weight: 700;"> ${user.getUser_point()}</strong>
 
 									</div>
 
