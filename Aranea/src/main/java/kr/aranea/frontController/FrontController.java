@@ -24,10 +24,12 @@ import kr.aranea.controller.GoSearchTextCon;
 import kr.aranea.controller.GoSpiderman;
 import kr.aranea.controller.GoSuccessCon;
 import kr.aranea.controller.GoWriteCon;
+import kr.aranea.controller.GomatchingCon;
 import kr.aranea.controller.JoinCon;
 import kr.aranea.controller.LoginCon;
 import kr.aranea.controller.LoginSuccessCon;
 import kr.aranea.controller.LogoutCon;
+import kr.aranea.controller.MatchingCon;
 import kr.aranea.controller.MyBookmarkCon;
 import kr.aranea.controller.MyBookmarkCon2;
 import kr.aranea.controller.MyBuyingListCon;
@@ -87,6 +89,8 @@ public class FrontController extends HttpServlet {
 		mappings.put("/goSerachText.com", new GoSearchTextCon());
 		mappings.put("/chatView.com", new ChatViewCon());
 		mappings.put("/buypage.com", new buypageCon());
+		mappings.put("/gomatching.com", new GomatchingCon());
+		mappings.put("/matching.com", new MatchingCon());
 	}
 	
 	
