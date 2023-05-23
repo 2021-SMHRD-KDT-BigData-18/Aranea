@@ -113,7 +113,7 @@
 								</a>
 								
 								</c:otherwise>
-							
+								
 							</c:choose>
 							<%
 							}
@@ -124,8 +124,8 @@
 					<div class="side">
 
 						<div class="category">
-							<a><img alt="메뉴버튼" src="images/category.png" width="35"
-								height="35">카테고리</a>
+							<a><img alt="메뉴버튼" src="images/카테카테카테카테고리.png" width="20"
+								height="25">   카테고리</a>
 							<ul class="categorybtn">
 								<table>
 									<tr bgcolor="white">

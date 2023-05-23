@@ -76,11 +76,11 @@
 							if (user == null) {
 							%>
 							<a class="menu button" href="login.com"> <img alt="판매하기 로고"
-								src="images/seller.png" width="23" height="26"> 판매하기
+								src="images/KakaoTalk_20230520_190952023.png" width="23" height="26"> 판매하기
 							</a> <a class="menu button" href="login.com"> <img alt="내상점 로고"
-								src="images/mystore.png" width="23" height="24"> 내 상점 ｜
+								src="images/KakaoTalk_20230520_191255450.png" width="23" height="24"> 내 상점 ｜
 							</a> <a class="menu button" href="login.com"> <img
-								alt="스파이더맨 신청 로고" src="images/mystore.png" width="23"
+								alt="스파이더맨 신청 로고" src="images/pngegg.png" width="23"
 								height="24"> 스파이더맨 신청 ｜
 							</a>
 
@@ -88,12 +88,12 @@
 							} else {
 							%>
 							<a class="menu button" href="goWrite.com"> <img alt="판매하기 로고"
-								src="images/seller.png" width="23" height="26"> 판매하기
+								src="images/KakaoTalk_20230520_190952023.png" width="23" height="26"> 판매하기
 							</a> <a class="menu button" href="goMypage.com"> <img
-								alt="내상점 로고" src="images/mystore.png" width="23" height="24">
+								alt="내상점 로고" src="images/KakaoTalk_20230520_191255450.png" width="23" height="24">
 								내 상점 ｜
 							</a> <a class="menu button" href="goSpiderman.com"> <img
-								alt="스파이더맨 신청 로고" src="images/mystore.png" width="23"
+								alt="스파이더맨 신청 로고" src="images/pngegg.png" width="23"
 								height="24"> 스파이더맨 신청 ｜
 							</a>
 							<%
