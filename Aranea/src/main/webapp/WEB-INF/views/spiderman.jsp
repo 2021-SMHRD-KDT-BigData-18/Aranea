@@ -45,20 +45,20 @@
 		<div class="body">
 			<br>
 			<h2>스파이더맨 신청</h2>
-			<form action="gomain.com">
+			<form action="spidermanSuccess.com" method="post">
 				<div class="form-group">
 					<label for="usr">이름</label> <input type="text" class="form-control"
-						id="name-input">
+						id="name-input" name="user_name">
 				</div>
 
 				<div class="form-group">
 					<label for="tel">전화번호</label> <input type="text"
-						class="form-control" id="phone-input">
+						class="form-control" id="phone-input" name="user_phone">
 				</div>
 
 				<div class="form-group">
 					<label for="act">계좌번호</label> <input type="text"
-						class="form-control" id="account-input">
+						class="form-control" id="account-input" name="user_v_account">
 				</div>
 
 				<li class="checkBox check03">

@@ -15,7 +15,7 @@
 		#{user_point},
 		sysdate,
 		'u',
-		'n'	
+		'n'
 		)
 	</insert>
 
@@ -24,57 +24,65 @@
 	<select id="login" parameterType="kr.aranea.entity.T_User"
 		resultType="kr.aranea.entity.T_User">
 		select * from T_USER where user_id = #{user_id} and
-		user_pw = #{user_pw}
+		user_pw
+		= #{user_pw}
 	</select>
 
 
 	<!-- 아이디 찾기 -->
-	<select id="searchId"
-	parameterType="kr.aranea.entity.T_User"
-	resultType="kr.aranea.entity.T_User">
+	<select id="searchId" parameterType="kr.aranea.entity.T_User"
+		resultType="kr.aranea.entity.T_User">
 		select *
-		  from T_USER
-		 where user_name = #{user_name}
-		   and user_phone = #{user_phone}
+		from T_USER
+		where user_name = #{user_name}
+		and user_phone = #{user_phone}
 	</select>
-	
-	
+
+
 	<!-- 비밀번호 수정 -->
-	<update id="searchPw"
-	parameterType="kr.aranea.entity.T_User">
+	<update id="searchPw" parameterType="kr.aranea.entity.T_User">
 		update T_USER
-		   set user_pw = #{user_pw}
-		 where user_id = #{user_id}
-		   and user_phone = #{user_phone}
+		set user_pw = #{user_pw}
+		where user_id = #{user_id}
+		and user_phone = #{user_phone}
 	</update>
-	
+
 	<!-- 마이페이지 정보 수정 -->
 	<update id="updateInfo" parameterType="kr.aranea.entity.T_User">
 		update T_USER
-		   set user_name = #{user_name},
-		   	   user_pw = #{user_pw},
-		   	   user_phone = #{user_phone},
-		   	   user_v_account = #{user_v_account}
-		 where user_id = #{user_id}
+		set user_name = #{user_name},
+		user_pw = #{user_pw},
+		user_phone = #{user_phone},
+		user_v_account = #{user_v_account}
+		where user_id = #{user_id}
 	</update>
-	
+
 	<!-- 정보수정 후 수정된 데이터들로 조회 -->
 	<select id="selectUi" resultType="kr.aranea.entity.T_User">
 		select *
-		  from T_USER
-		 where user_id = #{user_id}
+		from T_USER
+		where user_id = #{user_id}
 	</select>
-	
-	<!--  중복체크 -->
-<select id="check" resultType="kr.aranea.entity.T_User">
 
-	select* from T_USER
-	where user_id=#{user_id}
-</select>
-<select id="check1" resultType="kr.aranea.entity.T_User">
+	<!-- 중복체크 -->
+	<select id="check" resultType="kr.aranea.entity.T_User">
 
-	select* from T_USER
-	where user_name=#{user_name}
-</select>
+		select* from T_USER
+		where user_id=#{user_id}
+	</select>
+	<select id="check1" resultType="kr.aranea.entity.T_User">
+
+		select* from T_USER
+		where user_name=#{user_name}
+	</select>
+
+	<!-- 스파이더맨 신청 시 'y'로 변경 -->
+	<update id="spiderman" parameterType="kr.aranea.entity.T_User">
+		update T_USER
+		set SPIDER_YN = 'y'
+		where user_name = #{user_name}
+		and user_phone = #{user_phone}
+		and user_v_account = #{user_v_account}
+	</update>
 
 </mapper>

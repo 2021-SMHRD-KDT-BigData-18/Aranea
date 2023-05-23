@@ -91,13 +91,30 @@
 							%>
 							<a class="menu button" href="goWrite.com"> <img alt="판매하기 로고"
 								src="images/KakaoTalk_20230520_190952023.png" width="32" height="32"> 판매하기
-							</a> <a class="menu button" href="goMypage.com"> <img
-								alt="내상점 로고" src="images/KakaoTalk_20230520_191255450.png" width="32" height="32">
-								내 정보 ｜
-							</a> <a class="menu button" href="goSpiderman.com"> <img
-								alt="스파이더맨 신청 로고" src="images/pngegg.png" width="32"
-								height="32"> 스파이더맨 신청 ｜
-							</a>
+							</a> <a class="menu button" href="goMypage.com"> <img alt="내상점 로고"
+								src="images/KakaoTalk_20230520_191255450.png" width="32" height="32"> 내 정보 ｜
+							</a> 
+							
+							<c:choose>
+								<c:when test="${user.getSpider_yn() eq 'y'}">
+	
+								<a class="menu button" href="#"> <img
+									alt="스파이더맨 신청 로고" src="images/pngegg.png" width="32"
+									height="32"> 스파이더맨 요청목록 ｜
+								</a>
+	
+								</c:when>
+								
+								<c:otherwise>
+								
+								<a class="menu button" href="goSpiderman.com"> <img
+									alt="스파이더맨 신청 로고" src="images/pngegg.png" width="32"
+									height="32"> 스파이더맨 신청 ｜
+								</a>
+								
+								</c:otherwise>
+							
+							</c:choose>
 							<%
 							}
 							%>
