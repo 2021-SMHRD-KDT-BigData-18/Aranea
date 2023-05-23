@@ -43,8 +43,8 @@
 						<%
 						} else {
 						%>
-						<%=user.getUser_name()%>님, 환영합니다! ｜<a href="addressSet.com">동네설정
-							｜</a> <a href="logout.com">로그아웃</a>
+						<%=user.getUser_name()%>님, 환영합니다! <div style="width: 15px;">     </div>
+						 <a href="logout.com">로그아웃</a>
 						<%
 						}
 						%>

@@ -182,6 +182,18 @@ input[type="text"] {
 	align-items: center;
 	height: 50px;
 }
+#catebtn{
+	
+	margin-bottom: 15px;
+}
+#catebtn:hover {
+	
+    transition: 1s ease-out;
+    background-color: rgb(187,7,11);
+    color: white;
+
+}
+
 
 .h2 {
 	font-size: 1.5rem;

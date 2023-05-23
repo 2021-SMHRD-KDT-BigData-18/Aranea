@@ -32,8 +32,9 @@
 					<%
 					} else {
 					%>
-					<%=user.getUser_name()%>님, 환영합니다! ｜<a href="addressSet.com">동네설정
-						｜</a> <a href="logout.com">로그아웃</a>
+					<%=user.getUser_name()%>님, 환영합니다! 
+						<div style="width: 15px;">     </div>
+					 <a href="logout.com">로그아웃</a>
 					<%
 					}
 					%>
@@ -54,7 +55,7 @@
 						<div class="search">
 							<input type="text" placeholder="상품명, 지역명, @상점명 입력"
 								class="inputTag"> <a class="searchBtn"> <img
-								alt="검색버튼 아이콘" src="images/searchbtn.jpg" width="20" height="20">
+								alt="검색버튼 아이콘" src="images/123.png" width="20" height="20">
 							</a>
 						</div>
 					</div>
@@ -76,11 +77,11 @@
 						} else {
 						%>
 						<a class="menu button" href="goWrite.com"> <img alt="판매하기 로고"
-							src="images/seller.png" width="23" height="26"> 판매하기
+							src="images/KakaoTalk_20230520_190952023.png" width="23" height="26"> 판매하기
 						</a> <a class="menu button" href="goMypage.com"> <img alt="내상점 로고"
-							src="images/mystore.png" width="23" height="24"> 내 상점 ｜
+							src="images/KakaoTalk_20230520_191255450.png" width="23" height="24"> 내 상점 ｜
 						</a> <a class="menu button" href="goSpiderman.com"> <img
-							alt="스파이더맨 신청 로고" src="images/mystore.png" width="23" height="24">
+							alt="스파이더맨 신청 로고" src="images/pngegg.png" width="23" height="24">
 							스파이더맨 신청 ｜
 						</a>
 						<%

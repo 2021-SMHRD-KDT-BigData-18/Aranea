@@ -43,8 +43,9 @@
 						<%
 						} else {
 						%>
-						<%=user.getUser_name()%>님, 환영합니다! ｜<a href="addressSet.com">동네설정
-							｜</a> <a href="logout.com">로그아웃</a>
+						<%=user.getUser_name()%>님, 환영합니다! 
+						<div style="width: 15px;">     </div>
+						 <a href="logout.com">로그아웃</a>
 						<%
 						}
 						%>
@@ -65,7 +66,7 @@
 							<div class="search">
 								<input type="text" placeholder="상품명, 지역명, @상점명 입력"
 									class="inputTag"> <a class="searchBtn"> <img
-									alt="검색버튼 아이콘" src="images/searchbtn.jpg" width="20"
+									alt="검색버튼 아이콘" src="images/123.png" width="20"
 									height="20">
 								</a>
 							</div>
@@ -105,22 +106,22 @@
 					<div class="side">
 
 						<div class="category">
-							<a><img alt="메뉴버튼" src="images/category.png" width="35"
-								height="35">카테고리</a>
+							<a><img alt="메뉴버튼" src="images/카테카테카테카테고리.png" width="20"
+								height="25">   카테고리</a>
 							<ul class="categorybtn">
 								<table>
 									<tr bgcolor="white">
 										<td>
-											<li><a href="category.com?cm_category=남성복">남성복</a></li>
-											<li><a href="category.com?cm_category=여성복">여성복</a></li>
-											<li><a href="category.com?cm_category=디지털기기">디지털기기</a></li>
-											<li><a href="category.com?cm_category=생활가전">생활가전</a></li>
-											<li><a href="category.com?cm_category=가구/인테리어">가구/인테리어</a></li>
-											<li><a href="category.com?cm_category=뷰티/미용">뷰티/미용</a></li>
-											<li><a href="category.com?cm_category=스포츠/레저">스포츠/레저</a></li>
-											<li><a href="category.com?cm_category=도서">도서</a></li>
-											<li><a href="category.com?cm_category=티켓/상품권">티켓/상품권</a></li>
-											<li><a href="category.com?cm_category=반려동물용품">반려동물용품</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=남성복">남성복</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=여성복">여성복</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=디지털기기">디지털기기</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=생활가전">생활가전</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=가구/인테리어">가구/인테리어</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=뷰티/미용">뷰티/미용</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=스포츠/레저">스포츠/레저</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=도서">도서</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=티켓/상품권">티켓/상품권</a></li>
+											<li id="catebtn"><a href="category.com?cm_category=반려동물용품">반려동물용품</a></li>
 										</td>
 									</tr>
 								</table>

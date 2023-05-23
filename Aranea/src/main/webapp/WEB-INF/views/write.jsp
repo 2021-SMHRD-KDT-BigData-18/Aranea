@@ -44,7 +44,7 @@
 			</div>
 			<hr style="margin-left: 8%;">
 			<div class="card-body">
-				<form action="writingUpload.com" method="post"
+				<form action="gomain.com" method="post"
 					enctype="multipart/form-data">
 					<strong>상품이미지</strong><br>
 					<div>
