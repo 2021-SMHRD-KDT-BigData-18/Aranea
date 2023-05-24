@@ -142,7 +142,7 @@
 				<c:forEach items="${list}" var="item">
 					<tr>
 						<td><img alt="상품이미지"
-							src="http://211.228.63.186:8081/Aranea/file/${item.cm_img1}"
+							src="http://210.223.207.43:8081/Aranea/file/${item.cm_img1}"
 							width="194" height="194"></td>
 						<td><a href="viewWriting.com?cm_seq=${item.cm_seq}">${item.cm_name}</a></td>
 						<td>${item.cm_price}</td>
