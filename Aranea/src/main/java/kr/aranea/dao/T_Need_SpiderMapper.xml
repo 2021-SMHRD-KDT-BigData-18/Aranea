@@ -22,7 +22,7 @@
 	<select id="spiderview" resultType="kr.aranea.entity.T_Need_Spider">
 		select *
 		from T_Need_Spider
-		order by cm_seq desc
+		order by ns_seq desc
 	</select>
 
 

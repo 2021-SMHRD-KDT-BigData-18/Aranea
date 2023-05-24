@@ -71,7 +71,7 @@ public class NeedSpiderCon implements Controller {
 
 		
 		
-		return "needSpider";
+		return "redirect:/gomain.com";
 	}
 
 }
