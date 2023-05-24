@@ -226,8 +226,31 @@
 							<%-- 추가적인 프로필 정보를 여기에 표시하세요 --%>
 					</div>
 					<div class="profile-buttons">
-						<button class="bttn">입금</button>
-						<button class="bttn">출금</button>
+						<div class="profile-buttons">
+						<div class="bttn">
+							<form method="get" action="https://testapi.openbanking.or.kr/oauth/2.0/authorize">
+							  <input type="hidden" name="response_type" value="code"/>
+							  <input type="hidden" name="client_id" value="c68bcbdd-fd89-40a9-95a7-b0c73e070208"/>
+							  <input type="hidden" name="redirect_uri" value="https://openapi.openbanking.or.kr/v2.0/transfer/deposit/acnt_num"/>
+							  <input type="hidden" name="scope" value="login inquiry transfer"/>
+							  <input type="hidden" name="state" value="b80BLsfigm9OokPTjy03elbJqRHOfGSY"/>
+							  <input type="hidden" name="auth_type" value="0"/>
+							  <button>입금</button>
+							  
+							</form>
+						</div>
+						<div class="bttn">
+							<form method="get" action="https://testapi.openbanking.or.kr/oauth/2.0/authorize">
+							  <input type="hidden" name="response_type" value="code"/>
+							  <input type="hidden" name="client_id" value="c68bcbdd-fd89-40a9-95a7-b0c73e070208"/>
+							  <input type="hidden" name="redirect_uri" value="https://openapi.openbanking.or.kr/v2.0/transfer/deposit/acnt_num"/>
+							  <input type="hidden" name="scope" value="login inquiry transfer"/>
+							  <input type="hidden" name="state" value="b80BLsfigm9OokPTjy03elbJqRHOfGSY"/>
+							  <input type="hidden" name="auth_type" value="0"/>
+							  <button>출금</button>
+							</form>
+						</div>
+					</div>
 					</div>
 					<%
 					} else {
@@ -242,5 +265,12 @@
 		<!-- 컨테이너 바디 -->
 	</div>
 	<script type="text/javascript" src="assets/JS/home.js"></script>
+	<script type="text/javascript">
+	// 사이즈 지정해서 열기
+	function open(){
+	  window.open("https://twww.openbanking.or.kr/apt/mobileweb/authorizeNewGW?sessionID=b73738f8-9329-4983-b99c-681b6dad8495&action=Grant&api_tran_id=5c031e8d-92df-4e38-850c-0af25ae80655&gw_svc_id=faf66bd6cafdf009a37caaac77ba5194&gw_app_key=c68bcbdd-fd89-40a9-95a7-b0c73e070208&response_type=code&client_id=c68bcbdd-fd89-40a9-95a7-b0c73e070208&client_info=&redirect_uri=https://openapi.openbanking.or.kr/v2.0/transfer/deposit/acnt_num&scope=login+inquiry+transfer&auth_type=0&lang=kor&state=b80BLsfigm9OokPTjy03elbJqRHOfGSY"
+			  , "_blank", "width=500, height=500");
+	}
+	</script>
 </body>
 </html>
