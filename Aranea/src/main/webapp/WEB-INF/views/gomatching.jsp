@@ -80,15 +80,14 @@ table {
 			</div>
 		</div>
 	</div>
-
+<form action="needSpider.com">
 	<div class="body">
 		<h3 style="display: flex; justify-content: center; margin-top: 50px;padding: 50px;">
 			 스파이더맨 매칭을 선택 해주세요
 		</h3>
-
-  
+		<input type="hidden" name="cm_seq" value="${list.cm_seq}">
   <button class="btn btn-primary"style="background-color: white; border:2px solid rgb(187,7,11); width: 35%; height: 50px; align-items: center;
-  margin-left:11%;" onclick="location.href='needSpider.com?cm_seq=${list.cm_seq}'">
+  margin-left:11%;" onclick="alert('스파이더맨 배정 대기중');">
   스파이더맨 신청하기
   </button>
    <button class="btn btn-primary"style="background-color: white; border:2px solid rgb(187,7,11); width: 35%; height: 50px; align-items: center;
@@ -98,6 +97,7 @@ table {
   </button>
 
 	</div>
+</form>
 
 
 </body>
