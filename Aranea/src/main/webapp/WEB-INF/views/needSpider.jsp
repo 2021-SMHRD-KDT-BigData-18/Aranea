@@ -171,7 +171,7 @@
 
 		<div>
 			상품 사진 <img
-				src="http://211.228.63.186:8081/Aranea/file/${list.cm_img1} "
+				src="http://210.223.207.43:8081/Aranea/file/${list.cm_img1} "
 				width="300" height="300">
 		</div>
 		<div>상품 카테고리 ${list.getCm_category()}</div>

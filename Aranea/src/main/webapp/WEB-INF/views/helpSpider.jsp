@@ -178,7 +178,7 @@
 					<tr id="ho"
 						onclick="location.href='viewWriting.com?cm_seq=${item.cm_seq}'">
 						<td><img alt="상품이미지"
-							src="http://211.228.63.186:8081/Aranea/file/${item.cm_img1}"
+							src="http://210.223.207.43:8081/Aranea/file/${item.cm_img1}"
 							width="150" height="150"></td>
 						<td>${item.cm_name}</td>
 						<td>${item.cm_price}원</td>
