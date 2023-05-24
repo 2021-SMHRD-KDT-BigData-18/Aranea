@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.aranea.dao.T_Need_SpiderDAO">
+
+	<insert id="spider"
+		parameterType="kr.aranea.entity.T_Need_Spider">
+		insert into T_Need_Spider
+		values( T_NS_SEQ.nextval,
+		#{cm_seq},
+		'',
+		'',
+		#{cm_name},
+		#{cm_desc},
+		#{cm_category},
+		#{cm_price},
+		#{loc_name},
+		#{user_name},
+		#{cm_img1}
+				)
+	</insert>
+
+	<select id="spiderview" resultType="kr.aranea.entity.T_Need_Spider">
+		select *
+		from T_Need_Spider
+		order by cm_seq desc
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>
