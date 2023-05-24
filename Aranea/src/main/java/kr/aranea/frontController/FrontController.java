@@ -26,6 +26,7 @@ import kr.aranea.controller.GoSpiderman;
 import kr.aranea.controller.GoSuccessCon;
 import kr.aranea.controller.GoWriteCon;
 import kr.aranea.controller.GomatchingCon;
+import kr.aranea.controller.HelpSpiderCon;
 import kr.aranea.controller.JoinCon;
 import kr.aranea.controller.LoginCon;
 import kr.aranea.controller.LoginSuccessCon;
@@ -38,6 +39,7 @@ import kr.aranea.controller.MyPointCon;
 import kr.aranea.controller.MySellingListCon;
 import kr.aranea.controller.MyUpdateInfoCon;
 import kr.aranea.controller.MyUpdateInfoSuccessCon;
+import kr.aranea.controller.NeedSpiderCon;
 import kr.aranea.controller.SearchIdCon;
 import kr.aranea.controller.SearchIdSuccessCon;
 import kr.aranea.controller.SearchPwCon;
@@ -95,6 +97,8 @@ public class FrontController extends HttpServlet {
 		mappings.put("/matching.com", new MatchingCon());
 		mappings.put("/spidermanSuccess.com", new SpidermanSuccessCon());
 		mappings.put("/spiderInfo.com", new GoSpiderInfoCon());
+		mappings.put("/helpSpider.com", new HelpSpiderCon());
+		mappings.put("/needSpider.com", new NeedSpiderCon());
 
 	}
 	

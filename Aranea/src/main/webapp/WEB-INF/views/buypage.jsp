@@ -270,10 +270,9 @@
 							</div>
 						</div>
 						<!--결제금액 -->
-						<a href="gomatching.com">
-							<button class="btn btn-primary"
-								style="background-color: red; border: red; width: 50%; height: 70px; align-items: center; margin-left: 25%;">결제하기</button>
-						</a>
+						<button class="btn btn-primary"
+								style="background-color: red; border: red; width: 50%; height: 70px; align-items: center; margin-left: 25%;" 
+								onclick="location.href='gomatching.com?cm_seq=${list.cm_seq}'" >결제하기</button>
 
 					</div>
 

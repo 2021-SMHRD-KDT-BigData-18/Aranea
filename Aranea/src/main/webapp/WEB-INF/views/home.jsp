@@ -98,7 +98,7 @@
 							<c:choose>
 								<c:when test="${user.getSpider_yn() eq 'y'}">
 	
-								<a class="menu button" href="#"> <img
+								<a class="menu button" href="helpSpider.com"> <img
 									alt="스파이더맨 신청 로고" src="images/pngegg.png" width="32"
 									height="32"> 스파이더맨 요청목록 ｜
 								</a>

@@ -24,5 +24,7 @@
     <mapper resource="kr/aranea/dao/T_UserMapper.xml"/>
     <mapper resource="kr/aranea/dao/T_LikeMapper.xml"/>
     <mapper resource="kr/aranea/dao/T_ChatMapper.xml"/>
+    <mapper resource="kr/aranea/dao/T_Need_SpiderMapper.xml"/>
+    
   </mappers>
 </configuration>

@@ -1,3 +1,4 @@
+<%@page import="kr.aranea.entity.T_Commodity"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -65,6 +66,10 @@ table {
 }
 
 </style>
+<%
+	T_Commodity list = (T_Commodity)request.getAttribute("list");
+	request.setAttribute("list", list);
+%>
 <body>
 	<div class="header">
 		<div class="container">
@@ -83,9 +88,8 @@ table {
 
   
   <button class="btn btn-primary"style="background-color: white; border:2px solid rgb(187,7,11); width: 35%; height: 50px; align-items: center;
-  margin-left:11%;">
-  <a href="matching.com" >
-  스파이더맨 신청하기</a>
+  margin-left:11%;" onclick="location.href='needSpider.com?cm_seq=${list.cm_seq}'">
+  스파이더맨 신청하기
   </button>
    <button class="btn btn-primary"style="background-color: white; border:2px solid rgb(187,7,11); width: 35%; height: 50px; align-items: center;
   margin-left:8%;">
