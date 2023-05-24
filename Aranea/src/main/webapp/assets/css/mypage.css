@@ -39,6 +39,7 @@ table {
 }
 
 /*수정할 코드  */
+/*수정할 코드  */
 img {
 	border-style: none;
 }
@@ -49,6 +50,14 @@ img {
 
 /* header : 로그인/회원가입 화면 */
 .header {
+	/*       display: flex;
+            justify-content: center;
+            -webkit-box-pack: center;
+            height: 40px;
+            background: rgb(255, 255, 255);
+            margin-left: 100%;
+            margin-right: 20%;
+            float: right; */
 	left: 30%;
 	right: 30%;
 	border-bottom: 1px solid rgb(238, 238, 238);
@@ -68,7 +77,17 @@ img {
 .login {
 	color: black;
 }
-
+/* 
+         .a {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            font-size: 13px;
+            color: rgb(255, 6, 6);
+            padding: 0px 15px;
+            position: relative;
+            line-height: 1.4;
+        }  */
 .login:hover {
 	color: rgb(187, 7, 11);
 	text-decoration: underline;
@@ -107,14 +126,10 @@ img {
 	float: left;
 }
 
-.logoimg {
-	margin-top: 20px;
-}
-
 /* nav : 서치*/
 .search_input {
 	border: 2px solid rgb(187, 7, 11);
-	width: 150%;
+	width: 140%;
 	height: 40px;
 	box-sizing: border-box;
 	position: relative;
@@ -125,8 +140,9 @@ img {
 	display: flex;
 	-webkit-box-align: center;
 	align-items: center;
-	padding: 0px 15px;
+margin-left: 15px;
 }
+
 
 .searchBtn {
 	color: rgb(33, 33, 33);
@@ -139,7 +155,7 @@ img {
 }
 
 .inputTag {
-	width: 400px;
+	width: 340px;
 	border: none;
 	color: rgb(102, 102, 102);
 	-webkit-box-flex: 1;
@@ -176,6 +192,7 @@ input[type="text"] {
 	display: none;
 }
 
+
 .category {
 	margin-top: 10px;
 	-webkit-box-align: center;
@@ -195,6 +212,17 @@ input[type="text"] {
 }
 
 
+
+.card-menu {
+	padding: 1rem 0px 1rem;
+	display: flex;
+	justify-content: left;
+	margin-left: 15%;
+	margin-top: 20px;
+	
+	
+}
+
 .h2 {
 	font-size: 1.5rem;
 	margin-bottom: 1.5rem;
@@ -205,6 +233,34 @@ input[type="text"] {
 	align-items: flex-start;
 	flex-wrap: wrap;
 	margin-left: 38px;
+	    margin-top:20px;
+}
+
+.viewCard {
+}
+
+
+.viewImg{
+float: left;
+width: 270px;
+height:270px;
+
+}
+.viewImg>Img{
+	width: 100%;
+	height:100%;
+}
+.viewWrap {
+	/* width: 25%;
+	height: 30%;
+	border: 1px solid rgb(0, 0, 0);
+	margin: 20px; */
+	padding: 20px 20px 0 20px;
+    margin-bottom: 50px;
+    border: 1px solid lightgray;
+        margin-left: 14px;
+    
+    
 }
 
 .containerheader {
@@ -213,9 +269,13 @@ input[type="text"] {
 	border-bottom: 1px solid lightgray;
 }
 
-.allcontainer {
-	width: 1920px;
-	height: 786px;
+.containerbody {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+.allcontainer{
+width: 1920px;	
+height: 786px;
 }
 
 /*=================== 찜한상품~ 정보수정 리스트 ==================*/

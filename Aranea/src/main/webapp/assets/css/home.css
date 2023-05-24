@@ -128,7 +128,7 @@ img {
 /* nav : 서치*/
 .search_input {
 	border: 2px solid rgb(187, 7, 11);
-	width: 150%;
+	width: 140%;
 	height: 40px;
 	box-sizing: border-box;
 	position: relative;

@@ -120,15 +120,20 @@
 	color: rgb(30, 29, 41);
 	outline: 0px;
 }
+
+.paybutton:hover {
+	background-color: rgb(187, 7, 11);
+	color: white;
+	border: rgb(187, 7, 11);
+}
 </style>
 <body>
 	<%
-	T_Commodity list = (T_Commodity)request.getAttribute("list");
+	T_Commodity list = (T_Commodity) request.getAttribute("list");
 	request.setAttribute("list", list);
-	
-    T_User user = (T_User) session.getAttribute("user");
 
-%>
+	T_User user = (T_User) session.getAttribute("user");
+	%>
 
 
 	<div class="container">
@@ -155,10 +160,15 @@
 								<img
 									src="http://210.223.207.43:8081/Aranea/file/${list.cm_img1} "
 									width="300" height="300">
-									<div style="width: 100%; margin-left: 20px;">
-											<div class="title" style="height:10%;"><h1> ${list.cm_name}</h1></div><br>
-										<div class="price "style="height:10%;"><h1>${list.cm_price}원</h1></div>
+								<div style="width: 100%; margin-left: 20px;">
+									<div class="title" style="height: 10%;">
+										<h1>${list.cm_name}</h1>
 									</div>
+									<br>
+									<div class="price " style="height: 10%;">
+										<h1>${list.cm_price}원</h1>
+									</div>
+								</div>
 							</div>
 
 						</div>
@@ -192,17 +202,24 @@
 								<div>
 									• 토스페이로 10만원 이상 결제 시 3,000원 무제한 즉시할인 번개케어상품 최대 3만원 할인 <br>
 									• 번개케어 대상 상품을 토스페이로 50/100만 원 이상 결제 시 2/3만원 즉시할인 생애 첫 결제 <br>
-									• 토스페이 3만 원 이상 결제 즉시 3천 원 캐시백 • 토스페이 생애 첫 결제 유저 대상 기간내 1회 지급 <br>
+									• 토스페이 3만 원 이상 결제 즉시 3천 원 캐시백  <br>
+									• 토스페이 생애 첫 결제 유저 대상 기간내 1회 지급 <br>
 									• 현금영수증은 토스페이에서 발급 가능
 								</div>
 							</div>
 							<div class="payevent" id="kakao">
-								<div>카카오페이페이</div>
-								<div>카카오페에피에피에피에피에페이</div>
+								<div>
+									• 현금영수증은 카카오페이에서 발급 가능 <br><br>
+									• 카카오페이 머니는 1회 200만 원, 카드는 1회<br><br>
+									100만 원까지 결제 가능 (단, 카드는 개인 신용도에 따라 한도가 달라질 수 있음)
+								</div>
 							</div>
 							<div class="payevent" id="phone">
-								<div>핸드폰결제</div>
-								<div>결제결제핸드폰결제</div>
+								<div>
+									• 상점에 본인 인증된 휴대폰 번호로만 결제 가능 <br><br> • 결제 한도는 1회 30만 원,
+									월(1일~말일 기준) 30만 원까지 가능하며, 통신사 수납/가입 상태에 따라 한도가 상이할 수 있음<br><br>
+									• 결제 당월에만 결제수단 취소가 가능
+								</div>
 							</div>
 						</div>
 						<!--결제수단  -->
@@ -240,13 +257,15 @@
 									<div
 										style="display: flex; justify-content: space-between; margin-bottom: 5px;">
 										<div style="color: rgb(127, 127, 127)">상품금액</div>
-										<strong style="font-weight: 700;"> ${list.getCm_price()}</strong>
+										<strong style="font-weight: 700;">
+											${list.getCm_price()}</strong>
 
 									</div>
 									<div
 										style="display: flex; justify-content: space-between; margin-bottom: 5px;">
 										<div style="color: rgb(127, 127, 127)">포인트 사용</div>
-										<strong style="font-weight: 700;"> ${user.getUser_point()}</strong>
+										<strong style="font-weight: 700;">
+											${user.getUser_point()}</strong>
 
 									</div>
 
@@ -263,7 +282,7 @@
 
 										<strong
 											style="font-weight: 700; margin-top: 20px; font-size: 20px; color: rgb(216, 12, 24);">
-											5000만원${list.cm_price} 이거랑 ${user.getUser_point()} 이거  뺴야되는데 포인트가안나오넹 ㅋ </strong>
+											${list.cm_price}</strong>
 									</div>
 
 								</div>
@@ -271,8 +290,8 @@
 						</div>
 						<!--결제금액 -->
 						<button class="btn btn-primary"
-								style="background-color: red; border: red; width: 50%; height: 70px; align-items: center; margin-left: 25%;" 
-								onclick="location.href='gomatching.com?cm_seq=${list.cm_seq}'" >결제하기</button>
+							style="background-color: red; border: red; width: 50%; height: 70px; align-items: center; margin-left: 25%;"
+							onclick="location.href='gomatching.com?cm_seq=${list.cm_seq}'">결제하기</button>
 
 					</div>
 

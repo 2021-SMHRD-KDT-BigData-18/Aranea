@@ -3,6 +3,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +21,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <link rel="stylesheet" href="assets/css/viewWriting.css">
+<link rel="stylesheet" href="assets/css/home.css">
 <script type="text/javascript" src="assets/JS/home.js"></script>
 
 </head>
@@ -42,13 +44,18 @@
 				<div class="rose">
 					<div class="create">
 
-						<% if (user==null) { %>
+						<%
+						if (user == null) {
+						%>
 						<a class="login" href="login.com">로그인/회원가입</a>
-						<% } else { %>
-						<%=user.getUser_name()%>님, 환영합니다! 
-						<div style="width: 15px;">     </div>
-							<a href="logout.com">로그아웃</a>
-						<% } %>
+						<%
+						} else {
+						%>
+						<%=user.getUser_name()%>님, 환영합니다! <div style="width: 15px;">     </div>
+						 <a href="logout.com">로그아웃</a>
+						<%
+						}
+						%>
 					</div>
 				</div>
 			</div>
@@ -62,40 +69,63 @@
 							</a>
 						</div>
 
+						<form action="goSerachText.com" method="post">
 						<div class="search_input">
 							<div class="search">
-								<input type="text" placeholder="상품명, 지역명, @상점명 입력"
-									class="inputTag"> <a class="searchBtn"> <img
-									alt="검색버튼 아이콘" src="images/123.png" width="20" height="20">
-								</a>
+								<input type="text" name="searchContent" placeholder="키워드 검색"
+									class="inputTag" onkeyup="enterkey()"> 
+								<input  type="image" src="images/123.png" width="32" height="32" >
+							
+			
 							</div>
 						</div>
+						</form>
 
 						<div class="twopack">
-							<%  if(user == null){ %>
+							<%
+							if (user == null) {
+							%>
 							<a class="menu button" href="login.com"> <img alt="판매하기 로고"
-								src="images/KakaoTalk_20230520_190952023.png" width="23"
-								height="26"> 판매하기
+								src="images/KakaoTalk_20230520_190952023.png" width="32" height="32"> 판매하기
 							</a> <a class="menu button" href="login.com"> <img alt="내상점 로고"
-								src="images/KakaoTalk_20230520_191255450.png" width="23"
-								height="24"> 내 상점 ｜
+								src="images/KakaoTalk_20230520_191255450.png" width="32" height="32"> 내 정보 ｜
 							</a> <a class="menu button" href="login.com"> <img
-								alt="스파이더맨 신청 로고" src="images/pngegg.png" width="23" height="24">
-								스파이더맨 신청 ｜
+								alt="스파이더맨 신청 로고" src="images/pngegg.png" width="32"
+								height="32"> 스파이더맨 신청 ｜
 							</a>
 
-							<%} else{ %>
+							<%
+							} else {
+							%>
 							<a class="menu button" href="goWrite.com"> <img alt="판매하기 로고"
-								src="images/KakaoTalk_20230520_190952023.png" width="23"
-								height="26"> 판매하기
-							</a> <a class="menu button" href="goMypage.com"> <img
-								alt="내상점 로고" src="images/KakaoTalk_20230520_191255450.png"
-								width="23" height="24"> 내 상점 ｜
-							</a> <a class="menu button" href="goSpiderman.com"> <img
-								alt="스파이더맨 신청 로고" src="images/pngegg.png" width="23" height="24">
-								스파이더맨 신청 ｜
-							</a>
-							<%} %>
+								src="images/KakaoTalk_20230520_190952023.png" width="32" height="32"> 판매하기
+							</a> <a class="menu button" href="goMypage.com"> <img alt="내상점 로고"
+								src="images/KakaoTalk_20230520_191255450.png" width="32" height="32"> 내 정보 ｜
+							</a> 
+							
+							<c:choose>
+								<c:when test="${user.getSpider_yn() eq 'y'}">
+	
+								<a class="menu button" href="helpSpider.com"> <img
+									alt="스파이더맨 신청 로고" src="images/pngegg.png" width="32"
+									height="32"> 스파이더맨 요청목록 ｜
+								</a>
+	
+								</c:when>
+								
+								<c:otherwise>
+								
+								<a class="menu button" href="goSpiderman.com"> <img
+									alt="스파이더맨 신청 로고" src="images/pngegg.png" width="32"
+									height="32"> 스파이더맨 신청 ｜
+								</a>
+								
+								</c:otherwise>
+								
+							</c:choose>
+							<%
+							}
+							%>
 
 						</div>
 					</div>
@@ -128,8 +158,6 @@
 
 
 			</div>
-
-
 
 		</div>
 		<!--수정 컨테이너 헤더  -->

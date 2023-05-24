@@ -50,36 +50,44 @@
    }
 
    /*수정할 코드  */
-   img {
-      border-style: none;
-   }
+ img {
+	border-style: none;
+}
 
-   .container {}
+.container {
+	
+}
 
-   /* header : 로그인/회원가입 화면 */
-   .header {
-    
-      left: 30%;
-      right: 30%;
-      border-bottom: 1px solid rgb(238, 238, 238);
-   }
+/* header : 로그인/회원가입 화면 */
+.header {
+	/*       display: flex;
+            justify-content: center;
+            -webkit-box-pack: center;
+            height: 40px;
+            background: rgb(255, 255, 255);
+            margin-left: 100%;
+            margin-right: 20%;
+            float: right; */
+	left: 30%;
+	right: 30%;
+	border-bottom: 1px solid rgb(238, 238, 238);
+}
 
-   .rose {
-      display: flex;
-      -webkit-box-pack: justify;
-      justify-content: right;
-   }
+.rose {
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: right;
+}
 
-   .create {
-      display: flex;
-      flex-shrink: 0;
-   }
+.create {
+	display: flex;
+	flex-shrink: 0;
+}
 
-   .login {
-      color: black;
-   }
-
-   /* 
+.login {
+	color: black;
+}
+/* 
          .a {
             display: flex;
             -webkit-box-align: center;
@@ -90,102 +98,103 @@
             position: relative;
             line-height: 1.4;
         }  */
-   .login:hover {
-      color: rgb(187, 7, 11);
-      text-decoration: underline;
-   }
+.login:hover {
+	color: rgb(187, 7, 11);
+	text-decoration: underline;
+}
 
-   /* nav */
-   .nav {
-      position: sticky;
-      -webkit-box-pack: center;
-      padding-top: 15px;
-      background: rgb(255, 255, 255);
-      z-index: 10;
-      border-bottom: 1px solid rgb(238, 238, 238);
-      top: 0px;
-      left: 0px;
-   }
+/* nav */
+.nav {
+	position: sticky;
+	-webkit-box-pack: center;
+	padding-top: 15px;
+	background: rgb(255, 255, 255);
+	z-index: 10;
+	border-bottom: 1px solid rgb(238, 238, 238);
+	top: 0px;
+	left: 0px;
+}
 
-   .dav {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-   }
+.dav {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
 
-   .rav {
-      display: flex;
-      width: 100%;
-      -webkit-box-align: center;
-      align-items: center;
-   }
+.rav {
+	display: flex;
+	width: 100%;
+	-webkit-box-align: center;
+	align-items: center;
+}
 
-   .logo {
-      margin-right: 50px;
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      float: left;
-   }
+.logo {
+	margin-right: 50px;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	float: left;
+}
 
-   /* nav : 서치*/
-   .search_input {
-      border: 2px solid rgb(187, 7, 11);
-      width: 150%;
-      height: 40px;
-      box-sizing: border-box;
-      position: relative;
-   }
+/* nav : 서치*/
+.search_input {
+	border: 2px solid rgb(187, 7, 11);
+	width: 140%;
+	height: 40px;
+	box-sizing: border-box;
+	position: relative;
+}
 
-   .search {
-      height: 100%;
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      padding: 0px 15px;
-   }
+.search {
+	height: 100%;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+margin-left: 15px;
+}
 
-   .searchBtn {
-      color: rgb(33, 33, 33);
-      text-decoration: none;
-      cursor: pointer;
-      background-color: transparent;
-      text-align: center;
-      align-items: center;
-      left: 30%;
-   }
 
-   .inputTag {
-      width: 400px;
-      border: none;
-      color: rgb(102, 102, 102);
-      -webkit-box-flex: 1;
-      flex-grow: 1;
-   }
+.searchBtn {
+	color: rgb(33, 33, 33);
+	text-decoration: none;
+	cursor: pointer;
+	background-color: transparent;
+	text-align: center;
+	align-items: center;
+	left: 30%;
+}
 
-   input[type="text"] {
-      appearance: none;
-   }
+.inputTag {
+	width: 340px;
+	border: none;
+	color: rgb(102, 102, 102);
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+}
 
-   /* twopack */
-   .twopack {
-      width: 100%;
-      display: flex;
-      flex-direction: row-reverse;
-      -webkit-box-align: center;
-      align-items: center;
-      -webkit-box-flex: 1;
-   }
+input[type="text"] {
+	appearance: none;
+}
 
-   .menu button {
-      margin-left: 30px;
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      position: relative;
-   }
+/* twopack */
+.twopack {
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-flex: 1;
+}
 
-   .category a {
+.menu button {
+	margin-left: 30px;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	position: relative;
+}
+
+.category a {
 	cursor: pointer;
 }
 
@@ -211,56 +220,73 @@
     color: white;
 
 }
-   
 
 
 
-   .h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-   }
+.card-menu {
+	padding: 1rem 0px 1rem;
+	display: flex;
+	justify-content: left;
+	margin-left: 15%;
+	margin-top: 20px;
+	
+	
+}
 
-   .main {
-      display: flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      margin-left: 38px;
+.h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+}
 
-   }
+.main {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin-left: 38px;
+	    margin-top:20px;
+}
 
-   .viewCard {}
+.viewCard {
+}
 
 
-   .viewImg {
-      float: left;
-   }
+.viewImg{
+float: left;
+width: 270px;
+height:270px;
 
-   .viewWrap {
-      /* width: 25%;
+}
+.viewImg>Img{
+	width: 100%;
+	height:100%;
+}
+.viewWrap {
+	/* width: 25%;
 	height: 30%;
 	border: 1px solid rgb(0, 0, 0);
 	margin: 20px; */
-      padding: 20px 20px 0 20px;
-      margin-bottom: 50px;
+	padding: 20px 20px 0 20px;
+    margin-bottom: 50px;
+    border: 1px solid lightgray;
+        margin-left: 14px;
+    
+    
+}
 
+.containerheader {
+	margin-left: 15%;
+	margin-right: 15%;
+	border-bottom: 1px solid lightgray;
+}
 
-   }
-
-   .containerheader {
-      margin-left: 15%;
-      margin-right: 15%;
-      border-bottom: 1px solid lightgray;
-   }
-
-   .containerbody {
-      margin-left: 15%;
-      margin-right: 15%;
-   }
-
-   .allcontainer {
-      width: 1920px;
-      height: 786px;
-   }
+.containerbody {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+.allcontainer{
+width: 1920px;	
+height: 786px;
+}
 
    .imglist {
       display: flex;
@@ -366,6 +392,21 @@
       background-color:white;
    border: 2px solid rgba(187, 7, 11);
    
+   }
+   #mybtn:hover{
+   background-color: rgb(187,7,11);
+   border: rgb(187,7,11);
+   color: white;
+   }
+   #chatbtn:hover{
+   background-color: rgb(187,7,11);
+   border: rgb(187,7,11);
+   color: white;
+   }
+   #buybtn:hover{
+   background-color: rgb(187,7,11);
+   border: rgb(187,7,11);
+   color: white;
    }
 
 
