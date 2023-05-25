@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.aranea.controller.AAACon;
 import kr.aranea.controller.AddressSetCon;
 import kr.aranea.controller.CategoryCon;
 import kr.aranea.controller.ChatCon;
@@ -99,6 +100,7 @@ public class FrontController extends HttpServlet {
 		mappings.put("/spiderInfo.com", new GoSpiderInfoCon());
 		mappings.put("/helpSpider.com", new HelpSpiderCon());
 		mappings.put("/needSpider.com", new NeedSpiderCon());
+		mappings.put("/aaa.com", new AAACon());
 
 	}
 	
