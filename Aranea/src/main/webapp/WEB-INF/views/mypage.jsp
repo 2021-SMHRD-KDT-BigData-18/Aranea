@@ -235,7 +235,7 @@
 							  <input type="hidden" name="scope" value="login inquiry transfer"/>
 							  <input type="hidden" name="state" value="b80BLsfigm9OokPTjy03elbJqRHOfGSY"/>
 							  <input type="hidden" name="auth_type" value="0"/>
-							  <button>입금</button>
+							  <button id="bttn1">입금</button>
 							  
 							</form>
 						</div>
@@ -247,7 +247,7 @@
 							  <input type="hidden" name="scope" value="login inquiry transfer"/>
 							  <input type="hidden" name="state" value="b80BLsfigm9OokPTjy03elbJqRHOfGSY"/>
 							  <input type="hidden" name="auth_type" value="0"/>
-							  <button>출금</button>
+							  <button id="bttn1">출금</button>
 							</form>
 						</div>
 					</div>
