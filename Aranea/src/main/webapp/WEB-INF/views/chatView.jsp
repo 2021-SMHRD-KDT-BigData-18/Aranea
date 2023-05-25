@@ -14,6 +14,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="allcontainer">
 	<%
 	T_User user = (T_User) session.getAttribute("user");
 
@@ -205,6 +206,9 @@
 			</div>
 		</div>
 	</div>
+	
+	
+</div>
 	<script type="text/javascript"
 		src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
