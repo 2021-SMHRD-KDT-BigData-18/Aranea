@@ -209,6 +209,12 @@ JS에서 유저의 아이디, 이름, 채팅내용 등을 변수로 받아와 PO
 #### 참고문헌.
 https://dev-woo.tistory.com/44
 
+|.jsp|
+|------|
+|![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/3951a486-75d9-459c-88da-51c17d705578) ![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/d27edb19-5339-4016-b534-a561b4423789) ![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/3455e3e3-35e0-4828-9e29-5de33d3f25cc) ![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/7eef9645-9012-4253-b88b-107e7c574c57)
+|.java|
+|![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/aa63114b-2162-4d33-97dd-2e60e66078b1) ![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/b19cec21-2ffe-4e4d-a75b-37a3da89b135)
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
  
@@ -217,7 +223,7 @@ https://dev-woo.tistory.com/44
 #### 문제. 지도 테이블에서 'loc_seq' 컬럼을 primary key로 설정 후 시퀀스를 생성하고 상품 테이블에서 'loc_seq'컬럼을 외래키로 연결한 상태였다. 상품 테이블과 연결된 mybatis에서 insert쿼리문을 작성하여 db에 데이터를 저장하려고 하였지만 외래키로 연결된 'loc_seq'컬럼에서 값을 저장할 수 없다는 오류가 발생했다.
  
 #### 해결방안. 
-지도 테이블에 있는 insert 쿼리문 id를 가져와 상품 테이블에 selectkey를 입력해주어 'loc_seq'컬럼을 연결.
+지도 테이블에 있는 insert 쿼리문을 기반으로 상품 테이블에 selectkey를 입력해주어 'loc_seq'컬럼을 연결.
 |지도위치 테이블|상품 테이블|
 |------|---|
 |![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/9699fdfe-0001-4cc1-9c4d-d308a5629acb)|![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/6fa0ca28-851f-42ed-b571-e0b713c836be)
