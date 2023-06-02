@@ -233,6 +233,22 @@ https://dev-woo.tistory.com/44
 
 
 ##  🔨보완사항
+### [스파이더맨 매칭]
+|스파이더맨이 요청을 수락하는 화면|매칭된 스파이더맨의 정보와 위치 출력|
+|------|---|
+|![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/707087d9-0f79-474a-bdb0-63c599ff80a9)|![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/0752425e-d4d4-46f7-a432-225207ba29e8)|
+
+구현에 완벽하게 성공하지는 못했지만 카카오 택시의 매칭 알고리즘과 배달의민족 라이더 매칭 알고리즘 등을 찾아보고 이를 토대로 검수자 매칭 알고리즘을 설계하려고 노력하였다.
+
+
+### [결제 api]
+|포인트와 머니 조회 화면|결제 화면|
+|------|---|
+|![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/523b5c08-8f97-49f8-bc5b-67ee1f72a001)|![image](https://github.com/2021-SMHRD-KDT-BigData-18/Aranea/assets/130940590/742f6d2c-0a2b-421c-a78f-5633484b3284)|
+
+가상계좌로 아라냐머니를 통해 결제가 진행이 되게끔 구현하고 싶었지만 아임포트 api나 금융결제원 오픈api로 구현하기가 힘들어 보류된 부분이다.
+
+
 
 ## 👨‍👩‍👦‍👦 팀원 역할
 |박현주|이경민|박상준|강태호|이예은|
